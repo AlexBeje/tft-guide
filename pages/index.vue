@@ -10,9 +10,7 @@
   >
     <template #header>
       <div
-        :class="`flex justify-between items-center cursor-pointer p-4
-        ${!levelingGuide.showMore && 'rounded-b-sm'}
-        `"
+        class="flex justify-between items-center cursor-pointer p-4"
         @click="toggleShowMore"
       >
         <span>{{ levelingGuide.title }}</span>
@@ -23,7 +21,28 @@
       </div>
     </template>
     <template #default>
-      <div v-if="levelingGuide.showMore"></div>
+      <div v-if="levelingGuide.showMore" class="p-4 w-full">
+        <el-timeline>
+          <el-timeline-item
+            v-for="level in levelingGuide.levels"
+            :key="level.id"
+            :timestamp="level.label"
+            placement="top"
+          >
+            <div class="flex flex-col">
+              <el-card>
+                <p>
+                  Stage
+                  <el-tag class="flex gap-2" type="danger" effect="dark">
+                    <strong>{{ level.stage }}</strong>
+                  </el-tag>
+                  {{ level.extraInfo }}
+                </p>
+              </el-card>
+            </div>
+          </el-timeline-item>
+        </el-timeline>
+      </div>
     </template>
   </el-card>
 </template>
