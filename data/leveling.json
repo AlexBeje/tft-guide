@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Standard Leveling",
+    "levels": [
+      {
+        "id": 1,
+        "label": "Level 4",
+        "stages": ["2-1"]
+      },
+      {
+        "id": 2,
+        "label": "Level 5",
+        "stages": ["2-5"]
+      },
+      {
+        "id": 3,
+        "label": "Level 6",
+        "stages": ["3-2"]
+      },
+      {
+        "id": 4,
+        "label": "Level 7",
+        "stages": ["4-1"]
+      },
+      {
+        "id": 5,
+        "label": "Level 8",
+        "stages": ["4-5, 5-1"]
+      },
+      {
+        "id": 6,
+        "label": "Level 9",
+        "stages": ["5-5, 6-1"]
+      }
+    ]
+  }
+]
