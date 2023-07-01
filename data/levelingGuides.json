@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Standard Leveling",
+    "showMore": false,
     "levels": [
       {
         "id": 1,
