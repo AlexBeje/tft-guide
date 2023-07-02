@@ -1,6 +1,6 @@
 <template>
   <el-card
-    class="m-4"
+    class="m-2 large-card"
     v-for="levelingGuide in levelingGuides"
     :key="levelingGuide.id"
     :body-style="{
@@ -10,8 +10,8 @@
   >
     <template #header>
       <div
-        class="flex justify-between items-center cursor-pointer p-4"
-        @click="toggleShowMore"
+        :class="`flex justify-between items-center cursor-pointer px-3 py-1 ${levelingGuide.showMore && 'border-b border-borderLight'}`"
+        @click="toggleShowMore(levelingGuide.id)"
       >
         <span>{{ levelingGuide.title }}</span>
         <Icon
@@ -21,8 +21,8 @@
       </div>
     </template>
     <template #default>
-      <div v-if="levelingGuide.showMore" class="p-4 w-full">
-        <el-timeline>
+      <div v-if="levelingGuide.showMore" class="p-2 w-full">
+        <el-timeline class="timeline">
           <el-timeline-item
             v-for="level in levelingGuide.levels"
             :key="level.id"
@@ -30,7 +30,7 @@
             placement="top"
           >
             <div class="flex flex-col">
-              <el-card>
+              <el-card class="small-card">
                 <p>
                   Stage
                   <el-tag class="flex gap-2" type="danger" effect="dark">
@@ -55,9 +55,9 @@ import levelingGuidesDB from "@/data/levelingGuides.json";
 const levelingGuides = ref(levelingGuidesDB);
 
 /** Methods **/
-const toggleShowMore = () => {
+const toggleShowMore = (id: number) => {
   levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
-    if (levelingGuide.id === levelingGuide.id) {
+    if (levelingGuide.id === id) {
       levelingGuide.showMore = !levelingGuide.showMore;
     }
     return levelingGuide;
@@ -66,7 +66,24 @@ const toggleShowMore = () => {
 </script>
 
 <style scoped lang="scss">
-:deep(.el-card__header) {
-  @apply p-0;
+.large-card {
+  :deep(.el-card__header) {
+    @apply p-0 border-none;
+    border-color: var(--el-border-color-light);
+  }
+}
+.small-card {
+  :deep(.el-card__body) {
+    @apply p-2;
+  }
+}
+
+.timeline {
+  .el-timeline-item {
+    @apply pb-4;
+  }
+  :deep(.el-timeline-item__wrapper) {
+    @apply pl-6;
+  }
 }
 </style>

@@ -2,9 +2,12 @@
 module.exports = {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        borderLight: "#414243",
+      },
+    },
   },
   plugins: [],
-  darkMode: 'class'
-}
-
+  darkMode: "class",
+};
