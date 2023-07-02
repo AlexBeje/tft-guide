@@ -10,12 +10,14 @@
   >
     <template #header>
       <div
-        :class="`flex justify-between items-center cursor-pointer px-3 py-1 ${levelingGuide.showMore && 'border-b border-borderLight'}`"
+        :class="`flex justify-between items-center cursor-pointer px-3 py-1 ${
+          levelingGuide.showMore && 'border-b border-borderLight'
+        }`"
         @click="toggleShowMore(levelingGuide.id)"
       >
         <span>{{ levelingGuide.title }}</span>
         <Icon
-          size="2rem"
+          size="1.5rem"
           :name="`uil:angle-${levelingGuide.showMore ? 'down' : 'right'}`"
         />
       </div>
@@ -27,13 +29,21 @@
             v-for="level in levelingGuide.levels"
             :key="level.id"
             :timestamp="level.label"
+            :color="level.checked ? '#67C23A' : '#F56C6C'"
             placement="top"
           >
             <div class="flex flex-col">
-              <el-card class="small-card">
-                <p>
+              <el-card class="small-card" @click="checkToggle(level.id)">
+                <p
+                  :class="`p-2 border-[1px] rounded-sm border-borderLight
+                    ${level.checked && 'bg-green-900 border-green-700'}`"
+                >
                   Stage
-                  <el-tag class="flex gap-2" type="danger" effect="dark">
+                  <el-tag
+                    class="flex gap-2"
+                    :type="level.checked ? 'success' : 'danger'"
+                    effect="dark"
+                  >
                     <strong>{{ level.stage }}</strong>
                   </el-tag>
                   {{ level.extraInfo }}
@@ -45,11 +55,21 @@
       </div>
     </template>
   </el-card>
+  <el-backtop
+    :right="16"
+    :bottom="16"
+    :visibility-height="0"
+    @click="resetChecks"
+    class="backtop"
+  >
+    <Icon size="1.5rem" name="system-uicons:reset" />
+  </el-backtop>
 </template>
 
 <script setup lang="ts">
 /** Imports **/
 import levelingGuidesDB from "@/data/levelingGuides.json";
+import { Check } from '@element-plus/icons-vue'
 
 /** Variables **/
 const levelingGuides = ref(levelingGuidesDB);
@@ -63,6 +83,33 @@ const toggleShowMore = (id: number) => {
     return levelingGuide;
   });
 };
+
+const checkToggle = (id: number) => {
+  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
+    levelingGuide.levels = levelingGuide.levels.map((level) => {
+      if (level.id === id) {
+        level.checked = !level.checked;
+      }
+      return level;
+    });
+    return levelingGuide;
+  });
+};
+
+const resetChecks = () => {
+  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
+    levelingGuide.levels = levelingGuide.levels.map((level) => {
+      level.checked = false;
+      return level;
+    });
+    return levelingGuide;
+  });
+};
+
+/** Exposed Methods **/
+defineExpose({
+  resetChecks,
+});
 </script>
 
 <style scoped lang="scss">
@@ -73,8 +120,12 @@ const toggleShowMore = (id: number) => {
   }
 }
 .small-card {
+  &.el-card {
+    @apply rounded-sm;
+    border: none;
+  }
   :deep(.el-card__body) {
-    @apply p-2;
+    @apply p-0;
   }
 }
 
@@ -84,6 +135,12 @@ const toggleShowMore = (id: number) => {
   }
   :deep(.el-timeline-item__wrapper) {
     @apply pl-6;
+  }
+}
+
+.backtop {
+  &.el-backtop {
+    @apply text-white;
   }
 }
 </style>
