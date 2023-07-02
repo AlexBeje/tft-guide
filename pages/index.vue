@@ -62,7 +62,7 @@
                     >
                       <template #reference>
                         <Icon
-                          size="1.2rem"
+                          size="1.5rem"
                           name="lucide:info"
                           class="text-zinc-500 my-auto"
                           ref="popoverButtonRef"
