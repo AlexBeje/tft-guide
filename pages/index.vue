@@ -58,7 +58,7 @@
                       v-if="level.extraInfo"
                       :visible="level.extraInfoVisible"
                       placement="left"
-                      :width="300"
+                      :width="250"
                     >
                       <template #reference>
                         <Icon
