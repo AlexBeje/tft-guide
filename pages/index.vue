@@ -10,12 +10,12 @@
   >
     <template #header>
       <div
-        :class="`flex justify-between items-center cursor-pointer px-3 py-1 ${
+        :class="`flex justify-between items-center cursor-pointer p-3 ${
           levelingGuide.showMore && 'border-b border-borderLight'
         }`"
         @click="toggleShowMore(levelingGuide.id)"
       >
-        <span>{{ levelingGuide.title }}</span>
+        <strong>{{ levelingGuide.title }}</strong>
         <Icon
           size="1.5rem"
           :name="`uil:angle-${levelingGuide.showMore ? 'down' : 'right'}`"
@@ -29,24 +29,48 @@
             v-for="level in levelingGuide.levels"
             :key="level.id"
             :timestamp="level.label"
-            :color="level.checked ? '#67C23A' : '#F56C6C'"
+            :color="level.checked ? '#909399' : '#414243'"
             placement="top"
           >
             <div class="flex flex-col">
-              <el-card class="small-card" @click="checkToggle(level.id)">
+              <el-card class="small-card">
                 <p
-                  :class="`p-2 border-[1px] rounded-sm border-borderLight
-                    ${level.checked && 'bg-green-900 border-green-700'}`"
+                  :class="`p-2 border-[1px] rounded-sm border-borderLight cursor-pointer
+                    ${
+                      level.checked &&
+                      'bg-zinc-600 border-zinc-400 text-zinc-400'
+                    }`"
+                  @click="checkToggle(level.id)"
                 >
                   Stage
                   <el-tag
                     class="flex gap-2"
-                    :type="level.checked ? 'success' : 'danger'"
+                    :type="level.checked ? 'info' : 'danger'"
                     effect="dark"
                   >
-                    <strong>{{ level.stage }}</strong>
+                    <strong :class="`${level.checked && 'text-zinc-300'}`">{{
+                      level.stage
+                    }}</strong>
                   </el-tag>
-                  {{ level.extraInfo }}
+                  <el-popover
+                    v-if="level.extraInfo"
+                    :visible="level.extraInfoVisible"
+                    placement="bottom"
+                    :width="300"
+                  >
+                    <template #reference>
+                      <Icon
+                        size="1.2rem"
+                        name="lucide:info"
+                        class="ml-2 text-zinc-500"
+                        ref="popoverButtonRef"
+                        @click.stop="toggleExtraInfo(level.id)"
+                      />
+                    </template>
+                    <p class="break-normal text-left">
+                      {{ level.extraInfo }}
+                    </p>
+                  </el-popover>
                 </p>
               </el-card>
             </div>
@@ -62,17 +86,20 @@
     @click="resetChecks"
     class="backtop"
   >
-    <Icon size="1.5rem" name="system-uicons:reset" />
+    <Icon size="2rem" name="system-uicons:reset" />
   </el-backtop>
 </template>
 
 <script setup lang="ts">
 /** Imports **/
 import levelingGuidesDB from "@/data/levelingGuides.json";
-import { Check } from '@element-plus/icons-vue'
 
 /** Variables **/
 const levelingGuides = ref(levelingGuidesDB);
+const currentOpenedPopover = ref();
+
+/** Refs **/
+const popoverButtonRef = ref();
 
 /** Methods **/
 const toggleShowMore = (id: number) => {
@@ -106,6 +133,30 @@ const resetChecks = () => {
   });
 };
 
+const toggleExtraInfo = (id: number) => {
+  currentOpenedPopover.value = id;
+  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
+    levelingGuide.levels = levelingGuide.levels.map((level) => {
+      if (level.id === id) {
+        level.extraInfoVisible = !level.extraInfoVisible;
+      }
+      return level;
+    });
+    return levelingGuide;
+  });
+};
+
+/** Vue Use **/
+onClickOutside(popoverButtonRef, (e) => {
+  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
+    levelingGuide.levels = levelingGuide.levels.map((level) => {
+      level.extraInfoVisible = false;
+      return level;
+    });
+    return levelingGuide;
+  });
+});
+
 /** Exposed Methods **/
 defineExpose({
   resetChecks,
@@ -131,7 +182,7 @@ defineExpose({
 
 .timeline {
   .el-timeline-item {
-    @apply pb-4;
+    @apply pb-4 last:pb-0;
   }
   :deep(.el-timeline-item__wrapper) {
     @apply pl-6;
@@ -140,7 +191,7 @@ defineExpose({
 
 .backtop {
   &.el-backtop {
-    @apply text-white;
+    @apply text-white w-16 h-16;
   }
 }
 </style>
