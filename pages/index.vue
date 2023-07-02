@@ -1,6 +1,6 @@
 <template>
   <el-card
-    class="m-2 large-card"
+    class="m-2 large-card select-none"
     v-for="levelingGuide in levelingGuides"
     :key="levelingGuide.id"
     :body-style="{
@@ -35,39 +35,43 @@
             <div class="flex flex-col">
               <el-card class="small-card">
                 <p
-                  :class="`p-2 border-[1px] rounded-sm border-borderLight cursor-pointer
+                  :class="`p-4 border-[1px] rounded-sm border-borderLight cursor-pointer justify-between flex min-h-[64px] items-center
                     ${
                       level.checked &&
                       'bg-zinc-600 border-zinc-400 text-zinc-400'
                     }`"
                   @click="checkToggle(level.id)"
                 >
-                  Stage
-                  <el-tag
-                    class="flex gap-2"
-                    :type="level.checked ? 'info' : 'danger'"
-                    effect="dark"
-                  >
-                    <strong :class="`${level.checked && 'text-zinc-300'}`">{{
-                      level.stage
-                    }}</strong>
-                  </el-tag>
+                  <span class="flex gap-2">
+                    Stage
+                    <el-tag
+                      :type="level.checked ? 'info' : 'danger'"
+                      effect="dark"
+                    >
+                      <strong :class="`${level.checked && 'text-zinc-300'}`">{{
+                        level.stage
+                      }}</strong>
+                    </el-tag>
+                  </span>
                   <el-popover
                     v-if="level.extraInfo"
                     :visible="level.extraInfoVisible"
-                    placement="bottom"
+                    placement="left"
                     :width="300"
                   >
                     <template #reference>
                       <Icon
                         size="1.2rem"
                         name="lucide:info"
-                        class="ml-2 text-zinc-500"
+                        class="text-zinc-500 my-auto"
                         ref="popoverButtonRef"
                         @click.stop="toggleExtraInfo(level.id)"
                       />
                     </template>
-                    <p class="break-normal text-left">
+                    <p
+                      class="break-normal text-left select-none cursor-pointer"
+                      @click.stop="toggleExtraInfo(level.id)"
+                    >
                       {{ level.extraInfo }}
                     </p>
                   </el-popover>
@@ -96,7 +100,6 @@ import levelingGuidesDB from "@/data/levelingGuides.json";
 
 /** Variables **/
 const levelingGuides = ref(levelingGuidesDB);
-const currentOpenedPopover = ref();
 
 /** Refs **/
 const popoverButtonRef = ref();
@@ -134,7 +137,15 @@ const resetChecks = () => {
 };
 
 const toggleExtraInfo = (id: number) => {
-  currentOpenedPopover.value = id;
+  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
+    levelingGuide.levels = levelingGuide.levels.map((level) => {
+      if (level.id !== id && level.extraInfoVisible) {
+        level.extraInfoVisible = false;
+      }
+      return level;
+    });
+    return levelingGuide;
+  });
   levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
     levelingGuide.levels = levelingGuide.levels.map((level) => {
       if (level.id === id) {
@@ -145,17 +156,6 @@ const toggleExtraInfo = (id: number) => {
     return levelingGuide;
   });
 };
-
-/** Vue Use **/
-onClickOutside(popoverButtonRef, (e) => {
-  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
-    levelingGuide.levels = levelingGuide.levels.map((level) => {
-      level.extraInfoVisible = false;
-      return level;
-    });
-    return levelingGuide;
-  });
-});
 
 /** Exposed Methods **/
 defineExpose({
