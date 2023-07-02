@@ -1,88 +1,90 @@
 <template>
-  <el-card
-    class="m-2 large-card select-none"
-    v-for="levelingGuide in levelingGuides"
-    :key="levelingGuide.id"
-    :body-style="{
-      display: levelingGuide.showMore ? 'flex' : 'none',
-      padding: '0',
-    }"
-  >
-    <template #header>
-      <div
-        :class="`flex justify-between items-center cursor-pointer p-3 ${
-          levelingGuide.showMore && 'border-b border-borderLight'
-        }`"
-        @click="toggleShowMore(levelingGuide.id)"
-      >
-        <strong>{{ levelingGuide.title }}</strong>
-        <Icon
-          size="1.5rem"
-          :name="`uil:angle-${levelingGuide.showMore ? 'down' : 'right'}`"
-        />
-      </div>
-    </template>
-    <template #default>
-      <div v-if="levelingGuide.showMore" class="p-2 w-full">
-        <el-timeline class="timeline">
-          <el-timeline-item
-            v-for="level in levelingGuide.levels"
-            :key="level.id"
-            :timestamp="level.label"
-            :color="level.checked ? '#909399' : '#414243'"
-            placement="top"
-          >
-            <div class="flex flex-col">
-              <el-card class="small-card">
-                <p
-                  :class="`p-4 border-[1px] rounded-sm border-borderLight cursor-pointer justify-between flex min-h-[64px] items-center
+  <div class="mb-24">
+    <el-card
+      class="m-2 large-card"
+      v-for="levelingGuide in levelingGuides"
+      :key="levelingGuide.id"
+      :body-style="{
+        display: levelingGuide.showMore ? 'flex' : 'none',
+        padding: '0',
+      }"
+    >
+      <template #header>
+        <div
+          :class="`flex justify-between items-center cursor-pointer p-3 ${
+            levelingGuide.showMore && 'border-b border-borderLight'
+          }`"
+          @click="toggleShowMore(levelingGuide.id)"
+        >
+          <strong>{{ levelingGuide.title }}</strong>
+          <Icon
+            size="1.5rem"
+            :name="`uil:angle-${levelingGuide.showMore ? 'down' : 'right'}`"
+          />
+        </div>
+      </template>
+      <template #default>
+        <div v-if="levelingGuide.showMore" class="p-2 w-full">
+          <el-timeline class="timeline">
+            <el-timeline-item
+              v-for="level in levelingGuide.levels"
+              :key="level.id"
+              :timestamp="level.label"
+              :color="level.checked ? '#909399' : '#414243'"
+              placement="top"
+            >
+              <div class="flex flex-col">
+                <el-card class="small-card">
+                  <p
+                    :class="`p-4 border-[1px] rounded-sm border-borderLight cursor-pointer justify-between flex min-h-[64px] items-center
                     ${
                       level.checked &&
                       'bg-zinc-600 border-zinc-400 text-zinc-400'
                     }`"
-                  @click="checkToggle(level.id)"
-                >
-                  <span class="flex gap-2">
-                    Stage
-                    <el-tag
-                      :type="level.checked ? 'info' : 'danger'"
-                      effect="dark"
-                    >
-                      <strong :class="`${level.checked && 'text-zinc-300'}`">{{
-                        level.stage
-                      }}</strong>
-                    </el-tag>
-                  </span>
-                  <el-popover
-                    v-if="level.extraInfo"
-                    :visible="level.extraInfoVisible"
-                    placement="left"
-                    :width="300"
+                    @click="checkToggle(level.id)"
                   >
-                    <template #reference>
-                      <Icon
-                        size="1.2rem"
-                        name="lucide:info"
-                        class="text-zinc-500 my-auto"
-                        ref="popoverButtonRef"
-                        @click.stop="toggleExtraInfo(level.id)"
-                      />
-                    </template>
-                    <p
-                      class="break-normal text-left select-none cursor-pointer"
-                      @click.stop="toggleExtraInfo(level.id)"
+                    <span class="flex gap-2">
+                      Stage
+                      <el-tag
+                        :type="level.checked ? 'info' : 'danger'"
+                        effect="dark"
+                      >
+                        <strong :class="`${level.checked && 'text-zinc-300'}`">
+                          {{ level.stage }}
+                        </strong>
+                      </el-tag>
+                    </span>
+                    <el-popover
+                      v-if="level.extraInfo"
+                      :visible="level.extraInfoVisible"
+                      placement="left"
+                      :width="300"
                     >
-                      {{ level.extraInfo }}
-                    </p>
-                  </el-popover>
-                </p>
-              </el-card>
-            </div>
-          </el-timeline-item>
-        </el-timeline>
-      </div>
-    </template>
-  </el-card>
+                      <template #reference>
+                        <Icon
+                          size="1.2rem"
+                          name="lucide:info"
+                          class="text-zinc-500 my-auto"
+                          ref="popoverButtonRef"
+                          @click.stop="toggleExtraInfo(level.id)"
+                        />
+                      </template>
+                      <p
+                        class="break-normal text-left cursor-pointer"
+                        @click.stop="toggleExtraInfo(level.id)"
+                      >
+                        {{ level.extraInfo }}
+                      </p>
+                    </el-popover>
+                  </p>
+                </el-card>
+              </div>
+            </el-timeline-item>
+          </el-timeline>
+        </div>
+      </template>
+    </el-card>
+  </div>
   <el-backtop
     :right="16"
     :bottom="16"
