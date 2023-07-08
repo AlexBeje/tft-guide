@@ -61,3 +61,6 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+# TFT Mobalytics
+[TFT Mobalytics builds](https://mobalytics.gg/blog/best-tft-comps/)
