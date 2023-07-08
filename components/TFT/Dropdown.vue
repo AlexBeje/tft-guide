@@ -47,3 +47,12 @@ const toggleShowMore = () => {
   showMore.value = !showMore.value;
 };
 </script>
+
+<style scoped lang="scss">
+.large-card {
+  :deep(.el-card__header) {
+    @apply p-0 border-none;
+    border-color: var(--el-border-color-light);
+  }
+}
+</style>

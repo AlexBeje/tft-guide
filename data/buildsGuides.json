@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "Vastayans",
+    "team": "6 Ionia",
+    "team-icon": "ionia.png",
+    "image": "1.vastayans.jpg",
+    "desc": "This comp uses a full Ionia team with Yasuo as your main carry and Shen as your main tank!",
+    "whenToMake": "If you get an Ionia Augment",
+    "extraInfo": "https://app.mobalytics.gg/tft/comps-guide/vastayans-2RALIiB0HKrdpwYB44tLO7v4vr0"
+  },
+  {
+    "id": 2,
+    "title": "Noxus Empire",
+    "team": "6 Noxus, 3 Shurima",
+    "team-icon": "noxus.png",
+    "image": "2.noxus-empire.jpg",
+    "desc": "This comp uses a full Noxus team with the two 3-costs Darius and Katarina as your main carries!",
+    "whenToMake": "If you get a Noxus Augment / If you see an early copy of Sion / If you’re the only one in your lobby to play Darius / Katarina",
+    "extraInfo": "https://app.mobalytics.gg/tft/comps-guide/noxus-empire-2Qi9L1kpHOoGk0kUNcsZtPe8c9D"
+  },
+  {
+    "id": 3,
+    "title": "Slay all Day",
+    "team": "6 Slayer, 3 Noxus",
+    "team-icon": "slayer.png",
+    "image": "3.slay-all-day.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 4,
+    "title": "Super Nash Bros",
+    "team": "8 Void",
+    "team-icon": "void.png",
+    "image": "4.super-nash-bros.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 5,
+    "title": "Arcane Wizards",
+    "team": "8 Sorcerer",
+    "team-icon": "sorcerer.png",
+    "image": "5.arcane-wizards.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 6,
+    "title": "Guns Out!",
+    "team": "4 Gunner, 4 Zaun",
+    "team-icon": "gunner.png",
+    "image": "6.guns-out.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 7,
+    "title": "Dead Ice",
+    "team": "3 Targon, 3 Freljord",
+    "team-icon": "targon.png",
+    "image": "7.dead-ice.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 8,
+    "title": "Shurima Nomads",
+    "team": "7 Shurima",
+    "team-icon": "shurima.png",
+    "image": "8.shurima-nomads.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 9,
+    "title": "Multi Strategists",
+    "team": "4 Multicaster, 3 Yordle",
+    "team-icon": "multicaster.png",
+    "image": "9.multi-strategists.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 10,
+    "title": "Challengers",
+    "team": "6 Challenger, 3 Ionia",
+    "team-icon": "challenger.png",
+    "image": "10.challengers.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 11,
+    "title": "4 Stars Yordle",
+    "team": "5 Yordle, 2 Gunner",
+    "team-icon": "yordle.png",
+    "image": "11.4-stars-yordle.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 12,
+    "title": "SQUID Game",
+    "team": "4 Multicaster, 4 Strategist",
+    "team-icon": "multicaster.png",
+    "image": "12.squid-game.jpg",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 13,
+    "title": "Shadow Spears",
+    "team": "4 Shadow Isles, 4 Bastion",
+    "team-icon": "shadow-isles.png",
+    "image": "",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 14,
+    "title": "Juggernauts",
+    "team": "4 Juggernaut, 3 Demacia",
+    "team-icon": "juggernaut.png",
+    "image": "",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 15,
+    "title": "Furious Bite",
+    "team": "6 Bruiser, 3 Void",
+    "team-icon": "bruiser.png",
+    "image": "",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 16,
+    "title": "DEMACIAAA!",
+    "team": "5 Demacia, 3 Yordle",
+    "team-icon": "demacia.png",
+    "image": "",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  },
+  {
+    "id": 17,
+    "title": "Shadow Slayers",
+    "team": "4 Shadow Isles, 4 Slayers",
+    "team-icon": "shadow-isles.png",
+    "image": "",
+    "desc": "",
+    "whenToMake": "",
+    "extraInfo": ""
+  }
+]

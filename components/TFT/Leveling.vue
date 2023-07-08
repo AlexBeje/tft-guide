@@ -4,6 +4,7 @@
       v-for="levelingGuide in levelingGuides"
       :title="levelingGuide.title"
       :show-more="levelingGuide.showMore"
+      :key="levelingGuide.id"
     >
       <el-timeline class="timeline">
         <el-timeline-item
@@ -155,12 +156,6 @@ const toggleExtraInfo = (id: number) => {
 .backtop {
   &.el-backtop {
     @apply text-white w-16 h-16;
-  }
-}
-.large-card {
-  :deep(.el-card__header) {
-    @apply p-0 border-none;
-    border-color: var(--el-border-color-light);
   }
 }
 .small-card {
