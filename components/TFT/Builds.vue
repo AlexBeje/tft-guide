@@ -2,12 +2,12 @@
   <TFTDropdown
     v-for="buildsGuide in buildsGuidesDB"
     :title="buildsGuide.title"
+    :description="buildsGuide.team"
     :key="buildsGuide.id"
   >
     <div>
-      <p>{{ `@/public/builds/${buildsGuide.image}` }}</p>
       <img
-        :src="`require('@/public/builds/${buildsGuide.image}')`"
+        :src="`builds/${buildsGuide.image}`"
         :alt="buildsGuide.title"
         class="w-full h-auto"
       />

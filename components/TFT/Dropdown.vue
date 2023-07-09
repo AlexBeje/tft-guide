@@ -13,7 +13,12 @@
         }`"
         @click="toggleShowMore()"
       >
-        <strong>{{ title }}</strong>
+        <strong>
+          {{ title }}
+          <el-tag effect="dark" class="ml-2" v-if="description">
+            {{ description }}
+          </el-tag>
+        </strong>
         <Icon
           size="1.5rem"
           :name="`uil:angle-${showMore ? 'down' : 'right'}`"
@@ -39,9 +44,13 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  description: {
+    type: String,
+    default: "",
+  },
 });
 
-/** SMethods **/
+/** Methods **/
 const showMore = ref(props.showMore);
 const toggleShowMore = () => {
   showMore.value = !showMore.value;
