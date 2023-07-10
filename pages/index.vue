@@ -1,12 +1,14 @@
 <template>
-  <el-tabs v-model="activeName">
-    <el-tab-pane label="Builds" name="builds">
-      <TFTBuilds :data="buildsGuidesDB" />
-    </el-tab-pane>
-    <el-tab-pane label="Leveling" name="leveling">
-      <TFTLeveling :data="levelingGuidesDB" />
-    </el-tab-pane>
-  </el-tabs>
+  <div class="flex justify-center w-full bg-zinc-900 min-h-screen">
+    <el-tabs v-model="activeName" class="w-full flex flex-col bg-zinc-900">
+      <el-tab-pane label="Builds" name="builds" class="max-w-[320px] m-auto">
+        <TFTBuilds :data="buildsGuidesDB" />
+      </el-tab-pane>
+      <el-tab-pane label="Leveling" name="leveling">
+        <TFTLeveling :data="levelingGuidesDB" />
+      </el-tab-pane>
+    </el-tabs>
+  </div>
 </template>
 
 <script setup lang="ts">
