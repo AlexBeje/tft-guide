@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "GuinsoosRageblade",
+    "name": "ChallengerEmblem",
     "components": [
       {
         "id": 1,
-        "name": "NeedlesslyLargeRod"
+        "name": "Spatula"
       },
       {
         "id": 2,
@@ -15,6 +15,230 @@
   },
   {
     "id": 2,
+    "name": "DemaciaEmblem",
+    "components": [
+      {
+        "id": 1,
+        "name": "Spatula"
+      },
+      {
+        "id": 2,
+        "name": "NegatronCloak"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "IoniaEmblem",
+    "components": [
+      {
+        "id": 1,
+        "name": "Spatula"
+      },
+      {
+        "id": 2,
+        "name": "BFSword"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "JuggernautEmblem",
+    "components": [
+      {
+        "id": 1,
+        "name": "Spatula"
+      },
+      {
+        "id": 2,
+        "name": "ChainVest"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "NoxusEmblem",
+    "components": [
+      {
+        "id": 1,
+        "name": "Spatula"
+      },
+      {
+        "id": 2,
+        "name": "GiantsBelt"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "ShurimaEmblem",
+    "components": [
+      {
+        "id": 1,
+        "name": "Spatula"
+      },
+      {
+        "id": 2,
+        "name": "NeedlesslyLargeRod"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "SlayerEmblem",
+    "components": [
+      {
+        "id": 1,
+        "name": "Spatula"
+      },
+      {
+        "id": 2,
+        "name": "SparringGloves"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "SorcererEmblem",
+    "components": [
+      {
+        "id": 1,
+        "name": "Spatula"
+      },
+      {
+        "id": 2,
+        "name": "TearOfTheGoddess"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "ArchangelsStaff",
+    "components": [
+      {
+        "id": 1,
+        "name": "TearOfTheGoddess"
+      },
+      {
+        "id": 2,
+        "name": "NeedlesslyLargeRod"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Bloodthirster",
+    "components": [
+      {
+        "id": 1,
+        "name": "BFSword"
+      },
+      {
+        "id": 2,
+        "name": "NegatronCloak"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "BlueBuff",
+    "components": [
+      {
+        "id": 1,
+        "name": "TearOfTheGoddess"
+      },
+      {
+        "id": 2,
+        "name": "TearOfTheGoddess"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "BrambleVest",
+    "components": [
+      {
+        "id": 1,
+        "name": "ChainVest"
+      },
+      {
+        "id": 2,
+        "name": "ChainVest"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "ChaliceOfPower",
+    "components": [
+      {
+        "id": 1,
+        "name": "NegatronCloak"
+      },
+      {
+        "id": 2,
+        "name": "TearOfTheGoddess"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Deathblade",
+    "components": [
+      {
+        "id": 1,
+        "name": "BFSword"
+      },
+      {
+        "id": 2,
+        "name": "BFSword"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "DragonsClaw",
+    "components": [
+      {
+        "id": 1,
+        "name": "NegatronCloak"
+      },
+      {
+        "id": 2,
+        "name": "NegatronCloak"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "EdgeOfNight",
+    "components": [
+      {
+        "id": 1,
+        "name": "BFSword"
+      },
+      {
+        "id": 2,
+        "name": "ChainVest"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "GargoyleStoneplate",
+    "components": [
+      {
+        "id": 1,
+        "name": "ChainVest"
+      },
+      {
+        "id": 2,
+        "name": "NegatronCloak"
+      }
+    ]
+  },
+  {
+    "id": 18,
     "name": "GiantSlayer",
     "components": [
       {
@@ -28,7 +252,91 @@
     ]
   },
   {
-    "id": 3,
+    "id": 19,
+    "name": "Guardbreaker",
+    "components": [
+      {
+        "id": 1,
+        "name": "GiantsBelt"
+      },
+      {
+        "id": 2,
+        "name": "SparringGloves"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "GuinsoosRageblade",
+    "components": [
+      {
+        "id": 1,
+        "name": "RecurveBow"
+      },
+      {
+        "id": 2,
+        "name": "NeedlesslyLargeRod"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "HandOfJustice",
+    "components": [
+      {
+        "id": 1,
+        "name": "SparringGloves"
+      },
+      {
+        "id": 2,
+        "name": "TearOfTheGoddess"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "HextechGunblade",
+    "components": [
+      {
+        "id": 1,
+        "name": "BFSword"
+      },
+      {
+        "id": 2,
+        "name": "NeedlesslyLargeRod"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "InfinityEdge",
+    "components": [
+      {
+        "id": 1,
+        "name": "BFSword"
+      },
+      {
+        "id": 2,
+        "name": "SparringGloves"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "IonicSpark",
+    "components": [
+      {
+        "id": 1,
+        "name": "NeedlesslyLargeRod"
+      },
+      {
+        "id": 2,
+        "name": "NegatronCloak"
+      }
+    ]
+  },
+  {
+    "id": 25,
     "name": "JeweledGauntlet",
     "components": [
       {
@@ -36,41 +344,111 @@
         "name": "NeedlesslyLargeRod"
       },
       {
-        "id": 1,
+        "id": 2,
         "name": "SparringGloves"
       }
     ]
   },
   {
-    "id": 4,
-    "name": "HandOfJustice",
+    "id": 26,
+    "name": "LastWhisper",
     "components": [
       {
         "id": 1,
-        "name": "TearOfTheGoddess"
+        "name": "RecurveBow"
       },
       {
-        "id": 1,
+        "id": 2,
         "name": "SparringGloves"
       }
     ]
   },
   {
-    "id": 5,
-    "name": "GargoyleStoneplate",
+    "id": 27,
+    "name": "LocketOfTheIronSolari",
     "components": [
       {
         "id": 1,
         "name": "ChainVest"
       },
       {
-        "id": 1,
-        "name": "NegatronCloak"
+        "id": 2,
+        "name": "NeedlesslyLargeRod"
       }
     ]
   },
   {
-    "id": 6,
+    "id": 28,
+    "name": "Morellonomicon",
+    "components": [
+      {
+        "id": 1,
+        "name": "NeedlesslyLargeRod"
+      },
+      {
+        "id": 2,
+        "name": "GiantsBelt"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "ProtectorsVow",
+    "components": [
+      {
+        "id": 1,
+        "name": "ChainVest"
+      },
+      {
+        "id": 2,
+        "name": "TearOfTheGoddess"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Quicksilver",
+    "components": [
+      {
+        "id": 1,
+        "name": "NegatronCloak"
+      },
+      {
+        "id": 2,
+        "name": "SparringGloves"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "RabadonsDeathcap",
+    "components": [
+      {
+        "id": 1,
+        "name": "NeedlesslyLargeRod"
+      },
+      {
+        "id": 2,
+        "name": "NeedlesslyLargeRod"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "RapidFirecannon",
+    "components": [
+      {
+        "id": 1,
+        "name": "RecurveBow"
+      },
+      {
+        "id": 2,
+        "name": "RecurveBow"
+      }
+    ]
+  },
+  {
+    "id": 33,
     "name": "Redemption",
     "components": [
       {
@@ -78,13 +456,97 @@
         "name": "GiantsBelt"
       },
       {
-        "id": 1,
+        "id": 2,
         "name": "TearOfTheGoddess"
       }
     ]
   },
   {
-    "id": 7,
+    "id": 34,
+    "name": "RunaansHurricane",
+    "components": [
+      {
+        "id": 1,
+        "name": "RecurveBow"
+      },
+      {
+        "id": 2,
+        "name": "NegatronCloak"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "ShroudOfStillness",
+    "components": [
+      {
+        "id": 1,
+        "name": "ChainVest"
+      },
+      {
+        "id": 2,
+        "name": "SparringGloves"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "SpearOfShojin",
+    "components": [
+      {
+        "id": 1,
+        "name": "BFSword"
+      },
+      {
+        "id": 2,
+        "name": "TearOfTheGoddess"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "StatikkShiv",
+    "components": [
+      {
+        "id": 1,
+        "name": "RecurveBow"
+      },
+      {
+        "id": 2,
+        "name": "TearOfTheGoddess"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "SunfireCape",
+    "components": [
+      {
+        "id": 1,
+        "name": "GiantsBelt"
+      },
+      {
+        "id": 2,
+        "name": "ChainVest"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "TacticiansCrown",
+    "components": [
+      {
+        "id": 1,
+        "name": "Spatula"
+      },
+      {
+        "id": 2,
+        "name": "Spatula"
+      }
+    ]
+  },
+  {
+    "id": 40,
     "name": "ThiefsGloves",
     "components": [
       {
@@ -92,8 +554,78 @@
         "name": "SparringGloves"
       },
       {
-        "id": 1,
+        "id": 2,
         "name": "SparringGloves"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "TitansResolve",
+    "components": [
+      {
+        "id": 1,
+        "name": "ChainVest"
+      },
+      {
+        "id": 2,
+        "name": "RecurveBow"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "WarmogsArmor",
+    "components": [
+      {
+        "id": 1,
+        "name": "GiantsBelt"
+      },
+      {
+        "id": 2,
+        "name": "GiantsBelt"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "ZekesHerald",
+    "components": [
+      {
+        "id": 1,
+        "name": "BFSword"
+      },
+      {
+        "id": 2,
+        "name": "GiantsBelt"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Zephyr",
+    "components": [
+      {
+        "id": 1,
+        "name": "GiantsBelt"
+      },
+      {
+        "id": 2,
+        "name": "NegatronCloak"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "ZzRotPortal",
+    "components": [
+      {
+        "id": 1,
+        "name": "GiantsBelt"
+      },
+      {
+        "id": 2,
+        "name": "NeedlesslyLargeRod"
       }
     ]
   }
