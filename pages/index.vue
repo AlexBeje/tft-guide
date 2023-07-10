@@ -1,10 +1,10 @@
 <template>
   <el-tabs v-model="activeName">
-    <el-tab-pane label="Leveling" name="leveling">
-      <TFTLeveling :data="levelingGuidesDB" />
-    </el-tab-pane>
     <el-tab-pane label="Builds" name="builds">
       <TFTBuilds :data="buildsGuidesDB" />
+    </el-tab-pane>
+    <el-tab-pane label="Leveling" name="leveling">
+      <TFTLeveling :data="levelingGuidesDB" />
     </el-tab-pane>
   </el-tabs>
 </template>
