@@ -15,7 +15,7 @@ import levelingGuidesDB from "@/data/levelingGuides.json";
 import buildsGuidesDB from "@/data/buildsGuides.json";
 
 /** Vatriables **/
-const activeName = ref("leveling");
+const activeName = ref("builds");
 </script>
 
 <style lang="scss" scoped>
