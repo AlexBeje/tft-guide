@@ -1,12 +1,15 @@
 [
   {
     "id": 1,
-    "title": "Vastayans",
-    "team": "6 Ionia",
-    "image": "1.vastayans.jpg",
-    "carry": "Yasuo / Shen",
-    "whenToMake": "If you get an Ionia Augment",
-    "extraInfo": "https://app.mobalytics.gg/tft/comps-guide/vastayans-2RALIiB0HKrdpwYB44tLO7v4vr0"
+    "title": "6 Ionia",
+    "image": "1.6-ionia.jpg",
+    "team": [
+      {
+        "id": 1,
+        "name": "Yasuo",
+        "items": [1, 2, 5]
+      },
+    ],
   },
   {
     "id": 2,
