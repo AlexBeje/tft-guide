@@ -15,16 +15,22 @@
       >
         <strong>
           {{ title }}
-          <span v-for="description in descriptions">
-            <el-tag effect="dark" class="ml-2" v-if="description">
-              {{ description }}
-            </el-tag>
-          </span>
+          <el-tag effect="dark" v-if="description">
+            {{ description }}
+          </el-tag>
         </strong>
-        <Icon
-          size="1.5rem"
-          :name="`uil:angle-${showMore ? 'down' : 'right'}`"
-        />
+        <div class="flex gap-1 items-center">
+          <Icon
+            size="2rem"
+            :name="`uil:${itemLocked ? 'unlock' : 'lock'}`"
+            class="bg-zinc-900 rounded-full p-2"
+            @click.stop="onLockItem(itemLocked)"
+          />
+          <Icon
+            size="1.5rem"
+            :name="`uil:angle-${showMore ? 'down' : 'right'}`"
+          />
+        </div>
       </div>
     </template>
     <template #default>
@@ -45,16 +51,29 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  descriptions: {
-    type: Array,
+  description: {
+    type: String,
     default: "",
   },
+  id: {
+    type: Number,
+  },
+  itemLocked: {
+    type: Boolean,
+    default: false,
+  },
 });
+
+/** Emits **/
+const emits = defineEmits(["lockItem"]);
 
 /** Methods **/
 const showMore = ref(props.showMore);
 const toggleShowMore = () => {
   showMore.value = !showMore.value;
+};
+const onLockItem = (itemLocked: boolean) => {
+  emits("lockItem", props.id, itemLocked);
 };
 </script>
 

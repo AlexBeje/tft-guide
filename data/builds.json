@@ -1,28 +1,19 @@
 [
   {
     "id": 1,
-    "team": ["Slayer 5", "Yordle 3"],
-    "image": "1.Slayer5Yordle3.jpg",
+    "team": "Ionian Challengers",
+    "image": "1.ionian-challengers.png",
+    "locked": false,
     "carries": [
       {
         "id": 1,
-        "name": "Kayle",
-        "items": ["GuinsoosRageblade", "GuinsoosRageblade", "GiantSlayer"]
+        "name": "Yasuo",
+        "items": ["Bloodthirster", "GiantSlayer", "TitansResolve"]
       },
       {
         "id": 2,
-        "name": "Gwen",
-        "items": ["JeweledGauntlet", "HandOfJustice"]
-      },
-      {
-        "id": 3,
-        "name": "Poppy",
-        "items": ["GargoyleStoneplate", "Redemption"]
-      },
-      {
-        "id": 4,
-        "name": "Maokai",
-        "items": ["ThiefsGloves"]
+        "name": "Shen",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       }
     ]
   }
