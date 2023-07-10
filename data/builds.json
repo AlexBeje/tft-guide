@@ -44,5 +44,84 @@
       "title": "Slow Roll (7)",
       "description": "3-star units at level 7 by rolling your excess gold every round."
     }
+  },
+  {
+    "id": 3,
+    "icons": ["StrategistEmblem"],
+    "team": "Strategists",
+    "image": "3.strategists.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Azir",
+        "items": ["GiantSlayer", "GuinsoosRageblade", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "JarvanIV",
+        "items": ["Redemption", "SunfireCape"]
+      },
+      {
+        "id": 3,
+        "name": "Nasus",
+        "items": ["ThiefsGloves"]
+      }
+    ],
+    "strategy": {
+      "title": "Fast 8",
+      "description": "The goal is to reach level 8 early in Stage 4 to find 4 and 5 cost units before your opponents. You generally need long win or losestreaks to have enough gold for it."
+    }
+  },
+  {
+    "id": 4,
+    "icons": ["VoidEmblem"],
+    "team": "Voids",
+    "image": "4.voids.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kaisa",
+        "items": ["GuinsoosRageblade", "HextechGunblade", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Belveth",
+        "items": ["Bloodthirster", "TitansResolve"]
+      },
+      {
+        "id": 3,
+        "name": "Yasuo",
+        "items": ["VoidEmblem"]
+      }
+    ],
+    "strategy": {
+      "title": "Fast 8",
+      "description": "The goal is to reach level 8 early in Stage 4 to find 4 and 5 cost units before your opponents. You generally need long win or losestreaks to have enough gold for it."
+    }
+  },
+  {
+    "id": 5,
+    "icons": ["NoxusEmblem", "ShurimaEmblem"],
+    "team": "Noxus",
+    "image": "5.noxus-shurima.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Darius",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+      },
+      {
+        "id": 2,
+        "name": "Katarina",
+        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"]
+      }
+    ],
+    "strategy": {
+      "title": "Slow Roll (7)",
+      "description": "3-star units at level 7 by rolling your excess gold every round."
+    }
   }
 ]

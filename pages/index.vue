@@ -4,7 +4,7 @@
       <el-tab-pane label="Builds" name="builds" class="max-w-[320px] m-auto">
         <TFTBuilds :data="buildsGuidesDB" />
       </el-tab-pane>
-      <el-tab-pane label="Leveling" name="leveling">
+      <el-tab-pane label="Leveling" name="leveling" class="max-w-[320px] m-auto">
         <TFTLeveling :data="levelingGuidesDB" />
       </el-tab-pane>
     </el-tabs>
