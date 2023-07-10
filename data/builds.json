@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "team": ["Slayer 5", "Yordle 3"],
+    "image": "1.Slayer5Yordle3.jpg",
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kayle",
+        "items": ["GuinsoosRageblade", "GuinsoosRageblade", "GiantSlayer"]
+      },
+      {
+        "id": 2,
+        "name": "Gwen",
+        "items": ["JeweledGauntlet", "HandOfJustice"]
+      },
+      {
+        "id": 3,
+        "name": "Poppy",
+        "items": ["GargoyleStoneplate", "Redemption"]
+      },
+      {
+        "id": 4,
+        "name": "Maokai",
+        "items": ["ThiefsGloves"]
+      }
+    ]
+  }
+]

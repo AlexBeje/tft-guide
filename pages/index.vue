@@ -12,7 +12,7 @@
 <script setup lang="ts">
 /** Imports **/
 import levelingGuidesDB from "@/data/levelingGuides.json";
-import buildsGuidesDB from "@/data/buildsGuides.json";
+import buildsGuidesDB from "@/data/builds.json";
 
 /** Vatriables **/
 const activeName = ref("builds");

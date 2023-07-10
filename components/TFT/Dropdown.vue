@@ -15,9 +15,11 @@
       >
         <strong>
           {{ title }}
-          <el-tag effect="dark" class="ml-2" v-if="description">
-            {{ description }}
-          </el-tag>
+          <span v-for="description in descriptions">
+            <el-tag effect="dark" class="ml-2" v-if="description">
+              {{ description }}
+            </el-tag>
+          </span>
         </strong>
         <Icon
           size="1.5rem"
@@ -38,14 +40,13 @@
 const props = defineProps({
   title: {
     type: String,
-    required: true,
   },
   showMore: {
     type: Boolean,
     default: false,
   },
-  description: {
-    type: String,
+  descriptions: {
+    type: Array,
     default: "",
   },
 });
