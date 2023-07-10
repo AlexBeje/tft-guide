@@ -2,6 +2,7 @@
   <TFTDropdown
     v-for="buildsGuide in buildsGuidesDB"
     :description="buildsGuide.team"
+    :leftIcons="buildsGuide.icons"
     :key="buildsGuide.id"
     :id="buildsGuide.id"
     :itemLocked="buildsGuide.locked"
@@ -37,12 +38,8 @@
           </div>
         </div>
       </div>
-      <h1 class="text-xl">Fast 8</h1>
-      <p>
-        The goal is to reach level 8 early in Stage 4 to find 4 and 5 cost units
-        before your opponents. You generally need long win or losestreaks to
-        have enough gold for it.
-      </p>
+      <h1 class="text-xl">{{ buildsGuide.strategy.title }}</h1>
+      <p>{{ buildsGuide.strategy.description }}</p>
     </div>
   </TFTDropdown>
 </template>
@@ -61,10 +58,15 @@ interface Carries {
 
 interface BuildsGuide {
   id: number;
+  icons: string[];
   team: string;
   image: string;
   locked: boolean;
   carries: Carries[];
+  strategy: {
+    title: string;
+    description: string;
+  };
 }
 
 /** Props **/

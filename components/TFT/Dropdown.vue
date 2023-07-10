@@ -13,8 +13,15 @@
         }`"
         @click="toggleShowMore()"
       >
-        <strong>
+        <strong class="flex gap-2 items-center">
           {{ title }}
+          <div v-if="leftIcons?.length" class="flex gap-1">
+            <img
+              v-for="leftIcon in leftIcons"
+              :src="`items/${leftIcon}.png`"
+              class="w-[24px] h-[24px]"
+            />
+          </div>
           <el-tag effect="dark" v-if="description">
             {{ description }}
           </el-tag>
@@ -61,6 +68,9 @@ const props = defineProps({
   itemLocked: {
     type: Boolean,
     default: false,
+  },
+  leftIcons: {
+    type: Array,
   },
 });
 
