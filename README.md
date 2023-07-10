@@ -64,3 +64,4 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 
 # TFT Mobalytics
 [TFT Mobalytics builds](https://mobalytics.gg/blog/best-tft-comps/)
+[TFT Tactics](https://tftactics.gg/tierlist/team-comps)
