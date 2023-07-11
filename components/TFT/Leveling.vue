@@ -6,7 +6,7 @@
       :show-more="levelingGuide.showMore"
       :key="levelingGuide.id"
     >
-      <el-timeline class="timeline">
+      <el-timeline class="timeline p-2">
         <el-timeline-item
           v-for="level in levelingGuide.levels"
           :key="level.id"
@@ -78,6 +78,7 @@
 <script setup lang="ts">
 /** Types **/
 interface LevelingGuide {
+  id: number;
   title: string;
   showMore: boolean;
   levels: Level[];

@@ -1,10 +1,14 @@
 <template>
   <div class="flex justify-center w-full bg-zinc-900 min-h-screen">
     <el-tabs v-model="activeName" class="w-full flex flex-col bg-zinc-900">
-      <el-tab-pane label="Builds" name="builds" class="max-w-[320px] m-auto">
+      <el-tab-pane label="Builds" name="builds" class="max-w-[340px] m-auto">
         <TFTBuilds :data="buildsGuidesDB" />
       </el-tab-pane>
-      <el-tab-pane label="Leveling" name="leveling" class="max-w-[320px] m-auto">
+      <el-tab-pane
+        label="Leveling"
+        name="leveling"
+        class="max-w-[340px] m-auto"
+      >
         <TFTLeveling :data="levelingGuidesDB" />
       </el-tab-pane>
     </el-tabs>

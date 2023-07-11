@@ -6,40 +6,44 @@
     :key="buildsGuide.id"
     :id="buildsGuide.id"
     :itemLocked="buildsGuide.locked"
+    itemCanBeLocked
     @lockItem="lockItem"
   >
-    <div class="flex flex-col gap-2">
-      <img :src="`builds/${buildsGuide.image}`" class="w-full h-auto" />
-      <h1 class="text-xl">Carries</h1>
-      <div
-        v-for="carry in buildsGuide.carries"
-        :key="carry.id"
-        class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
-      >
-        <img
-          :src="`champions/set9/${carry.name}.png`"
-          class="w-[50px] h-[50px]"
-        />
-        <div v-for="item in carry.items" :key="item">
-          <div v-for="items in itemsDB">
-            <div v-if="items.name === item" class="flex">
-              <img
-                :src="`items/${items.name}.png`"
-                class="w-[50px] h-[50px] opacity-25"
-              />
-              <div class="flex flex-col">
+    <div class="flex flex-col">
+      <img
+        :src="`builds/${buildsGuide.image}`"
+        class="w-full h-auto border-b border-borderLight"
+      />
+      <div class="p-2 flex flex-col gap-2">
+        <div
+          v-for="carry in buildsGuide.carries"
+          :key="carry.id"
+          class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
+        >
+          <img
+            :src="`champions/set9/${carry.name}.png`"
+            class="w-[50px] h-[50px]"
+          />
+          <div v-for="item in carry.items" :key="item">
+            <div v-for="items in itemsDB">
+              <div v-if="items.name === item" class="flex">
                 <img
-                  v-for="component in items.components"
-                  :src="`components/${component.name}.png`"
-                  class="w-[25px] h-[25px]"
+                  :src="`items/${items.name}.png`"
+                  class="w-[50px] h-[50px] opacity-25"
                 />
+                <div class="flex flex-col">
+                  <img
+                    v-for="component in items.components"
+                    :src="`components/${component.name}.png`"
+                    class="w-[25px] h-[25px]"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <p class="text-sm">{{ getDescription(buildsGuide.id) }}</p>
       </div>
-      <h1 class="text-xl">{{ buildsGuide.strategy.title }}</h1>
-      <p>{{ buildsGuide.strategy.description }}</p>
     </div>
   </TFTDropdown>
 </template>
@@ -47,7 +51,6 @@
 <script setup lang="ts">
 /** Imports **/
 import itemsDB from "@/data/items.json";
-import componentsDB from "@/data/components.json";
 
 /** Types **/
 interface Carries {
@@ -63,10 +66,7 @@ interface BuildsGuide {
   image: string;
   locked: boolean;
   carries: Carries[];
-  strategy: {
-    title: string;
-    description: string;
-  };
+  description: string;
 }
 
 /** Props **/
@@ -98,6 +98,21 @@ const lockItem = (item: number, itemLocked: boolean) => {
           locked: true,
         };
       });
+  }
+};
+const getDescription = (id: number) => {
+  const description = props.data?.find(
+    (buildGuide: BuildsGuide) => buildGuide.id === id
+  )?.description;
+  switch (description) {
+    case "fast-8":
+      return "The goal is to reach level 8 early in Stage 4 to find 4 and 5 cost units before your opponents. You generally need long win or losestreaks to have enough gold for it.";
+    case "slow-roll-7":
+      return "3-star units at level 7 by rolling your excess gold every round.";
+    case "hyper-roll":
+      return "Save up and then 3-star units at stage 3-1 by rolling all your gold.";
+    case "standard":
+      return "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 6 by 3-2, Level 7 by 4-1, and Level 8 by 5-1.";
   }
 };
 </script>

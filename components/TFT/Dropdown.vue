@@ -28,6 +28,7 @@
         </strong>
         <div class="flex gap-1 items-center">
           <Icon
+            v-if="itemCanBeLocked"
             size="2rem"
             :name="`uil:${itemLocked ? 'unlock' : 'lock'}`"
             class="bg-zinc-900 rounded-full p-2"
@@ -41,7 +42,7 @@
       </div>
     </template>
     <template #default>
-      <div v-if="showMore" class="p-2 w-full">
+      <div v-if="showMore" class="w-full">
         <slot />
       </div>
     </template>
@@ -64,6 +65,10 @@ const props = defineProps({
   },
   id: {
     type: Number,
+  },
+  itemCanBeLocked: {
+    type: Boolean,
+    default: false,
   },
   itemLocked: {
     type: Boolean,
