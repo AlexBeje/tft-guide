@@ -14,8 +14,10 @@
         :src="`builds/${buildsGuide.image}`"
         class="w-full h-auto border-b border-borderLight"
         mgShape="square"
+        :mgTouchOffsetX="0"
+        :mgTouchOffsetY="0"
       />
-      <div class="p-2 flex flex-col gap-2">
+      <div class="p-2 flex flex-col gap-2 select-none">
         <div
           v-for="carry in buildsGuide.carries"
           :key="carry.id"
@@ -52,8 +54,8 @@
 <script setup lang="ts">
 /** Imports **/
 import itemsDB from "@/data/items.json";
-import VueMagnifier from '@websitebeaver/vue-magnifier'
-import '@websitebeaver/vue-magnifier/styles.css'
+import VueMagnifier from "@websitebeaver/vue-magnifier";
+import "@websitebeaver/vue-magnifier/styles.css";
 
 /** Types **/
 interface Carries {
