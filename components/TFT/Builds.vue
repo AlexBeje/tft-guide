@@ -15,7 +15,7 @@
         class="w-full h-auto border-b border-borderLight"
         mgShape="square"
         :mgTouchOffsetX="0"
-        :mgTouchOffsetY="0"
+        :mgTouchOffsetY="-100"
       />
       <div class="p-2 flex flex-col gap-2 select-none">
         <div
