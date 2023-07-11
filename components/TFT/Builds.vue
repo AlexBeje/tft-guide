@@ -10,9 +10,10 @@
     @lockItem="lockItem"
   >
     <div class="flex flex-col">
-      <img
+      <VueMagnifier
         :src="`builds/${buildsGuide.image}`"
         class="w-full h-auto border-b border-borderLight"
+        mgShape="square"
       />
       <div class="p-2 flex flex-col gap-2">
         <div
@@ -51,6 +52,8 @@
 <script setup lang="ts">
 /** Imports **/
 import itemsDB from "@/data/items.json";
+import VueMagnifier from '@websitebeaver/vue-magnifier'
+import '@websitebeaver/vue-magnifier/styles.css'
 
 /** Types **/
 interface Carries {
