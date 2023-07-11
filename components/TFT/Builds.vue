@@ -18,9 +18,10 @@
         :mgTouchOffsetY="200"
         :mgWidth="200"
         :mgHeight="200"
-        :mgShowOverflow="false"
         mgCornerBgColor="#18181B"
         mgBorderColor="#3D3E3F"
+        :zoomFactor="1.25"
+        :mgBorderWidth="1"
       />
       <div class="p-2 flex flex-col gap-2 select-none">
         <div
