@@ -1,8 +1,19 @@
 <template>
   <div class="flex justify-center w-full bg-zinc-900">
     <el-tabs v-model="activeName" class="w-full flex flex-col bg-zinc-900">
-      <el-tab-pane label="Builds" name="builds" class="max-w-[380px] m-auto mt-12">
+      <el-tab-pane
+        label="Builds"
+        name="builds"
+        class="max-w-[380px] m-auto mt-12"
+      >
         <TFTBuilds :data="buildsGuidesDB" />
+      </el-tab-pane>
+      <el-tab-pane
+        label="Champions"
+        name="champions"
+        class="max-w-[380px] m-auto mt-12"
+      >
+        <TFTChampions :data="championsCategoriesDB" />
       </el-tab-pane>
       <el-tab-pane
         label="Leveling"
@@ -18,6 +29,7 @@
 <script setup lang="ts">
 /** Imports **/
 import levelingGuidesDB from "@/data/levelingGuides.json";
+import championsCategoriesDB from "@/data/champions.json";
 import buildsGuidesDB from "@/data/builds.json";
 
 /** Vatriables **/
