@@ -19,8 +19,8 @@
         :mgWidth="300"
         :mgHeight="300"
         mgCornerBgColor="#18181B"
-        :zoomFactor="1"
-        :mgBorderWidth="1"
+        :zoomFactor="0.9"
+        :mgBorderWidth="0"
       />
       <div class="p-2 flex flex-col gap-2 select-none">
         <div
