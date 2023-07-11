@@ -29,20 +29,20 @@
         >
           <img
             :src="`champions/set9/${carry.name}.png`"
-            class="w-[50px] h-[50px]"
+            class="w-[62px] h-[62px]"
           />
           <div v-for="item in carry.items" :key="item">
             <div v-for="items in itemsDB">
               <div v-if="items.name === item" class="flex">
                 <img
                   :src="`items/${items.name}.png`"
-                  class="w-[50px] h-[50px] opacity-25"
+                  class="w-[62px] h-[62px] opacity-25"
                 />
                 <div class="flex flex-col">
                   <img
                     v-for="component in items.components"
                     :src="`components/${component.name}.png`"
-                    class="w-[25px] h-[25px]"
+                    class="w-[31px] h-[31px]"
                   />
                 </div>
               </div>
