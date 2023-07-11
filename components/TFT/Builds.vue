@@ -13,7 +13,6 @@
       <VueMagnifier
         :src="`builds/${buildsGuide.image}`"
         class="w-full h-auto border-b border-borderLight"
-        mgShape="square"
         :mgTouchOffsetX="0"
         :mgTouchOffsetY="200"
         :mgWidth="300"
