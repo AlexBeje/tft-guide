@@ -18,7 +18,7 @@
         :mgWidth="300"
         :mgHeight="300"
         mgCornerBgColor="#18181B"
-        :zoomFactor="0.70"
+        :zoomFactor="0.7"
         :mgBorderWidth="1"
       />
       <div class="p-2 flex flex-col gap-2 select-none">
@@ -99,6 +99,9 @@ const lockItem = (item: number, itemLocked: boolean) => {
   if (itemLocked) {
     lockedBuildGuide.value = props.data;
   } else {
+    const body = document.querySelector("body");
+    const { x } = useScroll(body);
+    x.value = 0;
     lockedBuildGuide.value = props.data
       .filter((buildGuide: BuildsGuide) => buildGuide.id === item)
       .map((buildGuide: BuildsGuide) => {
