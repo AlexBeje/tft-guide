@@ -10,3 +10,9 @@ definePageMeta({
 });
 
 </script>
+
+<style lang="scss">
+body {
+  @apply bg-zinc-900;
+}
+</style>

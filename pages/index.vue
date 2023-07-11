@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center w-full bg-zinc-900 min-h-screen">
+  <div class="flex justify-center w-full bg-zinc-900">
     <el-tabs v-model="activeName" class="w-full flex flex-col bg-zinc-900">
       <el-tab-pane label="Builds" name="builds" class="max-w-[380px] m-auto mt-12">
         <TFTBuilds :data="buildsGuidesDB" />
