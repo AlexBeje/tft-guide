@@ -1,13 +1,13 @@
 <template>
   <div class="flex justify-center w-full bg-zinc-900 min-h-screen">
     <el-tabs v-model="activeName" class="w-full flex flex-col bg-zinc-900">
-      <el-tab-pane label="Builds" name="builds" class="max-w-[340px] m-auto">
+      <el-tab-pane label="Builds" name="builds" class="max-w-[380px] m-auto">
         <TFTBuilds :data="buildsGuidesDB" />
       </el-tab-pane>
       <el-tab-pane
         label="Leveling"
         name="leveling"
-        class="max-w-[340px] m-auto"
+        class="max-w-[380px] m-auto"
       >
         <TFTLeveling :data="levelingGuidesDB" />
       </el-tab-pane>
@@ -26,9 +26,12 @@ const activeName = ref("builds");
 
 <style lang="scss" scoped>
 :deep(.el-tabs__item):nth-child(2) {
-  @apply ml-4;
+  @apply ml-2;
   &:after {
-    @apply ml-4;
+    @apply ml-2;
   }
+}
+:deep(.el-tabs__header) {
+  @apply mb-0;
 }
 </style>
