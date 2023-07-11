@@ -15,8 +15,12 @@
         class="w-full h-auto border-b border-borderLight"
         mgShape="square"
         :mgTouchOffsetX="0"
-        :mgTouchOffsetY="150"
-        :mgWidth="250"
+        :mgTouchOffsetY="200"
+        :mgWidth="200"
+        :mgHeight="200"
+        :mgShowOverflow="false"
+        mgCornerBgColor="#18181B"
+        mgBorderColor="#3D3E3F"
       />
       <div class="p-2 flex flex-col gap-2 select-none">
         <div
