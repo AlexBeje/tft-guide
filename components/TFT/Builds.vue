@@ -15,10 +15,10 @@
         class="w-full h-auto border-b border-borderLight"
         :mgTouchOffsetX="0"
         :mgTouchOffsetY="0"
-        :mgWidth="400"
-        :mgHeight="400"
+        :mgWidth="300"
+        :mgHeight="300"
         mgCornerBgColor="#18181B"
-        :zoomFactor="0.50"
+        :zoomFactor="0.60"
         :mgBorderWidth="1"
       />
       <div class="p-2 flex flex-col gap-2 select-none">
