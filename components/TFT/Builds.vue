@@ -101,7 +101,7 @@ const lockItem = (item: number, itemLocked: boolean) => {
   } else {
     const body = document.querySelector("body");
     const { x } = useScroll(body);
-    x.value = 0;
+    x.value = 16;
     lockedBuildGuide.value = props.data
       .filter((buildGuide: BuildsGuide) => buildGuide.id === item)
       .map((buildGuide: BuildsGuide) => {
