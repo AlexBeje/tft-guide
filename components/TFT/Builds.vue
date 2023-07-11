@@ -16,10 +16,10 @@
         mgShape="square"
         :mgTouchOffsetX="0"
         :mgTouchOffsetY="200"
-        :mgWidth="400"
-        :mgHeight="400"
+        :mgWidth="300"
+        :mgHeight="300"
         mgCornerBgColor="#18181B"
-        :zoomFactor="1.25"
+        :zoomFactor="1.15"
         :mgBorderWidth="1"
       />
       <div class="p-2 flex flex-col gap-2 select-none">
