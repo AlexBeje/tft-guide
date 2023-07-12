@@ -15,10 +15,16 @@
       >
         <TFTBuilds :data="buildsGuidesDB" />
       </el-tab-pane>
-
+      <el-tab-pane
+        label="Items"
+        name="items"
+        class="max-w-[380px] m-auto mt-12"
+      >
+        <TFTItems />
+      </el-tab-pane>
       <el-tab-pane
         label="Leveling"
-        name="leveling"
+        name="levels"
         class="max-w-[380px] m-auto mt-12"
       >
         <TFTLeveling :data="levelingGuidesDB" />
