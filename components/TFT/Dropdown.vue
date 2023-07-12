@@ -13,18 +13,20 @@
         }`"
         @click="toggleShowMore()"
       >
-        <strong class="flex gap-2 items-center">
-          {{ title }}
-          <div v-if="leftIcons?.length" class="flex gap-1">
-            <img
-              v-for="leftIcon in leftIcons"
-              :src="`items/${leftIcon}.png`"
-              class="w-[24px] h-[24px]"
-            />
+        <strong class="flex gap-2 items-center w-full">
+          <div class="flex gap-1 w-full">
+            <div v-for="leftIcon in leftIcons">
+              <div class="w-[24px] h-[24px]" v-if="!leftIcon" />
+              <img
+                :src="`classes/${leftIcon}.png`"
+                class="w-[24px] h-[24px]"
+                v-else
+              />
+            </div>
+            <span :class="`${leftIcons?.length ? 'm-auto' : 'm-0'}`">
+              {{ title }}
+            </span>
           </div>
-          <el-tag effect="dark" v-if="description">
-            {{ description }}
-          </el-tag>
         </strong>
         <div class="flex gap-1 items-center">
           <Icon
@@ -58,10 +60,6 @@ const props = defineProps({
   showMore: {
     type: Boolean,
     default: false,
-  },
-  description: {
-    type: String,
-    default: "",
   },
   id: {
     type: Number,

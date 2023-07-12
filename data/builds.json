@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "icons": ["IoniaEmblem", "ChallengerEmblem"],
-    "team": "Ionians",
+    "icons": ["ionia", "challenger"],
+    "team": "Ioniana / Challenger",
     "image": "1.ionian-challengers.png",
     "locked": false,
     "carries": [
@@ -21,8 +21,8 @@
   },
   {
     "id": 2,
-    "icons": ["RogueEmblem", "SlayerEmblem"],
-    "team": "Rogues",
+    "icons": ["rogue", "slayer"],
+    "team": "Rogues / Slayers",
     "image": "2.rogue-slayers.png",
     "locked": false,
     "carries": [
@@ -41,7 +41,7 @@
   },
   {
     "id": 3,
-    "icons": ["StrategistEmblem"],
+    "icons": ["strategist", ""],
     "team": "Strategists",
     "image": "3.strategists.png",
     "locked": false,
@@ -66,7 +66,7 @@
   },
   {
     "id": 4,
-    "icons": ["VoidEmblem"],
+    "icons": ["void", ""],
     "team": "Voids",
     "image": "4.voids.png",
     "locked": false,
@@ -91,8 +91,8 @@
   },
   {
     "id": 5,
-    "icons": ["NoxusEmblem", "ShurimaEmblem"],
-    "team": "Noxus",
+    "icons": ["noxus", "shurima"],
+    "team": "Noxus / Shurima",
     "image": "5.noxus-shurima.png",
     "locked": false,
     "carries": [
@@ -111,8 +111,8 @@
   },
   {
     "id": 6,
-    "icons": ["DemaciaEmblem", "JuggernautEmblem"],
-    "team": "Demacia",
+    "icons": ["demacia", "juggernaut"],
+    "team": "Demacia / Juggernauts",
     "image": "6.demacia-juggernauts.png",
     "locked": false,
     "carries": [
@@ -131,8 +131,8 @@
   },
   {
     "id": 7,
-    "icons": ["FreljordEmblem", "DeadeyeEmblem"],
-    "team": "Frejlord",
+    "icons": ["freljord", "deadeye"],
+    "team": "Frejlord / Deadeyes",
     "image": "7.freljord-deadeyes.png",
     "locked": false,
     "carries": [
@@ -151,8 +151,8 @@
   },
   {
     "id": 8,
-    "icons": ["YordleEmblem", "GunnerEmblem"],
-    "team": "Yordles",
+    "icons": ["yordle", "gunner"],
+    "team": "Yordles / Gunners",
     "image": "8.yordle-gunners.png",
     "locked": false,
     "carries": [
@@ -171,8 +171,8 @@
   },
   {
     "id": 9,
-    "icons": ["ZaunEmblem", "GunnerEmblem"],
-    "team": "Zaun",
+    "icons": ["zaun", "gunner"],
+    "team": "Zaun / Gunners",
     "image": "9.zaun-gunners.png",
     "locked": false,
     "carries": [
@@ -196,7 +196,7 @@
   },
   {
     "id": 10,
-    "icons": ["ChallengerEmblem"],
+    "icons": ["challenger", ""],
     "team": "Challengers",
     "image": "10.challengers.png",
     "locked": false,

@@ -1,13 +1,6 @@
 <template>
-  <div class="flex justify-center w-full bg-zinc-900">
+  <div class="flex justify-center w-full bg-zinc-900 select-none">
     <el-tabs v-model="activeName" class="w-full flex flex-col bg-zinc-900">
-      <el-tab-pane
-        label="Builds"
-        name="builds"
-        class="max-w-[380px] m-auto mt-12"
-      >
-        <TFTBuilds :data="buildsGuidesDB" />
-      </el-tab-pane>
       <el-tab-pane
         label="Champions"
         name="champions"
@@ -15,6 +8,14 @@
       >
         <TFTChampions :data="championsCategoriesDB" />
       </el-tab-pane>
+      <el-tab-pane
+        label="Builds"
+        name="builds"
+        class="max-w-[380px] m-auto mt-12"
+      >
+        <TFTBuilds :data="buildsGuidesDB" />
+      </el-tab-pane>
+
       <el-tab-pane
         label="Leveling"
         name="leveling"
@@ -33,7 +34,7 @@ import championsCategoriesDB from "@/data/champions.json";
 import buildsGuidesDB from "@/data/builds.json";
 
 /** Vatriables **/
-const activeName = ref("builds");
+const activeName = ref("champions");
 </script>
 
 <style lang="scss" scoped>

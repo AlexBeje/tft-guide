@@ -1,386 +1,477 @@
 [
   {
     "id": 1,
-    "name": "1 Cost",
-    "champions": [
-      {
-        "id": 1,
-        "name": "Cassiopeia",
-        "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"],
-        "tier": 4
-      },
-      {
-        "id": 2,
-        "name": "Chogath",
-        "items": ["DragonsClaw", "IonicSpark", "SunfireCape"],
-        "tier": 3
-      },
-      {
-        "id": 3,
-        "name": "Irelia",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 4
-      },
-      {
-        "id": 4,
-        "name": "Jhin",
-        "items": ["GuinsoosRageblade", "LastWhisper", "InfinityEdge"],
-        "tier": 4
-      },
-      {
-        "id": 5,
-        "name": "Kayle",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "JeweledGauntlet"],
-        "tier": 5
-      },
-      {
-        "id": 6,
-        "name": "Malzahar",
-        "items": ["BlueBuff", "GiantSlayer", "Morellonomicon"],
-        "tier": 4
-      },
-      {
-        "id": 7,
-        "name": "Maokai",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 3
-      },
-      {
-        "id": 8,
-        "name": "Orianna",
-        "items": ["ArchangelsStaff", "RabadonsDeathcap", "SpearOfShojin"],
-        "tier": 5
-      },
-      {
-        "id": 9,
-        "name": "Poppy",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 4
-      },
-      {
-        "id": 10,
-        "name": "Renekton",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 4
-      },
-      {
-        "id": 11,
-        "name": "Samira",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "InfinityEdge"],
-        "tier": 4
-      },
-      {
-        "id": 12,
-        "name": "Tristana",
-        "items": ["GiantSlayer", "HextechGunblade", "LastWhisper"],
-        "tier": 3
-      },
-      {
-        "id": 13,
-        "name": "Viego",
-        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
-        "tier": 3
-      }
-    ]
+    "name": "Cassiopeia",
+    "cost": 1,
+    "class": ["noxus", "shurima", "invoker"],
+    "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"],
+    "tier": 4
   },
   {
     "id": 2,
-    "name": "2 Cost",
-    "champions": [
-      {
-        "id": 1,
-        "name": "Ashe",
-        "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
-        "tier": 4
-      },
-      {
-        "id": 2,
-        "name": "Galio",
-        "items": ["DragonsClaw", "GargoyleStoneplate", "IonicSpark"],
-        "tier": 3
-      },
-      {
-        "id": 3,
-        "name": "Jinx",
-        "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
-        "tier": 3
-      },
-      {
-        "id": 4,
-        "name": "Kassadin",
-        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
-        "tier": 3
-      },
-      {
-        "id": 5,
-        "name": "Kled",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
-        "tier": 4
-      },
-      {
-        "id": 6,
-        "name": "Sett",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 4
-      },
-      {
-        "id": 7,
-        "name": "Soraka",
-        "items": ["ArchangelsStaff", "RabadonsDeathcap", "SpearOfShojin"],
-        "tier": 4
-      },
-      {
-        "id": 8,
-        "name": "Swain",
-        "items": ["IonicSpark", "SunfireCape", "WarmogsArmor"],
-        "tier": 3
-      },
-      {
-        "id": 9,
-        "name": "Taliyah",
-        "items": ["GiantSlayer", "JeweledGauntlet", "RabadonsDeathcap"],
-        "tier": 5
-      },
-      {
-        "id": 10,
-        "name": "Teemo",
-        "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"],
-        "tier": 4
-      },
-      {
-        "id": 11,
-        "name": "Vi",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 4
-      },
-      {
-        "id": 12,
-        "name": "Warwick",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 4
-      },
-      {
-        "id": 13,
-        "name": "Zed",
-        "items": ["HandOfJustice", "InfinityEdge", "TitansResolve"],
-        "tier": 3
-      }
-    ]
+    "name": "Chogath",
+    "cost": 1,
+    "class": ["void", "bruiser"],
+    "items": ["DragonsClaw", "IonicSpark", "SunfireCape"],
+    "tier": 3
   },
   {
     "id": 3,
-    "name": "3 Cost",
-    "champions": [
-      {
-        "id": 1,
-        "name": "Akshan",
-        "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
-        "tier": 4
-      },
-      {
-        "id": 2,
-        "name": "Darius",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
-        "tier": 2
-      },
-      {
-        "id": 3,
-        "name": "Ekko",
-        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
-        "tier": 3
-      },
-      {
-        "id": 4,
-        "name": "Garen",
-        "items": ["Bloodthirster", "GuinsoosRageblade", "TitansResolve"],
-        "tier": 2
-      },
-      {
-        "id": 5,
-        "name": "Jayce",
-        "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
-        "tier": 2
-      },
-      {
-        "id": 6,
-        "name": "Kalista",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "StatikkShiv"],
-        "tier": 3
-      },
-      {
-        "id": 7,
-        "name": "Karma",
-        "items": ["GiantSlayer", "HextechGunblade", "JeweledGauntlet"],
-        "tier": 2
-      },
-      {
-        "id": 8,
-        "name": "Katarina",
-        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
-        "tier": 2
-      },
-      {
-        "id": 9,
-        "name": "Lissandra",
-        "items": ["HextechGunblade", "JeweledGauntlet", "Morellonomicon"],
-        "tier": 3
-      },
-      {
-        "id": 10,
-        "name": "RekSai",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
-        "tier": 3
-      },
-      {
-        "id": 11,
-        "name": "Sona",
-        "items": ["ArchangelsStaff", "RabadonsDeathcap", "SpearOfShojin"],
-        "tier": 3
-      },
-      {
-        "id": 12,
-        "name": "Taric",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 2
-      },
-      {
-        "id": 13,
-        "name": "Velkoz",
-        "items": ["GiantSlayer", "JeweledGauntlet", "HextechGunblade"],
-        "tier": 4
-      }
-    ]
+    "name": "Irelia",
+    "cost": 1,
+    "class": ["ionia", "challenger"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 4
   },
   {
     "id": 4,
-    "name": "4 Cost",
-    "champions": [
-      {
-        "id": 1,
-        "name": "Aphelios",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "InfinityEdge"],
-        "tier": 2
-      },
-      {
-        "id": 2,
-        "name": "Azir",
-        "items": ["GuinsoosRageblade", "HextechGunblade", "StatikkShiv"],
-        "tier": 2
-      },
-      {
-        "id": 3,
-        "name": "Gwen",
-        "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"],
-        "tier": 3
-      },
-      {
-        "id": 4,
-        "name": "JarvanIV",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 2
-      },
-      {
-        "id": 5,
-        "name": "Kaisa",
-        "items": ["Guardbreaker", "JeweledGauntlet", "SpearOfShojin"],
-        "tier": 2
-      },
-      {
-        "id": 6,
-        "name": "Lux",
-        "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"],
-        "tier": 3
-      },
-      {
-        "id": 7,
-        "name": "Nasus",
-        "items": ["Bloodthirster", "TitansResolve", "WarmogsArmor"],
-        "tier": 3
-      },
-      {
-        "id": 8,
-        "name": "Sejuani",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 1
-      },
-      {
-        "id": 9,
-        "name": "Shen",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 1
-      },
-      {
-        "id": 10,
-        "name": "Urgot",
-        "items": ["Bloodthirster", "GiantSlayer", "TitansResolve"],
-        "tier": 2
-      },
-      {
-        "id": 11,
-        "name": "Yasuo",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
-        "tier": 2
-      },
-      {
-        "id": 12,
-        "name": "Zeri",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "LastWhisper"],
-        "tier": 1
-      }
-    ]
+    "name": "Jhin",
+    "cost": 1,
+    "class": ["ionia", "deadeye"],
+    "items": ["GuinsoosRageblade", "LastWhisper", "InfinityEdge"],
+    "tier": 4
   },
   {
     "id": 5,
-    "name": "5 Cost",
-    "champions": [
-      {
-        "id": 1,
-        "name": "Aatrox",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
-        "tier": 2
-      },
-      {
-        "id": 2,
-        "name": "Ahri",
-        "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"],
-        "tier": 2
-      },
-      {
-        "id": 3,
-        "name": "Belveth",
-        "items": ["Bloodthirster", "LastWhisper", "TitansResolve"],
-        "tier": 2
-      },
-      {
-        "id": 4,
-        "name": "Heimerdinger",
-        "items": ["GuinsoosRageblade", "SpearOfShojin", "StatikkShiv"],
-        "tier": 1
-      },
-      {
-        "id": 5,
-        "name": "KSante",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 1
-      },
-      {
-        "id": 6,
-        "name": "Ryze",
-        "items": ["ArchangelsStaff", "JeweledGauntlet", "SpearOfShojin"],
-        "tier": 2
-      },
-      {
-        "id": 7,
-        "name": "Senna",
-        "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
-        "tier": 2
-      },
-      {
-        "id": 8,
-        "name": "Sion",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
-        "tier": 2
-      }
-    ]
+    "name": "Kayle",
+    "cost": 1,
+    "class": ["demacia", "slayer"],
+    "items": ["GiantSlayer", "GuinsoosRageblade", "JeweledGauntlet"],
+    "tier": 5
+  },
+  {
+    "id": 6,
+    "name": "Malzahar",
+    "cost": 1,
+    "class": ["void", "sorcerer"],
+    "items": ["BlueBuff", "GiantSlayer", "Morellonomicon"],
+    "tier": 4
+  },
+  {
+    "id": 7,
+    "name": "Maokai",
+    "cost": 1,
+    "class": ["shadowisles", "bastion"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 3
+  },
+  {
+    "id": 8,
+    "name": "Orianna",
+    "cost": 1,
+    "class": ["piltover", "sorcerer"],
+    "items": ["ArchangelsStaff", "RabadonsDeathcap", "SpearOfShojin"],
+    "tier": 5
+  },
+  {
+    "id": 9,
+    "name": "Poppy",
+    "cost": 1,
+    "class": ["yordle", "demacia", "bastion"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 4
+  },
+  {
+    "id": 10,
+    "name": "Renekton",
+    "cost": 1,
+    "class": ["shurima", "bruiser"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 4
+  },
+  {
+    "id": 11,
+    "name": "Samira",
+    "cost": 1,
+    "class": ["noxus", "challenger"],
+    "items": ["GiantSlayer", "GuinsoosRageblade", "InfinityEdge"],
+    "tier": 4
+  },
+  {
+    "id": 12,
+    "name": "Tristana",
+    "cost": 1,
+    "class": ["yordle", "gunner"],
+    "items": ["GiantSlayer", "HextechGunblade", "LastWhisper"],
+    "tier": 3
+  },
+  {
+    "id": 13,
+    "name": "Viego",
+    "cost": 1,
+    "class": ["shadowisles", "rogue"],
+    "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
+    "tier": 3
+  },
+
+  {
+    "id": 1,
+    "name": "Ashe",
+    "cost": 2,
+    "class": ["freljord", "deadeye"],
+    "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
+    "tier": 4
+  },
+  {
+    "id": 2,
+    "name": "Galio",
+    "cost": 2,
+    "class": ["demacia", "invoker"],
+    "items": ["DragonsClaw", "GargoyleStoneplate", "IonicSpark"],
+    "tier": 3
+  },
+  {
+    "id": 3,
+    "name": "Jinx",
+    "cost": 2,
+    "class": ["zaun", "gunner"],
+    "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
+    "tier": 3
+  },
+  {
+    "id": 4,
+    "name": "Kassadin",
+    "cost": 2,
+    "class": ["void", "bastion"],
+    "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
+    "tier": 3
+  },
+  {
+    "id": 5,
+    "name": "Kled",
+    "cost": 2,
+    "class": ["noxus", "yordle", "slayer"],
+    "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
+    "tier": 4
+  },
+  {
+    "id": 6,
+    "name": "Sett",
+    "cost": 2,
+    "class": ["ionia", "juggernaut"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 4
+  },
+  {
+    "id": 7,
+    "name": "Soraka",
+    "cost": 2,
+    "class": ["targon", "invoker"],
+    "items": ["ArchangelsStaff", "RabadonsDeathcap", "SpearOfShojin"],
+    "tier": 4
+  },
+  {
+    "id": 8,
+    "name": "Swain",
+    "cost": 2,
+    "class": ["noxus", "strategist", "sorcerer"],
+    "items": ["IonicSpark", "SunfireCape", "WarmogsArmor"],
+    "tier": 3
+  },
+  {
+    "id": 9,
+    "name": "Taliyah",
+    "cost": 2,
+    "class": ["shurima", "multicaster"],
+    "items": ["GiantSlayer", "JeweledGauntlet", "RabadonsDeathcap"],
+    "tier": 5
+  },
+  {
+    "id": 10,
+    "name": "Teemo",
+    "cost": 2,
+    "class": ["yordle", "strategist", "multicaster"],
+    "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"],
+    "tier": 4
+  },
+  {
+    "id": 11,
+    "name": "Vi",
+    "cost": 2,
+    "class": ["piltover", "bruiser"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 4
+  },
+  {
+    "id": 12,
+    "name": "Warwick",
+    "cost": 2,
+    "class": ["zaun", "juggernaut", "challenger"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 4
+  },
+  {
+    "id": 13,
+    "name": "Zed",
+    "cost": 2,
+    "class": ["ionia", "rogue", "slayer"],
+    "items": ["HandOfJustice", "InfinityEdge", "TitansResolve"],
+    "tier": 3
+  },
+
+  {
+    "id": 14,
+    "name": "Akshan",
+    "cost": 3,
+    "class": ["shurima", "deadeye"],
+    "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
+    "tier": 4
+  },
+  {
+    "id": 15,
+    "name": "Darius",
+    "cost": 3,
+    "class": ["noxus", "juggernaut"],
+    "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
+    "tier": 2
+  },
+  {
+    "id": 16,
+    "name": "Ekko",
+    "cost": 3,
+    "class": ["zaun", "piltover", "rogue"],
+    "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
+    "tier": 3
+  },
+  {
+    "id": 17,
+    "name": "Garen",
+    "cost": 3,
+    "class": ["demacia", "juggernaut"],
+    "items": ["Bloodthirster", "GuinsoosRageblade", "TitansResolve"],
+    "tier": 2
+  },
+  {
+    "id": 18,
+    "name": "Jayce",
+    "cost": 3,
+    "class": ["piltover", "gunner"],
+    "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
+    "tier": 2
+  },
+  {
+    "id": 19,
+    "name": "Kalista",
+    "cost": 3,
+    "class": ["shadowisles", "challenger"],
+    "items": ["GiantSlayer", "GuinsoosRageblade", "StatikkShiv"],
+    "tier": 3
+  },
+  {
+    "id": 20,
+    "name": "Karma",
+    "cost": 3,
+    "class": ["ionia", "invoker"],
+    "items": ["GiantSlayer", "HextechGunblade", "JeweledGauntlet"],
+    "tier": 2
+  },
+  {
+    "id": 21,
+    "name": "Katarina",
+    "cost": 3,
+    "class": ["noxus", "rogue"],
+    "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
+    "tier": 2
+  },
+  {
+    "id": 22,
+    "name": "Lissandra",
+    "cost": 3,
+    "class": ["freljord", "invoker"],
+    "items": ["HextechGunblade", "JeweledGauntlet", "Morellonomicon"],
+    "tier": 3
+  },
+  {
+    "id": 23,
+    "name": "RekSai",
+    "cost": 3,
+    "class": ["void", "bruiser"],
+    "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
+    "tier": 3
+  },
+  {
+    "id": 24,
+    "name": "Sona",
+    "cost": 3,
+    "class": ["demacia", "multicaster"],
+    "items": ["ArchangelsStaff", "RabadonsDeathcap", "SpearOfShojin"],
+    "tier": 3
+  },
+  {
+    "id": 25,
+    "name": "Taric",
+    "cost": 3,
+    "class": ["targon", "bastion", "sorcerer"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 2
+  },
+  {
+    "id": 26,
+    "name": "Velkoz",
+    "cost": 3,
+    "class": ["void", "multicaster", "sorcerer"],
+    "items": ["GiantSlayer", "JeweledGauntlet", "HextechGunblade"],
+    "tier": 4
+  },
+
+  {
+    "id": 27,
+    "name": "Aphelios",
+    "cost": 4,
+    "class": ["targon", "deadeye"],
+    "items": ["GiantSlayer", "GuinsoosRageblade", "InfinityEdge"],
+    "tier": 2
+  },
+  {
+    "id": 28,
+    "name": "Azir",
+    "cost": 4,
+    "class": ["shurima", "strategist"],
+    "items": ["GuinsoosRageblade", "HextechGunblade", "StatikkShiv"],
+    "tier": 2
+  },
+  {
+    "id": 29,
+    "name": "Gwen",
+    "cost": 4,
+    "class": ["shadowisles", "slayer"],
+    "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"],
+    "tier": 3
+  },
+  {
+    "id": 30,
+    "name": "JarvanIV",
+    "cost": 4,
+    "class": ["demacia", "strategist"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 2
+  },
+  {
+    "id": 31,
+    "name": "Kaisa",
+    "cost": 4,
+    "class": ["void", "challenger"],
+    "items": ["Guardbreaker", "JeweledGauntlet", "SpearOfShojin"],
+    "tier": 2
+  },
+  {
+    "id": 32,
+    "name": "Lux",
+    "cost": 4,
+    "class": ["demacia", "sorcerer"],
+    "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"],
+    "tier": 3
+  },
+  {
+    "id": 33,
+    "name": "Nasus",
+    "cost": 4,
+    "class": ["shurima", "juggernaut"],
+    "items": ["Bloodthirster", "TitansResolve", "WarmogsArmor"],
+    "tier": 3
+  },
+  {
+    "id": 34,
+    "name": "Sejuani",
+    "cost": 4,
+    "class": ["freljord", "bruiser"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 1
+  },
+  {
+    "id": 35,
+    "name": "Shen",
+    "cost": 4,
+    "class": ["ionia", "bastion", "invoker"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 1
+  },
+  {
+    "id": 36,
+    "name": "Urgot",
+    "cost": 4,
+    "class": ["zaun", "deadeye"],
+    "items": ["Bloodthirster", "GiantSlayer", "TitansResolve"],
+    "tier": 2
+  },
+  {
+    "id": 37,
+    "name": "Yasuo",
+    "cost": 4,
+    "class": ["ionia", "challenger"],
+    "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
+    "tier": 2
+  },
+  {
+    "id": 38,
+    "name": "Zeri",
+    "cost": 4,
+    "class": ["zaun", "gunner"],
+    "items": ["GiantSlayer", "GuinsoosRageblade", "LastWhisper"],
+    "tier": 1
+  },
+  {
+    "id": 39,
+    "name": "Aatrox",
+    "cost": 5,
+    "class": ["slayer", "juggernaut"],
+    "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"],
+    "tier": 2
+  },
+  {
+    "id": 40,
+    "name": "Ahri",
+    "cost": 5,
+    "class": ["ionia", "sorcerer"],
+    "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"],
+    "tier": 2
+  },
+  {
+    "id": 41,
+    "name": "Belveth",
+    "cost": 5,
+    "class": ["void"],
+    "items": ["Bloodthirster", "LastWhisper", "TitansResolve"],
+    "tier": 2
+  },
+  {
+    "id": 42,
+    "name": "Heimerdinger",
+    "cost": 5,
+    "class": ["piltover", "yordle"],
+    "items": ["GuinsoosRageblade", "SpearOfShojin", "StatikkShiv"],
+    "tier": 1
+  },
+  {
+    "id": 43,
+    "name": "KSante",
+    "cost": 5,
+    "class": ["shurima", "bastion"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 1
+  },
+  {
+    "id": 44,
+    "name": "Ryze",
+    "cost": 5,
+    "class": ["invoker"],
+    "items": ["ArchangelsStaff", "JeweledGauntlet", "SpearOfShojin"],
+    "tier": 2
+  },
+  {
+    "id": 45,
+    "name": "Senna",
+    "cost": 5,
+    "class": ["shadowisles", "gunner"],
+    "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
+    "tier": 2
+  },
+  {
+    "id": 46,
+    "name": "Sion",
+    "cost": 5,
+    "class": ["noxus", "bruiser"],
+    "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
+    "tier": 2
   }
 ]
