@@ -23,7 +23,7 @@
                 v-else
               />
             </div>
-            <span :class="`${leftIcons?.length ? 'm-auto' : 'm-0'}`">
+            <span :class="`text-sm ${leftIcons?.length ? 'm-auto' : 'm-0'}`">
               {{ title }}
             </span>
           </div>
