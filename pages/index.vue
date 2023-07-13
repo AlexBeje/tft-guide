@@ -22,20 +22,12 @@
       >
         <TFTItems />
       </el-tab-pane>
-      <el-tab-pane
-        label="Leveling"
-        name="levels"
-        class="max-w-[380px] m-auto mt-12"
-      >
-        <TFTLeveling :data="levelingGuidesDB" />
-      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
 
 <script setup lang="ts">
 /** Imports **/
-import levelingGuidesDB from "@/data/levelingGuides.json";
 import championsCategoriesDB from "@/data/champions.json";
 import buildsGuidesDB from "@/data/builds.json";
 
@@ -44,11 +36,8 @@ const activeName = ref("champions");
 </script>
 
 <style lang="scss" scoped>
-:deep(.el-tabs__item):nth-child(2) {
-  @apply ml-2;
-  &:after {
-    @apply ml-2;
-  }
+:deep(.el-tabs__nav-scroll) {
+  @apply flex justify-center;
 }
 :deep(.el-tabs__header) {
   @apply mb-0 fixed w-full z-10 bg-zinc-900;
