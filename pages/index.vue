@@ -13,7 +13,7 @@
         name="builds"
         class="max-w-[380px] m-auto mt-12"
       >
-        <TFTBuilds :data="buildsGuidesDB" />
+        <TFTBuilds :data="buildsDB" />
       </el-tab-pane>
       <el-tab-pane
         label="Items"
@@ -22,14 +22,22 @@
       >
         <TFTItems />
       </el-tab-pane>
+      <el-tab-pane
+        label="Level"
+        name="level"
+        class="max-w-[380px] m-auto mt-12"
+      >
+        <TFTLeveling :data="levelingDB"/>
+      </el-tab-pane>
     </el-tabs>
   </div>
 </template>
 
 <script setup lang="ts">
 /** Imports **/
+import levelingDB from "@/data/leveling.json";
 import championsCategoriesDB from "@/data/champions.json";
-import buildsGuidesDB from "@/data/builds.json";
+import buildsDB from "@/data/builds.json";
 
 /** Vatriables **/
 const activeName = ref("champions");

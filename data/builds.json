@@ -1,15 +1,127 @@
 [
   {
     "id": 1,
-    "icons": ["ionia", "challenger"],
-    "team": "Ioniana / Challenger",
-    "image": "1.ionian-challengers.png",
+    "team": "Freljord / Shurima",
+    "icons": ["freljord", "shurima"],
+    "image": "freljord-shurima.png",
+    "locked": false,
+    "tier": "S",
+    "carries": [
+      {
+        "id": 1,
+        "name": "Akshan",
+        "items": ["Deathblade", "InfinityEdge", "RunaansHurricane"]
+      },
+      {
+        "id": 2,
+        "name": "Sejuani",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+      }
+    ],
+    "description": "standard"
+  },
+  {
+    "id": 2,
+    "team": "Noxus / Shurima",
+    "icons": ["noxus", "shurima"],
+    "image": "noxus-shurima.png",
     "locked": false,
     "carries": [
       {
         "id": 1,
+        "name": "Katarina",
+        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Darius",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+      }
+    ],
+    "description": "slow-roll-7"
+  },
+  {
+    "id": 3,
+    "team": "Rogue / Slayer",
+    "icons": ["rogue", "slayer"],
+    "image": "rogue-slayer.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Zed",
+        "items": ["HandOfJustice", "InfinityEdge", "TitansResolve"]
+      },
+      {
+        "id": 2,
+        "name": "Katarina",
+        "items": ["HandOfJustice", "JeweledGauntlet", "SlayerEmblem"]
+      }
+    ],
+    "description": "slow-roll-7"
+  },
+  {
+    "id": 4,
+    "team": "Strategist",
+    "icons": ["strategist", ""],
+    "image": "strategist.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Azir",
+        "items": ["GuinsoosRageblade", "InfinityEdge", "StatikkShiv"]
+      },
+      {
+        "id": 2,
+        "name": "JarvanIV",
+        "items": ["Redemption", "SunfireCape"]
+      },
+      {
+        "id": 2,
+        "name": "Nasus",
+        "items": ["ThiefsGloves"]
+      }
+    ],
+    "description": "fast-8"
+  },
+  {
+    "id": 5,
+    "team": "Void",
+    "icons": ["void", ""],
+    "image": "void.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kaisa",
+        "items": ["GuardBreaker", "JeweledGauntlet", "SpearOfShojin"]
+      },
+      {
+        "id": 2,
+        "name": "Belveth",
+        "items": ["BloodTwister", "TitansResolve"]
+      },
+      {
+        "id": 2,
+        "name": "yasuo",
+        "items": ["VoidEmblem"]
+      }
+    ],
+    "description": "fast-8"
+  },
+  {
+    "id": 6,
+    "team": "Ionia / Challerger",
+    "icons": ["ionia", "challenger"],
+    "image": "ionia-challenger.png",
+    "locked": false,
+    "tier": "A",
+    "carries": [
+      {
+        "id": 1,
         "name": "Yasuo",
-        "items": ["Bloodthirster", "GiantSlayer", "TitansResolve"]
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       },
       {
         "id": 2,
@@ -20,100 +132,30 @@
     "description": "fast-8"
   },
   {
-    "id": 2,
-    "icons": ["rogue", "slayer"],
-    "team": "Rogues / Slayers",
-    "image": "2.rogue-slayers.png",
+    "id": 7,
+    "team": "Challenger",
+    "icons": ["challenger", ""],
+    "image": "challenger.png",
     "locked": false,
     "carries": [
       {
         "id": 1,
-        "name": "Katarina",
-        "items": ["HandOfJustice", "JeweledGauntlet", "SlayerEmblem"]
-      },
-      {
-        "id": 2,
-        "name": "Zed",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
-      }
-    ],
-    "description": "slow-roll-7"
-  },
-  {
-    "id": 3,
-    "icons": ["strategist", ""],
-    "team": "Strategists",
-    "image": "3.strategists.png",
-    "locked": false,
-    "carries": [
-      {
-        "id": 1,
-        "name": "Azir",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "JeweledGauntlet"]
-      },
-      {
-        "id": 2,
-        "name": "JarvanIV",
-        "items": ["Redemption", "SunfireCape"]
-      },
-      {
-        "id": 3,
-        "name": "Nasus",
-        "items": ["ThiefsGloves"]
-      }
-    ],
-    "description": "fast-8"
-  },
-  {
-    "id": 4,
-    "icons": ["void", ""],
-    "team": "Voids",
-    "image": "4.voids.png",
-    "locked": false,
-    "carries": [
-      {
-        "id": 1,
-        "name": "Kaisa",
-        "items": ["GuinsoosRageblade", "HextechGunblade", "JeweledGauntlet"]
-      },
-      {
-        "id": 2,
-        "name": "Belveth",
-        "items": ["Bloodthirster", "TitansResolve"]
-      },
-      {
-        "id": 3,
         "name": "Yasuo",
-        "items": ["VoidEmblem"]
-      }
-    ],
-    "description": "fast-8"
-  },
-  {
-    "id": 5,
-    "icons": ["noxus", "shurima"],
-    "team": "Noxus / Shurima",
-    "image": "5.noxus-shurima.png",
-    "locked": false,
-    "carries": [
-      {
-        "id": 1,
-        "name": "Darius",
         "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       },
       {
         "id": 2,
-        "name": "Katarina",
-        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"]
+        "name": "Kalista",
+        "items": ["GiantSlayer", "RunaansHurricane", "StatikkShiv"]
       }
     ],
-    "description": "slow-roll-7"
+    "description": "standard"
   },
   {
-    "id": 6,
+    "id": 8,
+    "team": "Demacia / Juggernaut",
     "icons": ["demacia", "juggernaut"],
-    "team": "Demacia / Juggernauts",
-    "image": "6.demacia-juggernauts.png",
+    "image": "demacia-juggernaut.png",
     "locked": false,
     "carries": [
       {
@@ -130,10 +172,30 @@
     "description": "slow-roll-7"
   },
   {
-    "id": 7,
+    "id": 9,
+    "team": "Demacia / Sorcerer",
+    "icons": ["demacia", "sorcerer"],
+    "image": "demacia-sorcerer.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Lux",
+        "items": ["BlueBuff", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Swain",
+        "items": ["IonicSpark", "SunfireCape", "WarmogsArmor"]
+      }
+    ],
+    "description": "standard"
+  },
+  {
+    "id": 10,
+    "team": "Freljord / DeadEye",
     "icons": ["freljord", "deadeye"],
-    "team": "Frejlord / Deadeyes",
-    "image": "7.freljord-deadeyes.png",
+    "image": "freljord-deadeye.png",
     "locked": false,
     "carries": [
       {
@@ -150,16 +212,56 @@
     "description": "fast-8"
   },
   {
-    "id": 8,
-    "icons": ["yordle", "gunner"],
-    "team": "Yordles / Gunners",
-    "image": "8.yordle-gunners.png",
+    "id": 11,
+    "team": "Ionia / Invoker",
+    "icons": ["ionia", "invoker"],
+    "image": "ionia-invoker.png",
     "locked": false,
     "carries": [
       {
         "id": 1,
-        "name": "Tristana",
-        "items": ["GiantSlayer", "HextechGunblade", "LastWhisper"]
+        "name": "Karma",
+        "items": ["GiantSlayer", "HextechGunblade", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Yasuo",
+        "items": ["IonicSpark", "Redemption", "WarmogsArmor"]
+      }
+    ],
+    "description": "slow-roll-7"
+  },
+  {
+    "id": 12,
+    "team": "Noxus / Rogues",
+    "icons": ["noxus", "rogue"],
+    "image": "noxus-rogue.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Katarina",
+        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Darius",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+      }
+    ],
+    "description": "slow-roll-7"
+  },
+  {
+    "id": 13,
+    "team": "Shadowisle / Rogue",
+    "icons": ["shadowisle", "rogue"],
+    "image": "shadowisle-rogue.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Viego",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       },
       {
         "id": 2,
@@ -168,50 +270,5 @@
       }
     ],
     "description": "hyper-roll"
-  },
-  {
-    "id": 9,
-    "icons": ["zaun", "gunner"],
-    "team": "Zaun / Gunners",
-    "image": "9.zaun-gunners.png",
-    "locked": false,
-    "carries": [
-      {
-        "id": 1,
-        "name": "Zeri",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "InfinityEdge"]
-      },
-      {
-        "id": 2,
-        "name": "Sejuani",
-        "items": ["Redemption", "SunfireCape"]
-      },
-      {
-        "id": 3,
-        "name": "Jayce",
-        "items": ["ZekesHerald"]
-      }
-    ],
-    "description": "fast-8"
-  },
-  {
-    "id": 10,
-    "icons": ["challenger", ""],
-    "team": "Challengers",
-    "image": "10.challengers.png",
-    "locked": false,
-    "carries": [
-      {
-        "id": 1,
-        "name": "Yasuo",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
-      },
-      {
-        "id": 2,
-        "name": "Kalista",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "StatikkShiv"]
-      }
-    ],
-    "description": "standard"
   }
 ]

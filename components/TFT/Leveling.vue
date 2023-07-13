@@ -27,7 +27,7 @@
                 <span class="flex gap-2">
                   Stage
                   <el-tag
-                    :type="level.checked ? 'info' : 'danger'"
+                    :type="level.checked ? 'info' : ''"
                     effect="dark"
                   >
                     <strong :class="`${level.checked && 'text-zinc-300'}`">

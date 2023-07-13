@@ -1,6 +1,6 @@
 <template>
   <div v-for="championClass in championClassesDB">
-    <div class="flex items-center mt-4 " v-if="championClass.index">
+    <div class="flex items-center" v-if="championClass.index">
       <p class="ml-2 font-bold">{{ championClass.index }}</p>
       <div class="w-full h-[2px] bg-[#E5EAF3] ml-2 mr-2" />
     </div>

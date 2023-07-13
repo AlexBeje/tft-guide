@@ -1,58 +1,63 @@
 <template>
-  <TFTDropdown
-    v-for="buildsGuide in buildsGuidesDB"
-    :title="buildsGuide.team"
-    :leftIcons="buildsGuide.icons"
-    :key="buildsGuide.id"
-    :id="buildsGuide.id"
-    :itemLocked="buildsGuide.locked"
-    itemCanBeLocked
-    @lockItem="lockItem"
-  >
-    <div class="flex flex-col">
-      <VueMagnifier
-        :src="`builds/${buildsGuide.image}`"
-        class="w-full h-auto border-b border-borderLight"
-        :mgTouchOffsetX="0"
-        :mgTouchOffsetY="0"
-        :mgWidth="300"
-        :mgHeight="300"
-        mgCornerBgColor="#18181B"
-        :zoomFactor="0.6"
-        :mgBorderWidth="1"
-      />
-      <div class="p-2 flex flex-col gap-2 select-none">
-        <div
-          v-for="carry in buildsGuide.carries"
-          :key="carry.id"
-          class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
-        >
-          <img
-            :src="`champions/set9/${carry.name}.png`"
-            class="w-[60px] h-[60px]"
-          />
-          <div v-for="item in carry.items" :key="item">
-            <div v-for="items in itemsDB">
-              <div v-if="items.name === item" class="flex">
-                <img
-                  :src="`items/${items.name}.png`"
-                  class="w-[60px] h-[60px] opacity-25"
-                />
-                <div class="flex flex-col">
+  <div v-for="buildsGuide in buildsGuidesDB">
+    <div class="flex items-center" v-if="buildsGuide.tier">
+      <p class="ml-2 font-bold">{{ buildsGuide.tier }}</p>
+      <div class="w-full h-[2px] bg-[#E5EAF3] ml-2 mr-2" />
+    </div>
+    <TFTDropdown
+      :title="buildsGuide.team"
+      :leftIcons="buildsGuide.icons"
+      :key="buildsGuide.id"
+      :id="buildsGuide.id"
+      :itemLocked="buildsGuide.locked"
+      itemCanBeLocked
+      @lockItem="lockItem"
+    >
+      <div class="flex flex-col">
+        <VueMagnifier
+          :src="`builds/${buildsGuide.image}`"
+          class="w-full h-auto border-b border-borderLight"
+          :mgTouchOffsetX="0"
+          :mgTouchOffsetY="0"
+          :mgWidth="300"
+          :mgHeight="300"
+          mgCornerBgColor="#18181B"
+          :zoomFactor="0.6"
+          :mgBorderWidth="1"
+        />
+        <div class="p-2 flex flex-col gap-2 select-none">
+          <div
+            v-for="carry in buildsGuide.carries"
+            :key="carry.id"
+            class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
+          >
+            <img
+              :src="`champions/set9/${carry.name}.png`"
+              class="w-[60px] h-[60px]"
+            />
+            <div v-for="item in carry.items" :key="item">
+              <div v-for="items in itemsDB">
+                <div v-if="items.name === item" class="flex">
                   <img
-                    v-for="component in items.components"
-                    :src="`components/${component.name}.png`"
-                    class="w-[30px] h-[30px]"
+                    :src="`items/${items.name}.png`"
+                    class="w-[60px] h-[60px] opacity-25"
                   />
+                  <div class="flex flex-col">
+                    <img
+                      v-for="component in items.components"
+                      :src="`components/${component.name}.png`"
+                      class="w-[30px] h-[30px]"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <p class="text-sm">{{ getDescription(buildsGuide.id) }}</p>
         </div>
-        <p class="text-sm">{{ getDescription(buildsGuide.id) }}</p>
       </div>
-    </div>
-  </TFTDropdown>
+    </TFTDropdown>
+  </div>
 </template>
 
 <script setup lang="ts">

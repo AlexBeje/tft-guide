@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Maokai",
     "cost": 1,
-    "class": ["shadowisles", "bastion"],
+    "class": ["shadowisle", "bastion"],
     "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
     "tier": 3
   },
@@ -99,7 +99,7 @@
     "id": 13,
     "name": "Viego",
     "cost": 1,
-    "class": ["shadowisles", "rogue"],
+    "class": ["shadowisle", "rogue"],
     "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"],
     "tier": 3
   },
@@ -253,7 +253,7 @@
     "id": 19,
     "name": "Kalista",
     "cost": 3,
-    "class": ["shadowisles", "challenger"],
+    "class": ["shadowisle", "challenger"],
     "items": ["GiantSlayer", "GuinsoosRageblade", "StatikkShiv"],
     "tier": 3
   },
@@ -334,7 +334,7 @@
     "id": 29,
     "name": "Gwen",
     "cost": 4,
-    "class": ["shadowisles", "slayer"],
+    "class": ["shadowisle", "slayer"],
     "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"],
     "tier": 3
   },
@@ -462,7 +462,7 @@
     "id": 45,
     "name": "Senna",
     "cost": 5,
-    "class": ["shadowisles", "gunner"],
+    "class": ["shadowisle", "gunner"],
     "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
     "tier": 2
   },
