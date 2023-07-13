@@ -48,7 +48,7 @@ const activeName = ref("builds");
   @apply flex justify-center;
 }
 :deep(.el-tabs__nav) {
-  @apply w-[380px] px-2;
+  @apply w-[380px] px-4;
 }
 :deep(.el-tabs__item) {
   @apply flex-1;
