@@ -14,7 +14,7 @@
   { "id": 13, "name": "piltover", "locked": false, "index": "P" },
   { "id": 14, "name": "rogue", "locked": false, "index": "R" },
   { "id": 15, "name": "shadowisle", "locked": false, "index": "S" },
-  { "id": 16, "name": "shurima", "locked": false },
+  { "id": 16, "name": "shuriman", "locked": false },
   { "id": 17, "name": "slayer", "locked": false },
   { "id": 18, "name": "sorcerer", "locked": false },
   { "id": 19, "name": "strategist", "locked": false },

@@ -32,7 +32,7 @@
             class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
           >
             <img
-              :src="`champions/set9/${carry.name}.png`"
+              :src="`champions/${carry.name}.png`"
               class="w-[60px] h-[60px]"
             />
             <div v-for="item in carry.items" :key="item">
@@ -121,6 +121,8 @@ const getDescription = (id: number) => {
   switch (description) {
     case "fast-8":
       return "The goal is to reach level 8 early in Stage 4 to find 4 and 5 cost units before your opponents. You generally need long win or losestreaks to have enough gold for it.";
+    case "slow-roll-6":
+      return "3-star units at level 6 by rolling your excess gold every round.";
     case "slow-roll-7":
       return "3-star units at level 7 by rolling your excess gold every round.";
     case "hyper-roll":

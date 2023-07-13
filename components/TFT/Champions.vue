@@ -19,7 +19,7 @@
           class="flex gap-[4px] mb-2 first:mt-2 ml-2"
         >
           <img
-            :src="`champions/set9/${champion.name}.png`"
+            :src="`champions/${champion.name}.png`"
             :class="`w-[60px] h-[60px] relative
           ${champion.cost === 2 && 'border-[2px] border-[#156831]'}
           ${champion.cost === 3 && 'border-[2px] border-[#12407c]'}

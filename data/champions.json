@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Cassiopeia",
     "cost": 1,
-    "class": ["noxus", "shurima", "invoker"],
+    "class": ["noxus", "shuriman", "invoker"],
     "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"],
     "tier": 4
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "name": "Renekton",
     "cost": 1,
-    "class": ["shurima", "bruiser"],
+    "class": ["shuriman", "bruiser"],
     "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
     "tier": 4
   },
@@ -172,7 +172,7 @@
     "id": 9,
     "name": "Taliyah",
     "cost": 2,
-    "class": ["shurima", "multicaster"],
+    "class": ["shuriman", "multicaster"],
     "items": ["GiantSlayer", "JeweledGauntlet", "RabadonsDeathcap"],
     "tier": 5
   },
@@ -213,7 +213,7 @@
     "id": 14,
     "name": "Akshan",
     "cost": 3,
-    "class": ["shurima", "deadeye"],
+    "class": ["shuriman", "deadeye"],
     "items": ["GiantSlayer", "InfinityEdge", "LastWhisper"],
     "tier": 4
   },
@@ -326,7 +326,7 @@
     "id": 28,
     "name": "Azir",
     "cost": 4,
-    "class": ["shurima", "strategist"],
+    "class": ["shuriman", "strategist"],
     "items": ["GuinsoosRageblade", "HextechGunblade", "StatikkShiv"],
     "tier": 2
   },
@@ -366,7 +366,7 @@
     "id": 33,
     "name": "Nasus",
     "cost": 4,
-    "class": ["shurima", "juggernaut"],
+    "class": ["shuriman", "juggernaut"],
     "items": ["Bloodthirster", "TitansResolve", "WarmogsArmor"],
     "tier": 3
   },
@@ -446,7 +446,7 @@
     "id": 43,
     "name": "KSante",
     "cost": 5,
-    "class": ["shurima", "bastion"],
+    "class": ["shuriman", "bastion"],
     "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
     "tier": 1
   },

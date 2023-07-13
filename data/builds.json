@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "team": "Freljord / Shurima",
-    "icons": ["freljord", "shurima"],
-    "image": "freljord-shurima.png",
+    "team": "Freljord / Shuriman",
+    "icons": ["freljord", "shuriman"],
+    "image": "freljord-shuriman.png",
     "locked": false,
     "tier": "S",
     "carries": [
@@ -22,9 +22,9 @@
   },
   {
     "id": 2,
-    "team": "Noxus / Shurima",
-    "icons": ["noxus", "shurima"],
-    "image": "noxus-shurima.png",
+    "team": "Noxus / Shuriman",
+    "icons": ["noxus", "shuriman"],
+    "image": "noxus-shuriman.png",
     "locked": false,
     "carries": [
       {
@@ -35,7 +35,7 @@
       {
         "id": 2,
         "name": "Darius",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       }
     ],
     "description": "slow-roll-7"
@@ -70,7 +70,7 @@
       {
         "id": 1,
         "name": "Azir",
-        "items": ["GuinsoosRageblade", "InfinityEdge", "StatikkShiv"]
+        "items": ["GuinsoosRageblade", "HextechGunblade", "StatikkShiv"]
       },
       {
         "id": 2,
@@ -78,7 +78,7 @@
         "items": ["Redemption", "SunfireCape"]
       },
       {
-        "id": 2,
+        "id": 3,
         "name": "Nasus",
         "items": ["ThiefsGloves"]
       }
@@ -100,10 +100,10 @@
       {
         "id": 2,
         "name": "Belveth",
-        "items": ["BloodTwister", "TitansResolve"]
+        "items": ["Bloodthirster", "TitansResolve"]
       },
       {
-        "id": 2,
+        "id": 3,
         "name": "yasuo",
         "items": ["VoidEmblem"]
       }
@@ -146,7 +146,7 @@
       {
         "id": 2,
         "name": "Kalista",
-        "items": ["GiantSlayer", "RunaansHurricane", "StatikkShiv"]
+        "items": ["GiantSlayer", "GuinsoosRageblade", "StatikkShiv"]
       }
     ],
     "description": "standard"
@@ -270,5 +270,150 @@
       }
     ],
     "description": "hyper-roll"
+  },
+  {
+    "id": 14,
+    "team": "Shadowisle / Slayer",
+    "icons": ["shadowisle", "slayer"],
+    "image": "shadowisle-slayer.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Gwen",
+        "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Aatrox",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+      }
+    ],
+    "description": "fast-8"
+  },
+  {
+    "id": 15,
+    "team": "Shuriman",
+    "icons": ["shuriman", ""],
+    "image": "shuriman.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Azir",
+        "items": ["GuinsoosRageblade", "HextechGunblade", "StatikkShiv"]
+      },
+      {
+        "id": 2,
+        "name": "Nasus",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+      }
+    ],
+    "description": "fast-8"
+  },
+  {
+    "id": 16,
+    "team": "Void / Bruisers",
+    "icons": ["void", "bruiser"],
+    "image": "void-bruiser.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kaisa",
+        "items": ["GuardBreaker", "JeweledGauntlet", "SpearOfShojin"]
+      },
+      {
+        "id": 2,
+        "name": "RekSai",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+      }
+    ],
+    "description": "standard"
+  },
+  {
+    "id": 17,
+    "team": "Yordle / Gunner",
+    "icons": ["yordle", "gunner"],
+    "image": "yordle-gunner.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Tristana",
+        "items": ["GiantSlayer", "HextechGunblade", "LastWhisper"]
+      },
+      {
+        "id": 2,
+        "name": "Maokai",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+      }
+    ],
+    "description": "hyper-roll"
+  },
+  {
+    "id": 18,
+    "team": "Yordle / Multicaster",
+    "icons": ["yordle", "multicaster"],
+    "image": "yordle-multicaster.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Teemo",
+        "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Galio",
+        "items": ["IonicSpark", "Redemption"]
+      }
+    ],
+    "description": "slow-roll-6"
+  },
+  {
+    "id": 19,
+    "team": "Yordle",
+    "icons": ["yordle", ""],
+    "image": "yordle.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Teemo",
+        "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Poppy",
+        "items": ["IonicSpark", "Redemption"]
+      }
+    ],
+    "description": "slow-roll-6"
+  },
+  {
+    "id": 20,
+    "team": "Zaun / Gunners",
+    "icons": ["zaun", "gunner"],
+    "image": "zaun-gunner.png",
+    "locked": false,
+    "carries": [
+      {
+        "id": 1,
+        "name": "Zeri",
+        "items": ["GiantSlayer", "HextechGunblade", "LastWhisper"]
+      },
+      {
+        "id": 2,
+        "name": "Sejuani",
+        "items": ["Redemption", "SunfireCape"]
+      },
+      {
+        "id": 3,
+        "name": "Jayce",
+        "items": ["ZekesHerald"]
+      }
+    ],
+    "description": "fast-8"
   }
 ]
