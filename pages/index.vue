@@ -23,11 +23,11 @@
         <TFTItems />
       </el-tab-pane>
       <el-tab-pane
-        label="Leveling"
-        name="leveling"
+        label="Level"
+        name="level"
         class="max-w-[380px] m-auto mt-12"
       >
-        <TFTLeveling :data="levelingDB" />
+        <TFTLevel :data="levelDB" />
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 /** Imports **/
-import levelingDB from "@/data/leveling.json";
+import levelDB from "@/data/level.json";
 import championsCategoriesDB from "@/data/champions.json";
 import buildsDB from "@/data/builds.json";
 

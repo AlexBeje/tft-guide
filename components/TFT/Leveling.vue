@@ -1,14 +1,14 @@
 <template>
   <div class="mb-24">
     <TFTDropdown
-      v-for="levelingGuide in levelingGuides"
-      :title="levelingGuide.title"
-      :show-more="levelingGuide.showMore"
-      :key="levelingGuide.id"
+      v-for="levelGuide in levelGuides"
+      :title="levelGuide.title"
+      :show-more="levelGuide.showMore"
+      :key="levelGuide.id"
     >
       <el-timeline class="timeline p-2">
         <el-timeline-item
-          v-for="level in levelingGuide.levels"
+          v-for="level in levelGuide.levels"
           :key="level.id"
           :timestamp="level.label"
           :color="level.checked ? '#909399' : '#414243'"
@@ -77,7 +77,7 @@
 
 <script setup lang="ts">
 /** Types **/
-interface LevelingGuide {
+interface LevelGuide {
   id: number;
   title: string;
   showMore: boolean;
@@ -95,14 +95,14 @@ interface Level {
 
 /** Props **/
 const props = defineProps<{
-  data: LevelingGuide[];
+  data: LevelGuide[];
 }>();
 
 /** Computed **/
-const levelingGuidesDB = computed(() => props.data);
+const levelGuidesDB = computed(() => props.data);
 
 /** Variables **/
-const levelingGuides = ref(levelingGuidesDB.value);
+const levelGuides = ref(levelGuidesDB.value);
 
 /** Refs **/
 const popoverButtonRef = ref();
@@ -110,45 +110,45 @@ const popoverButtonRef = ref();
 /** Methods **/
 
 const checkToggle = (id: number) => {
-  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
-    levelingGuide.levels = levelingGuide.levels.map((level) => {
+  levelGuides.value = levelGuides.value.map((levelGuide) => {
+    levelGuide.levels = levelGuide.levels.map((level) => {
       if (level.id === id) {
         level.checked = !level.checked;
       }
       return level;
     });
-    return levelingGuide;
+    return levelGuide;
   });
 };
 
 const resetChecks = () => {
-  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
-    levelingGuide.levels = levelingGuide.levels.map((level) => {
+  levelGuides.value = levelGuides.value.map((levelGuide) => {
+    levelGuide.levels = levelGuide.levels.map((level) => {
       level.checked = false;
       return level;
     });
-    return levelingGuide;
+    return levelGuide;
   });
 };
 
 const toggleExtraInfo = (id: number) => {
-  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
-    levelingGuide.levels = levelingGuide.levels.map((level) => {
+  levelGuides.value = levelGuides.value.map((levelGuide) => {
+    levelGuide.levels = levelGuide.levels.map((level) => {
       if (level.id !== id && level.extraInfoVisible) {
         level.extraInfoVisible = false;
       }
       return level;
     });
-    return levelingGuide;
+    return levelGuide;
   });
-  levelingGuides.value = levelingGuides.value.map((levelingGuide) => {
-    levelingGuide.levels = levelingGuide.levels.map((level) => {
+  levelGuides.value = levelGuides.value.map((levelGuide) => {
+    levelGuide.levels = levelGuide.levels.map((level) => {
       if (level.id === id) {
         level.extraInfoVisible = !level.extraInfoVisible;
       }
       return level;
     });
-    return levelingGuide;
+    return levelGuide;
   });
 };
 </script>
