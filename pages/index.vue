@@ -40,7 +40,7 @@ const activeName = ref("champions");
   @apply flex justify-center;
 }
 :deep(.el-tabs__nav) {
-  @apply w-[380px];
+  @apply w-[380px] px-2;
 }
 :deep(.el-tabs__item) {
   @apply flex-1;
