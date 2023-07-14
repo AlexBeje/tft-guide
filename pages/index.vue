@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center w-full bg-zinc-900 select-none">
+  <div class="flex justify-center w-full bg-zinc-900 select-none touch-manipulation">
     <el-tabs v-model="activeName" class="w-full flex flex-col bg-zinc-900">
       <el-tab-pane
         label="Builds"
