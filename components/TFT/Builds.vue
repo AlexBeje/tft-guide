@@ -67,6 +67,11 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="border-t-[1px] border-t-[#414243] p-2 flex flex-col gap-2">
+          <p class="text-xl font-black">
+            {{ getTitle(buildsGuide.id) }}
+          </p>
           <p class="text-sm">{{ getDescription(buildsGuide.id) }}</p>
         </div>
       </div>
@@ -93,6 +98,7 @@ interface BuildsGuide {
   team: string;
   image: string;
   locked: boolean;
+  tier: string;
   carries: Carries[];
   description: string;
 }
@@ -126,6 +132,23 @@ const lockItem = (item: number, itemLocked: boolean) => {
           locked: true,
         };
       });
+  }
+};
+const getTitle = (id: number) => {
+  const title = props.data?.find(
+    (buildGuide: BuildsGuide) => buildGuide.id === id
+  )?.description;
+  switch (title) {
+    case "standard":
+      return "Standard";
+    case "hyper-roll":
+      return "Hyper Roll";
+    case "slow-roll-6":
+      return "Slow Roll (6)";
+    case "slow-roll-7":
+      return "Slow Roll (7)";
+    case "fast-8":
+      return "Fast 8";
   }
 };
 const getDescription = (id: number) => {
