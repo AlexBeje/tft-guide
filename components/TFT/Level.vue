@@ -66,9 +66,9 @@
     </TFTDropdown>
     <div class="flex justify-center">
       <el-table :data="tableData" border style="width: 360px">
-        <el-table-column prop="level" label="Lvl" width="55">
+        <el-table-column prop="level" label="Lvl" width="52">
           <template #default="scope">
-            <span class="text-[#A2A6AD]">{{ scope.row.level }}</span>
+            <span class="text-[#A2A6AD] font-bold">{{ scope.row.level }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="oneCost" label="1*" width="62">
@@ -93,7 +93,7 @@
             >
           </template>
         </el-table-column>
-        <el-table-column prop="fourCost" label="4*" width="62">
+        <el-table-column prop="fourCost" label="4*" width="61">
           <template #default="scope">
             <span
               :class="
@@ -105,7 +105,7 @@
             >
           </template>
         </el-table-column>
-        <el-table-column prop="fiveCost" label="5*" width="62">
+        <el-table-column prop="fiveCost" label="5*" width="61">
           <template #default="scope">
             <span
               :class="
@@ -217,12 +217,20 @@ const tableData = [
     fiveCost: "16%",
   },
   {
-    level: 10,
-    oneCost: "5%",
-    twoCost: "10%",
-    threeCost: "20%",
-    fourCost: "40%",
-    fiveCost: "25%",
+    level: "",
+    oneCost: "",
+    twoCost: "",
+    threeCost: "",
+    fourCost: "",
+    fiveCost: "",
+  },
+  {
+    level: "Nº",
+    oneCost: "[29*] [9**]",
+    twoCost: "[22*] [7**]",
+    threeCost: "[18*] [6**]",
+    fourCost: "[12*] [4**]",
+    fiveCost: "[10*] [3**]",
   },
 ];
 
@@ -298,5 +306,9 @@ const toggleExtraInfo = (id: number) => {
   :deep(.el-timeline-item__wrapper) {
     @apply pl-6;
   }
+}
+
+:deep(.cell) {
+  @apply text-center min-h-[23px];
 }
 </style>
