@@ -28,7 +28,7 @@
           `"
           />
           <div
-            :class="`absolute w-[10px] h-[10px] mt-[44px] ml-[6px] rounded-full border-[2px] border-black
+            :class="`absolute w-[14px] h-[14px] mt-[40px] ml-[6px] rounded-full border-[2px] border-black
           ${champion.tier === 1 && 'bg-[#FF00FF]'}
           ${champion.tier === 2 && 'bg-[#E69138]'}
           ${champion.tier === 3 && 'bg-[#FFE599]'}

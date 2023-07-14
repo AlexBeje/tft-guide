@@ -217,6 +217,7 @@
     "icons": ["ionia", "invoker"],
     "image": "ionia-invoker.png",
     "locked": false,
+    "tier": "B",
     "carries": [
       {
         "id": 1,
@@ -317,6 +318,7 @@
     "icons": ["void", "bruiser"],
     "image": "void-bruiser.png",
     "locked": false,
+    "tier": "C",
     "carries": [
       {
         "id": 1,

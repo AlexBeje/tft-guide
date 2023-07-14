@@ -1,8 +1,22 @@
 <template>
   <div v-for="buildsGuide in buildsGuidesDB">
     <div class="flex items-center" v-if="buildsGuide.tier">
-      <p class="ml-2 font-bold">{{ buildsGuide.tier }}</p>
-      <div class="w-full h-[2px] bg-[#E5EAF3] ml-2 mr-2" />
+      <p
+        :class="`ml-2 font-bold
+          ${buildsGuide.tier === 'S' && 'text-[#FF00FF]'}
+          ${buildsGuide.tier === 'A' && 'text-[#E69138]'}
+          ${buildsGuide.tier === 'B' && 'text-[#FFE599]'}
+          ${buildsGuide.tier === 'C' && 'text-[#6D9EEB]'}`"
+      >
+        {{ buildsGuide.tier }}
+      </p>
+      <div
+        :class="`w-full h-[2px] ml-2 mr-2
+          ${buildsGuide.tier === 'S' && 'bg-[#FF00FF]'}
+          ${buildsGuide.tier === 'A' && 'bg-[#E69138]'}
+          ${buildsGuide.tier === 'B' && 'bg-[#FFE599]'}
+          ${buildsGuide.tier === 'C' && 'bg-[#6D9EEB]'}`"
+      />
     </div>
     <TFTDropdown
       :title="buildsGuide.team"
