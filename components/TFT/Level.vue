@@ -182,8 +182,8 @@ const tableData = [
   {
     level: 9,
     oneCost: "9%",
-    twoCost: "9%",
-    threeCost: "9%",
+    twoCost: "15%",
+    threeCost: "30%",
     fourCost: "30%",
     fiveCost: "16%",
   },
