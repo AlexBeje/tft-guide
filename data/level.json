@@ -1,41 +1,41 @@
 [
   {
     "id": 1,
-    "title": "Standard Level",
-    "showMore": true,
+    "title": "Standard",
+    "showMore": false,
     "levels": [
       {
         "id": 1,
         "label": "Level 4",
-        "stage": "2-1",
+        "stages": ["2-1", "2-3"],
         "checked": false
       },
       {
         "id": 2,
         "label": "Level 5",
-        "stage": "2-5",
+        "stages": ["2-5", "3-1"],
         "checked": false
       },
       {
         "id": 3,
-        "label": "Level 6",
-        "stage": "3-2",
+        "label": "Level 6 (30+ gold)",
+        "stages": ["3-2", "3-5"],
         "extraInfoVisible": false,
         "extraInfo": "Sometimes you roll on 3-2 if you have a lot of pairs, maybe 10-20g depending on your health",
         "checked": false
       },
       {
         "id": 4,
-        "label": "Level 7",
-        "stage": "4-1",
+        "label": "Level 7 (30+ gold)",
+        "stages": ["3-5", "4-1", "4-2"],
         "extraInfoVisible": false,
         "extraInfo": "Typically roll a little bit after reaching level 7 because you need to stabilize your board if you have pairs or if you are low hp",
         "checked": false
       },
       {
         "id": 5,
-        "label": "Level 8",
-        "stage": "5-1",
+        "label": "Level 8 (30+ gold)",
+        "stages": ["4-5", "5-1", "5-2"],
         "extraInfoVisible": false,
         "extraInfo": "Usually roll 30-50g on level 8 unless your board is already 2* or if you are 80hp+",
         "checked": false
@@ -43,9 +43,197 @@
       {
         "id": 6,
         "label": "Level 9",
-        "stage": "5-5",
+        "stages": ["5-2", "5-5", "6-1", "6-5"],
         "extraInfoVisible": false,
         "extraInfo": "Roll most of your gold when you hit level 9 unless you are doing something very specific",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Hyper Roll",
+    "showMore": false,
+    "levels": [
+      {
+        "id": 1,
+        "label": "Level 4",
+        "stages": ["2-3"],
+        "extraInfoVisible": false,
+        "extraInfo": "ROLL AT STAGE 3-1 to 30g. If you have 7 copies at this point, roll another 10. If you have 8 copies, then roll another 10 again.",
+        "checked": false
+      },
+      {
+        "id": 2,
+        "label": "Level 5 (50+ gold)",
+        "stages": ["3-2"],
+        "extraInfoVisible": false,
+        "extraInfo": "Slow roll at level 5. Think about 'all inning' when you have 6+ copies of the most important unit in order to save HP",
+        "checked": false
+      },
+      {
+        "id": 3,
+        "label": "Level 6",
+        "stages": ["3-x", "4-x"],
+        "checked": false
+      },
+      {
+        "id": 4,
+        "label": "Level 7",
+        "stages": ["4-x", "5-1"],
+        "checked": false
+      },
+      {
+        "id": 5,
+        "label": "Level 8",
+        "stages": ["5-x", "6-x"],
+        "checked": false
+      },
+      {
+        "id": 6,
+        "label": "Level 9",
+        "stages": ["6-x"],
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Slow roll (6)",
+    "showMore": false,
+    "levels": [
+      {
+        "id": 1,
+        "label": "Level 4",
+        "stages": ["2-1", "2-3"],
+        "checked": false
+      },
+      {
+        "id": 2,
+        "label": "Level 5",
+        "stages": ["2-5", "3-1"],
+        "checked": false
+      },
+      {
+        "id": 3,
+        "label": "Level 6 (50+ gold)",
+        "stages": ["3-2", "3-5"],
+        "extraInfoVisible": false,
+        "extraInfo": "Slow roll at this level",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "label": "Level 7",
+        "stages": ["4-x", "5-x"],
+        "checked": false
+      },
+      {
+        "id": 5,
+        "label": "Level 8",
+        "stages": ["5-x", "6-1"],
+        "checked": false
+      },
+      {
+        "id": 6,
+        "label": "Level 9",
+        "stages": ["6-x"],
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Slow roll (7)",
+    "showMore": false,
+    "levels": [
+      {
+        "id": 1,
+        "label": "Level 4",
+        "stages": ["2-1", "2-3"],
+        "checked": false
+      },
+      {
+        "id": 2,
+        "label": "Level 5",
+        "stages": ["2-5", "3-1"],
+        "checked": false
+      },
+      {
+        "id": 3,
+        "label": "Level 6 (50+ gold)",
+        "stages": ["3-2"],
+        "extraInfoVisible": false,
+        "extraInfo": "Sometimes you roll at 3-2 to stabilize your board to hit 2* 3 cost units",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "label": "Level 7 (50+ gold)",
+        "stages": ["4-x", "5-x"],
+        "extraInfoVisible": false,
+        "extraInfo": "Slow roll at this level",
+        "checked": false
+      },
+      {
+        "id": 5,
+        "label": "Level 8",
+        "stages": ["5-x", "6-x"],
+        "checked": false
+      },
+      {
+        "id": 6,
+        "label": "Level 9",
+        "stages": ["6-x"],
+        "checked": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Fast 8",
+    "showMore": false,
+    "levels": [
+      {
+        "id": 1,
+        "label": "Level 4",
+        "stages": ["2-1", "2-3"],
+        "checked": false
+      },
+      {
+        "id": 2,
+        "label": "Level 5",
+        "stages": ["2-5"],
+        "extraInfoVisible": false,
+        "extraInfo": "In stage 2, you follow a regular strategy by either committing to a win streak or a lose streak depending on the units you find.",
+        "checked": false
+      },
+      {
+        "id": 3,
+        "label": "Level 6 (50+ gold)",
+        "stages": ["3-1"],
+        "extraInfoVisible": false,
+        "extraInfo": "The only caveat is that if you plan to Fast 8, you should not roll down at all at level 6 and continue to commit to your lose streak. If you lose your win streak, you usually will be healthy enough to lose rounds to continue saving gold.",
+        "checked": false
+      },
+      {
+        "id": 4,
+        "label": "Level 7 (50+ gold)",
+        "stages": ["3-5"],
+        "checked": false
+      },
+      {
+        "id": 5,
+        "label": "Level 8",
+        "stages": ["4-3"],
+        "extraInfoVisible": false,
+        "extraInfo": "After hitting level 8, you will roll down to find your core 4 cost carry and possibly 5 cost carries that compliment your team. The natural shop refreshes may contain core 4 or 5-cost units, and you can simply wait for 5-1 to roll down.",
+        "checked": false
+      },
+      {
+        "id": 6,
+        "label": "Level 9",
+        "stages": ["6-x"],
         "checked": false
       }
     ]
