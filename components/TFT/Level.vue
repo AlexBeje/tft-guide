@@ -66,8 +66,16 @@
     </TFTDropdown>
     <div class="flex justify-center">
       <el-table :data="tableData" border style="width: 365px">
-        <el-table-column prop="level" label="Lvl" width="55" />
-        <el-table-column prop="oneCost" label="1*" width="62" />
+        <el-table-column prop="level" label="Lvl" width="55">
+          <template #default="scope">
+            <span class="text-[#A2A6AD]">{{ scope.row.level }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="oneCost" label="1*" width="62">
+          <template #default="scope">
+            <span class="text-[#E6EAF3]">{{ scope.row.oneCost }}</span>
+          </template>
+        </el-table-column>
         <el-table-column prop="twoCost" label="2*" width="62">
           <template #default="scope">
             <span class="text-[#156831]">{{ scope.row.twoCost }}</span>
@@ -75,17 +83,38 @@
         </el-table-column>
         <el-table-column prop="threeCost" label="3*" width="62">
           <template #default="scope">
-            <span class="text-[#12407c]">{{ scope.row.threeCost }}</span>
+            <span
+              :class="
+                scope.row.threeCost !== '0%'
+                  ? 'text-[#12407c]'
+                  : 'text-transparent'
+              "
+              >{{ scope.row.threeCost }}</span
+            >
           </template>
         </el-table-column>
         <el-table-column prop="fourCost" label="4*" width="62">
           <template #default="scope">
-            <span class="text-[#893088]">{{ scope.row.fourCost }}</span>
+            <span
+              :class="
+                scope.row.fourCost !== '0%'
+                  ? 'text-[#893088]'
+                  : 'text-transparent'
+              "
+              >{{ scope.row.fourCost }}</span
+            >
           </template>
         </el-table-column>
         <el-table-column prop="fiveCost" label="5*" width="62">
           <template #default="scope">
-            <span class="text-[#b89d27]">{{ scope.row.fiveCost }}</span>
+            <span
+              :class="
+                scope.row.fiveCost !== '0%'
+                  ? 'text-[#b89d27]'
+                  : 'text-transparent'
+              "
+              >{{ scope.row.fiveCost }}</span
+            >
           </template>
         </el-table-column>
       </el-table>
