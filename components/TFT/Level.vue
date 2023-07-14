@@ -65,7 +65,7 @@
       </el-timeline>
     </TFTDropdown>
     <div class="flex justify-center">
-      <el-table :data="tableData" border style="width: 355px">
+      <el-table :data="tableData" border style="width: 360px">
         <el-table-column prop="level" label="Lvl" width="55">
           <template #default="scope">
             <span class="text-[#A2A6AD]">{{ scope.row.level }}</span>
