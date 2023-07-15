@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "team": "Freljord / Shuriman",
-    "icons": ["freljord", "shuriman"],
+    "team": "Shuriman / Freljord",
+    "icons": ["shuriman", "freljord"],
     "image": "freljord-shuriman.png",
     "locked": false,
     "tier": "S",
@@ -18,14 +18,15 @@
         "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       }
     ],
-    "description": "standard"
+    "leveling": "standard"
   },
   {
     "id": 2,
-    "team": "Noxus / Shuriman",
-    "icons": ["noxus", "shuriman"],
+    "team": "Shuriman / Noxus",
+    "icons": ["shuriman", "noxus"],
     "image": "noxus-shuriman.png",
     "locked": false,
+    "tier": "S",
     "carries": [
       {
         "id": 1,
@@ -38,14 +39,15 @@
         "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       }
     ],
-    "description": "slow-roll-7"
+    "leveling": "slow-roll-7"
   },
   {
     "id": 3,
-    "team": "Rogue / Slayer",
+    "team": "Slayer / Rogue",
     "icons": ["rogue", "slayer"],
     "image": "rogue-slayer.png",
     "locked": false,
+    "tier": "S",
     "carries": [
       {
         "id": 1,
@@ -58,7 +60,7 @@
         "items": ["HandOfJustice", "JeweledGauntlet", "SlayerEmblem"]
       }
     ],
-    "description": "slow-roll-7"
+    "leveling": "slow-roll-7"
   },
   {
     "id": 4,
@@ -66,6 +68,7 @@
     "icons": ["strategist", ""],
     "image": "strategist.png",
     "locked": false,
+    "tier": "S",
     "carries": [
       {
         "id": 1,
@@ -83,7 +86,7 @@
         "items": ["ThiefsGloves"]
       }
     ],
-    "description": "fast-8"
+    "leveling": "fast-8"
   },
   {
     "id": 5,
@@ -91,6 +94,7 @@
     "icons": ["void", ""],
     "image": "void.png",
     "locked": false,
+    "tier": "S",
     "carries": [
       {
         "id": 1,
@@ -108,7 +112,7 @@
         "items": ["VoidEmblem"]
       }
     ],
-    "description": "fast-8"
+    "leveling": "fast-8"
   },
   {
     "id": 6,
@@ -129,7 +133,7 @@
         "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       }
     ],
-    "description": "fast-8"
+    "leveling": "fast-8"
   },
   {
     "id": 7,
@@ -137,6 +141,7 @@
     "icons": ["challenger", ""],
     "image": "challenger.png",
     "locked": false,
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -149,7 +154,7 @@
         "items": ["GiantSlayer", "GuinsoosRageblade", "StatikkShiv"]
       }
     ],
-    "description": "standard"
+    "leveling": "standard"
   },
   {
     "id": 8,
@@ -157,6 +162,7 @@
     "icons": ["demacia", "juggernaut"],
     "image": "demacia-juggernaut.png",
     "locked": false,
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -169,7 +175,7 @@
         "items": ["ZekesHerald", "ZekesHerald", "ZekesHerald"]
       }
     ],
-    "description": "slow-roll-7"
+    "leveling": "slow-roll-7"
   },
   {
     "id": 9,
@@ -177,6 +183,7 @@
     "icons": ["demacia", "sorcerer"],
     "image": "demacia-sorcerer.png",
     "locked": false,
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -189,7 +196,7 @@
         "items": ["IonicSpark", "SunfireCape", "WarmogsArmor"]
       }
     ],
-    "description": "standard"
+    "leveling": "standard"
   },
   {
     "id": 10,
@@ -197,6 +204,7 @@
     "icons": ["freljord", "deadeye"],
     "image": "freljord-deadeye.png",
     "locked": false,
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -209,7 +217,7 @@
         "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       }
     ],
-    "description": "fast-8"
+    "leveling": "fast-8"
   },
   {
     "id": 11,
@@ -230,7 +238,7 @@
         "items": ["IonicSpark", "Redemption", "WarmogsArmor"]
       }
     ],
-    "description": "slow-roll-7"
+    "leveling": "slow-roll-7"
   },
   {
     "id": 12,
@@ -238,6 +246,7 @@
     "icons": ["noxus", "rogue"],
     "image": "noxus-rogue.png",
     "locked": false,
+    "tier": "B",
     "carries": [
       {
         "id": 1,
@@ -250,7 +259,7 @@
         "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       }
     ],
-    "description": "slow-roll-7"
+    "leveling": "slow-roll-7"
   },
   {
     "id": 13,
@@ -258,6 +267,7 @@
     "icons": ["shadowisle", "rogue"],
     "image": "shadowisle-rogue.png",
     "locked": false,
+    "tier": "B",
     "carries": [
       {
         "id": 1,
@@ -270,7 +280,7 @@
         "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       }
     ],
-    "description": "hyper-roll"
+    "leveling": "hyper-roll"
   },
   {
     "id": 14,
@@ -278,6 +288,7 @@
     "icons": ["shadowisle", "slayer"],
     "image": "shadowisle-slayer.png",
     "locked": false,
+    "tier": "B",
     "carries": [
       {
         "id": 1,
@@ -290,7 +301,7 @@
         "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       }
     ],
-    "description": "fast-8"
+    "leveling": "fast-8"
   },
   {
     "id": 15,
@@ -298,6 +309,7 @@
     "icons": ["shuriman", ""],
     "image": "shuriman.png",
     "locked": false,
+    "tier": "B",
     "carries": [
       {
         "id": 1,
@@ -310,7 +322,7 @@
         "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       }
     ],
-    "description": "fast-8"
+    "leveling": "fast-8"
   },
   {
     "id": 16,
@@ -331,7 +343,7 @@
         "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       }
     ],
-    "description": "standard"
+    "leveling": "standard"
   },
   {
     "id": 17,
@@ -339,6 +351,7 @@
     "icons": ["yordle", "gunner"],
     "image": "yordle-gunner.png",
     "locked": false,
+    "tier": "C",
     "carries": [
       {
         "id": 1,
@@ -351,7 +364,7 @@
         "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       }
     ],
-    "description": "hyper-roll"
+    "leveling": "hyper-roll"
   },
   {
     "id": 18,
@@ -359,6 +372,7 @@
     "icons": ["yordle", "multicaster"],
     "image": "yordle-multicaster.png",
     "locked": false,
+    "tier": "C",
     "carries": [
       {
         "id": 1,
@@ -371,7 +385,7 @@
         "items": ["IonicSpark", "Redemption"]
       }
     ],
-    "description": "slow-roll-6"
+    "leveling": "slow-roll-6"
   },
   {
     "id": 19,
@@ -379,6 +393,7 @@
     "icons": ["yordle", ""],
     "image": "yordle.png",
     "locked": false,
+    "tier": "C",
     "carries": [
       {
         "id": 1,
@@ -391,7 +406,7 @@
         "items": ["IonicSpark", "Redemption"]
       }
     ],
-    "description": "slow-roll-6"
+    "leveling": "slow-roll-6"
   },
   {
     "id": 20,
@@ -399,6 +414,7 @@
     "icons": ["zaun", "gunner"],
     "image": "zaun-gunner.png",
     "locked": false,
+    "tier": "C",
     "carries": [
       {
         "id": 1,
@@ -416,6 +432,6 @@
         "items": ["ZekesHerald"]
       }
     ],
-    "description": "fast-8"
+    "leveling": "fast-8"
   }
 ]

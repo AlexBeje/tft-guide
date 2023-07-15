@@ -8,9 +8,9 @@
   >
     <template #header>
       <div
-        :class="`flex justify-between items-center cursor-pointer p-3 ${
-          showMore && 'border-b border-borderLight'
-        }`"
+        :class="`flex justify-between items-center cursor-pointer p-3 
+        ${showMore && 'border-b border-borderLight'}
+        `"
         @click="toggleShowMore()"
       >
         <strong class="flex gap-2 items-center w-full">
@@ -23,7 +23,21 @@
                 v-else
               />
             </div>
-            <span :class="`text-sm ${leftIcons?.length ? 'm-auto' : 'm-0'}`">
+            <span
+              :class="`text-sm ${
+                leftIcons?.length ? 'm-auto' : 'm-0'
+              } flex items-center gap-2`"
+            >
+              <div
+                v-if="tier"
+                :class="`w-[14px] h-[14px] rounded-full border-[2px] border-black flex 
+                  ${tier === 'S' && 'bg-[#FF00FF]'}
+                  ${tier === 'A' && 'bg-[#E69138]'}
+                  ${tier === 'B' && 'bg-[#FFE599]'}
+                  ${tier === 'C' && 'bg-[#6D9EEB]'}
+                  ${tier === 'D' && 'bg-[#00FF01]'}
+                `"
+              />
               {{ title }}
             </span>
           </div>
@@ -74,6 +88,9 @@ const props = defineProps({
   },
   leftIcons: {
     type: Array,
+  },
+  tier: {
+    type: String,
   },
 });
 

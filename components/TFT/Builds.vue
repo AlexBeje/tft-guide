@@ -1,23 +1,46 @@
 <template>
-  <div v-for="buildsGuide in buildsGuidesDB">
-    <div class="flex items-center" v-if="buildsGuide.tier">
-      <p
-        :class="`ml-2 font-bold
-          ${buildsGuide.tier === 'S' && 'text-[#FF00FF]'}
-          ${buildsGuide.tier === 'A' && 'text-[#E69138]'}
-          ${buildsGuide.tier === 'B' && 'text-[#FFE599]'}
-          ${buildsGuide.tier === 'C' && 'text-[#6D9EEB]'}`"
-      >
-        {{ buildsGuide.tier }}
-      </p>
-      <div
-        :class="`w-full h-[2px] ml-2 mr-2
-          ${buildsGuide.tier === 'S' && 'bg-[#FF00FF]'}
-          ${buildsGuide.tier === 'A' && 'bg-[#E69138]'}
-          ${buildsGuide.tier === 'B' && 'bg-[#FFE599]'}
-          ${buildsGuide.tier === 'C' && 'bg-[#6D9EEB]'}`"
+  <div class="flex gap-4 px-2">
+    <el-select
+      v-model="leveling"
+      class="py-2"
+      placeholder="Leveling"
+      size="large"
+      clearable
+      @clear="levelingClear"
+      @change="onLevelingChange"
+    >
+      <el-option
+        v-for="levelingListItem in levelingList"
+        :key="levelingListItem.value"
+        :label="levelingListItem.label"
+        :value="levelingListItem.value"
       />
-    </div>
+    </el-select>
+    <el-select
+      v-model="team"
+      class="py-2"
+      placeholder="Team"
+      size="large"
+      clearable
+      @clear="teamClear"
+      @change="onTeamChange"
+    >
+      <el-option
+        v-for="teamListItem in teamList"
+        :key="teamListItem.value"
+        :label="teamListItem.label"
+        :value="teamListItem.value"
+      >
+        <div class="flex items-center gap-2">
+          <img
+            :src="`classes/${teamListItem.value}.png`"
+            class="w-[16px] h-[16px]"
+          /><span>{{ teamListItem.label }}</span>
+        </div>
+      </el-option>
+    </el-select>
+  </div>
+  <div v-for="buildsGuide in buildsGuidesDB">
     <TFTDropdown
       :title="buildsGuide.team"
       :leftIcons="buildsGuide.icons"
@@ -25,6 +48,7 @@
       :id="buildsGuide.id"
       :itemLocked="buildsGuide.locked"
       itemCanBeLocked
+      :tier="buildsGuide.tier"
       @lockItem="lockItem"
     >
       <div class="flex flex-col">
@@ -100,7 +124,7 @@ interface BuildsGuide {
   locked: boolean;
   tier: string;
   carries: Carries[];
-  description: string;
+  leveling: string;
 }
 
 /** Props **/
@@ -110,6 +134,124 @@ const props = defineProps<{
 
 /** Variables **/
 const lockedBuildGuide = ref<BuildsGuide[]>();
+const leveling = ref();
+const team = ref();
+const levelingList = ref([
+  {
+    label: "Standard",
+    value: "standard",
+  },
+  {
+    label: "Hyper Roll",
+    value: "hyper-roll",
+  },
+  {
+    label: "Slow Roll (6)",
+    value: "slow-roll-6",
+  },
+  {
+    label: "Slow Roll (7)",
+    value: "slow-roll-7",
+  },
+  {
+    label: "Fast 8",
+    value: "fast-8",
+  },
+]);
+const teamList = ref([
+  {
+    label: "Bastion",
+    value: "bastion",
+  },
+  {
+    label: "Bruiser",
+    value: "bruiser",
+  },
+  {
+    label: "Challenger",
+    value: "challenger",
+  },
+  {
+    label: "Deadeye",
+    value: "deadeye",
+  },
+  {
+    label: "Demacia",
+    value: "demacia",
+  },
+  {
+    label: "Freljord",
+    value: "freljord",
+  },
+  {
+    label: "Gunner",
+    value: "gunner",
+  },
+  {
+    label: "Invoker",
+    value: "invoker",
+  },
+  {
+    label: "Ionia",
+    value: "ionia",
+  },
+  {
+    label: "Juggernaut",
+    value: "juggernaut",
+  },
+  {
+    label: "Multicaster",
+    value: "multicaster",
+  },
+  {
+    label: "Noxus",
+    value: "noxus",
+  },
+  {
+    label: "Piltover",
+    value: "piltover",
+  },
+  {
+    label: "Rogue",
+    value: "rogue",
+  },
+  {
+    label: "Shadowisle",
+    value: "shadowisle",
+  },
+  {
+    label: "Shuriman",
+    value: "shuriman",
+  },
+  {
+    label: "Slayer",
+    value: "slayer",
+  },
+  {
+    label: "Sorcerer",
+    value: "sorcerer",
+  },
+  {
+    label: "Strategist",
+    value: "strategist",
+  },
+  {
+    label: "Targon",
+    value: "targon",
+  },
+  {
+    label: "Void",
+    value: "void",
+  },
+  {
+    label: "Yordle",
+    value: "yordle",
+  },
+  {
+    label: "Zaun",
+    value: "zaun",
+  },
+]);
 
 /** Computed **/
 const buildsGuidesDB = computed(() => {
@@ -123,6 +265,17 @@ const buildsGuidesDB = computed(() => {
 const lockItem = (item: number, itemLocked: boolean) => {
   if (itemLocked) {
     lockedBuildGuide.value = props.data;
+    if (leveling.value) {
+      lockedBuildGuide.value = lockedBuildGuide.value.filter(
+        (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
+      );
+    }
+    if (team.value) {
+      lockedBuildGuide.value = lockedBuildGuide.value.filter(
+        (buildGuide: BuildsGuide) =>
+          buildGuide.icons.find((icon) => icon === team.value)
+      );
+    }
   } else {
     lockedBuildGuide.value = props.data
       .filter((buildGuide: BuildsGuide) => buildGuide.id === item)
@@ -137,7 +290,7 @@ const lockItem = (item: number, itemLocked: boolean) => {
 const getTitle = (id: number) => {
   const title = props.data?.find(
     (buildGuide: BuildsGuide) => buildGuide.id === id
-  )?.description;
+  )?.leveling;
   switch (title) {
     case "standard":
       return "Standard";
@@ -152,10 +305,10 @@ const getTitle = (id: number) => {
   }
 };
 const getDescription = (id: number) => {
-  const description = props.data?.find(
+  const leveling = props.data?.find(
     (buildGuide: BuildsGuide) => buildGuide.id === id
-  )?.description;
-  switch (description) {
+  )?.leveling;
+  switch (leveling) {
     case "fast-8":
       return "The goal is to reach level 8 early in Stage 4 to find 4 and 5 cost units before your opponents. You generally need long win or losestreaks to have enough gold for it.";
     case "slow-roll-6":
@@ -166,6 +319,41 @@ const getDescription = (id: number) => {
       return "Save up and then 3-star units at stage 3-1 by rolling all your gold.";
     case "standard":
       return "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 6 by 3-2, Level 7 by 4-1, and Level 8 by 5-1.";
+  }
+};
+const levelingClear = () => {
+  leveling.value = undefined;
+  lockedBuildGuide.value = undefined;
+};
+const onLevelingChange = (value: string) => {
+  teamClear();
+  leveling.value = value;
+  if (lockedBuildGuide.value?.length) {
+    lockedBuildGuide.value = props.data.filter(
+      (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
+    );
+  } else {
+    lockedBuildGuide.value = props.data.filter(
+      (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
+    );
+  }
+};
+const teamClear = () => {
+  team.value = undefined;
+  lockedBuildGuide.value = undefined;
+};
+const onTeamChange = (value: string) => {
+  levelingClear();
+  team.value = value;
+  if (lockedBuildGuide.value?.length) {
+    lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
+      buildGuide.icons.find((icon) => icon === team.value)
+    );
+  } else {
+    lockedBuildGuide.value = undefined;
+    lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
+      buildGuide.icons.find((icon) => icon === team.value)
+    );
   }
 };
 </script>
