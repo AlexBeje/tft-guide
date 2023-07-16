@@ -5,8 +5,6 @@
       class="py-2"
       placeholder="Leveling"
       size="large"
-      clearable
-      @clear="levelingClear"
       @change="onLevelingChange"
     >
       <el-option
@@ -21,8 +19,6 @@
       class="py-2"
       placeholder="Team"
       size="large"
-      clearable
-      @clear="teamClear"
       @change="onTeamChange"
     >
       <el-option
@@ -35,6 +31,7 @@
           <img
             :src="`classes/${teamListItem.value}.png`"
             class="w-[16px] h-[16px]"
+            v-if="teamListItem.value !== 'all'"
           />
           <span>{{ teamListItem.label }}</span>
         </div>
@@ -142,9 +139,14 @@ const props = defineProps<{
 
 /** Variables **/
 const lockedBuildGuide = ref<BuildsGuide[]>();
-const leveling = ref();
-const team = ref();
+const leveling = ref("all");
+const team = ref("all");
 const levelingList = ref([
+  {
+    id: 0,
+    label: "All",
+    value: "all",
+  },
   {
     id: 1,
     label: "Standard",
@@ -172,6 +174,11 @@ const levelingList = ref([
   },
 ]);
 const teamList = ref([
+  {
+    id: 0,
+    label: "All",
+    value: "all",
+  },
   {
     id: 1,
     label: "Bastion",
@@ -309,7 +316,7 @@ const teamList = ref([
     visible: false,
   },
 ]);
-const selectedTeamListItem = ref();
+const selectedTeamListItem = ref("all");
 
 /** Computed **/
 const buildsGuidesDB = computed(() => {
@@ -321,8 +328,10 @@ const buildsGuidesDB = computed(() => {
 const getTeamList = computed(() => {
   const visibleTeamList = teamList.value?.map((teamListItem) => {
     if (
-      props.data?.find((buildGuide) =>
-        buildGuide.icons.includes(teamListItem.value)
+      props.data?.find(
+        (buildGuide) =>
+          buildGuide.icons.includes(teamListItem.value) ||
+          teamListItem.value === "all"
       )
     ) {
       return {
@@ -343,6 +352,8 @@ const getTeamList = computed(() => {
 const lockItem = (item: number, itemLocked: boolean) => {
   if (itemLocked) {
     lockedBuildGuide.value = props.data;
+    console.log("🧢", leveling.value);
+    console.log("😰", lockedBuildGuide.value);
     if (leveling.value) {
       lockedBuildGuide.value = lockedBuildGuide.value.filter(
         (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
@@ -399,41 +410,60 @@ const getDescription = (id: number) => {
       return "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 6 by 3-2, Level 7 by 4-1, and Level 8 by 5-1.";
   }
 };
-const levelingClear = () => {
-  leveling.value = undefined;
-  lockedBuildGuide.value = undefined;
-};
 const onLevelingChange = (value: string) => {
-  teamClear();
+  selectedTeamListItem.value = "all";
+  team.value = "all";
   leveling.value = value;
   if (lockedBuildGuide.value?.length) {
     lockedBuildGuide.value = props.data.filter(
       (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
     );
+    if (leveling.value === "all") {
+      lockedBuildGuide.value = props.data;
+    }
   } else {
     lockedBuildGuide.value = props.data.filter(
       (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
     );
+    if (leveling.value === "all") {
+      lockedBuildGuide.value = props.data;
+    }
   }
 };
-const teamClear = () => {
-  team.value = undefined;
-  lockedBuildGuide.value = undefined;
-};
 const onTeamChange = (value: string) => {
-  levelingClear();
+  leveling.value = "all";
   team.value = value;
   if (lockedBuildGuide.value?.length) {
     lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
       buildGuide.icons.find((icon) => icon === team.value)
     );
+    if (team.value === "all") {
+      lockedBuildGuide.value = props.data;
+    }
     selectedTeamListItem.value = team.value;
   } else {
     lockedBuildGuide.value = undefined;
     lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
       buildGuide.icons.find((icon) => icon === team.value)
     );
+    if (team.value === "all") {
+      lockedBuildGuide.value = props.data;
+    }
     selectedTeamListItem.value = team.value;
   }
 };
+
+const constGetWidth = computed(() => {
+  if (selectedTeamListItem.value === "all") {
+    return "0px";
+  }
+  return "auto";
+});
+
 </script>
+
+<style scoped lang="scss">
+:deep(.el-input__prefix-inner) {
+  width: v-bind(constGetWidth);
+}
+</style>
