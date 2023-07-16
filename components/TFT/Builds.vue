@@ -26,7 +26,7 @@
       @change="onTeamChange"
     >
       <el-option
-        v-for="teamListItem in teamList"
+        v-for="teamListItem in getTeamList"
         :key="teamListItem.value"
         :label="teamListItem.label"
         :value="teamListItem.value"
@@ -35,9 +35,17 @@
           <img
             :src="`classes/${teamListItem.value}.png`"
             class="w-[16px] h-[16px]"
-          /><span>{{ teamListItem.label }}</span>
+          />
+          <span>{{ teamListItem.label }}</span>
         </div>
       </el-option>
+      <template #prefix>
+        <img
+          v-if="selectedTeamListItem"
+          :src="`classes/${selectedTeamListItem}.png`"
+          class="w-[16px] h-[16px]"
+        />
+      </template>
     </el-select>
   </div>
   <div v-for="buildsGuide in buildsGuidesDB">
@@ -138,120 +146,170 @@ const leveling = ref();
 const team = ref();
 const levelingList = ref([
   {
+    id: 1,
     label: "Standard",
     value: "standard",
   },
   {
+    id: 2,
     label: "Hyper Roll",
     value: "hyper-roll",
   },
   {
+    id: 3,
     label: "Slow Roll (6)",
     value: "slow-roll-6",
   },
   {
+    id: 4,
     label: "Slow Roll (7)",
     value: "slow-roll-7",
   },
   {
+    id: 5,
     label: "Fast 8",
     value: "fast-8",
   },
 ]);
 const teamList = ref([
   {
+    id: 1,
     label: "Bastion",
     value: "bastion",
+    visible: false,
   },
   {
+    id: 2,
     label: "Bruiser",
     value: "bruiser",
+    visible: false,
   },
   {
+    id: 3,
     label: "Challenger",
     value: "challenger",
+    visible: false,
   },
   {
+    id: 4,
     label: "Deadeye",
     value: "deadeye",
+    visible: false,
   },
   {
+    id: 5,
     label: "Demacia",
     value: "demacia",
+    visible: false,
   },
   {
+    id: 6,
     label: "Freljord",
     value: "freljord",
+    visible: false,
   },
   {
     label: "Gunner",
     value: "gunner",
   },
   {
+    id: 7,
     label: "Invoker",
     value: "invoker",
+    visible: false,
   },
   {
+    id: 8,
     label: "Ionia",
     value: "ionia",
+    visible: false,
   },
   {
+    id: 9,
     label: "Juggernaut",
     value: "juggernaut",
+    visible: false,
   },
   {
+    id: 10,
     label: "Multicaster",
     value: "multicaster",
+    visible: false,
   },
   {
+    id: 11,
     label: "Noxus",
     value: "noxus",
+    visible: false,
   },
   {
+    id: 12,
     label: "Piltover",
     value: "piltover",
+    visible: false,
   },
   {
+    id: 13,
     label: "Rogue",
     value: "rogue",
+    visible: false,
   },
   {
+    id: 14,
     label: "Shadowisle",
     value: "shadowisle",
+    visible: false,
   },
   {
+    id: 15,
     label: "Shuriman",
     value: "shuriman",
+    visible: false,
   },
   {
+    id: 16,
     label: "Slayer",
     value: "slayer",
+    visible: false,
   },
   {
+    id: 17,
     label: "Sorcerer",
     value: "sorcerer",
+    visible: false,
   },
   {
+    id: 18,
     label: "Strategist",
     value: "strategist",
+    visible: false,
   },
   {
+    id: 19,
     label: "Targon",
     value: "targon",
+    visible: false,
   },
   {
+    id: 20,
     label: "Void",
     value: "void",
+    visible: false,
   },
   {
+    id: 21,
     label: "Yordle",
     value: "yordle",
+    visible: false,
   },
   {
+    id: 22,
     label: "Zaun",
     value: "zaun",
+    visible: false,
   },
 ]);
+const selectedTeamListItem = ref();
 
 /** Computed **/
 const buildsGuidesDB = computed(() => {
@@ -259,6 +317,26 @@ const buildsGuidesDB = computed(() => {
     return lockedBuildGuide.value;
   }
   return props.data;
+});
+const getTeamList = computed(() => {
+  const visibleTeamList = teamList.value?.map((teamListItem) => {
+    if (
+      props.data?.find((buildGuide) =>
+        buildGuide.icons.includes(teamListItem.value)
+      )
+    ) {
+      return {
+        ...teamListItem,
+        visible: true,
+      };
+    }
+    return {
+      ...teamListItem,
+      visible: false,
+    };
+  });
+
+  return visibleTeamList.filter((teamListItem) => teamListItem.visible);
 });
 
 /** Methods **/
@@ -349,11 +427,13 @@ const onTeamChange = (value: string) => {
     lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
       buildGuide.icons.find((icon) => icon === team.value)
     );
+    selectedTeamListItem.value = team.value;
   } else {
     lockedBuildGuide.value = undefined;
     lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
       buildGuide.icons.find((icon) => icon === team.value)
     );
+    selectedTeamListItem.value = team.value;
   }
 };
 </script>
