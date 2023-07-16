@@ -55,7 +55,7 @@
       :key="buildsGuide.id"
       :id="buildsGuide.id"
       :itemLocked="buildsGuide.locked"
-      :itemCanBeLocked="buildsGuidesDB.length > 1"
+      itemCanBeLocked
       :tier="buildsGuide.tier"
       @lockItem="lockItem"
     >
