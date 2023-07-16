@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@nuxtjs/color-mode",
     "@vueuse/nuxt",
+    "@vite-pwa/nuxt",
   ],
   colorMode: {
     classSuffix: "",
