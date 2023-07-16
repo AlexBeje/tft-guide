@@ -225,7 +225,7 @@
     "icons": ["ionia", "invoker"],
     "image": "ionia-invoker.png",
     "locked": false,
-    "tier": "B",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -246,7 +246,7 @@
     "icons": ["noxus", "rogue"],
     "image": "noxus-rogue.png",
     "locked": false,
-    "tier": "B",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -267,7 +267,7 @@
     "icons": ["shadowisle", "rogue"],
     "image": "shadowisle-rogue.png",
     "locked": false,
-    "tier": "B",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -288,7 +288,7 @@
     "icons": ["shadowisle", "slayer"],
     "image": "shadowisle-slayer.png",
     "locked": false,
-    "tier": "B",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -309,7 +309,7 @@
     "icons": ["shuriman", ""],
     "image": "shuriman.png",
     "locked": false,
-    "tier": "B",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -330,7 +330,7 @@
     "icons": ["void", "bruiser"],
     "image": "void-bruiser.png",
     "locked": false,
-    "tier": "C",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -351,7 +351,7 @@
     "icons": ["yordle", "gunner"],
     "image": "yordle-gunner.png",
     "locked": false,
-    "tier": "C",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -372,7 +372,7 @@
     "icons": ["yordle", "multicaster"],
     "image": "yordle-multicaster.png",
     "locked": false,
-    "tier": "C",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -393,7 +393,7 @@
     "icons": ["yordle", ""],
     "image": "yordle.png",
     "locked": false,
-    "tier": "C",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
@@ -414,7 +414,7 @@
     "icons": ["zaun", "gunner"],
     "image": "zaun-gunner.png",
     "locked": false,
-    "tier": "C",
+    "tier": "A",
     "carries": [
       {
         "id": 1,
