@@ -27,7 +27,10 @@
         :label="teamListItem.label"
         :value="teamListItem.value"
       >
-        <div class="flex items-center gap-2">
+        <div
+          class="flex items-center gap-2"
+          v-if="teamListItem.value !== 'all'"
+        >
           <img
             :src="`classes/${teamListItem.value}.png`"
             class="w-[16px] h-[16px]"
@@ -38,7 +41,7 @@
       </el-option>
       <template #prefix>
         <img
-          v-if="selectedTeamListItem"
+          v-if="selectedTeamListItem && selectedTeamListItem !== 'all'"
           :src="`classes/${selectedTeamListItem}.png`"
           class="w-[16px] h-[16px]"
         />
@@ -52,7 +55,7 @@
       :key="buildsGuide.id"
       :id="buildsGuide.id"
       :itemLocked="buildsGuide.locked"
-      itemCanBeLocked
+      :itemCanBeLocked="buildsGuidesDB.length > 1"
       :tier="buildsGuide.tier"
       @lockItem="lockItem"
     >
@@ -350,18 +353,24 @@ const getTeamList = computed(() => {
 
 /** Methods **/
 const lockItem = (item: number, itemLocked: boolean) => {
+  console.log("😳", item);
+  console.log("👾", itemLocked);
   if (itemLocked) {
     lockedBuildGuide.value = props.data;
-    console.log("🧢", leveling.value);
-    console.log("😰", lockedBuildGuide.value);
-    if (leveling.value) {
-      lockedBuildGuide.value = lockedBuildGuide.value.filter(
+    if (leveling.value === "all" && team.value === "all") {
+      lockedBuildGuide.value = props.data;
+    } else if (leveling.value === "all" && team.value !== "all") {
+      lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
+        buildGuide.icons.find((icon) => icon === team.value)
+      );
+    } else if (leveling.value !== "all" && team.value === "all") {
+      lockedBuildGuide.value = props.data.filter(
         (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
       );
-    }
-    if (team.value) {
-      lockedBuildGuide.value = lockedBuildGuide.value.filter(
+    } else {
+      lockedBuildGuide.value = props.data.filter(
         (buildGuide: BuildsGuide) =>
+          buildGuide.leveling === leveling.value &&
           buildGuide.icons.find((icon) => icon === team.value)
       );
     }
@@ -459,7 +468,6 @@ const constGetWidth = computed(() => {
   }
   return "auto";
 });
-
 </script>
 
 <style scoped lang="scss">
