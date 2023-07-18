@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "team": "Shuriman / Freljord",
-    "icons": ["shuriman", "freljord"],
-    "image": "freljord-shuriman.png",
+    "team": "Freljord / Shuriman",
+    "icons": ["freljord", "shuriman"],
+    "image": "1.freljord-shuriman.png",
     "locked": false,
     "tier": "S",
     "carries": [
@@ -22,30 +22,51 @@
   },
   {
     "id": 2,
-    "team": "Noxus / Shuriman",
-    "icons": ["noxus", "shuriman"],
-    "image": "noxus-shuriman.png",
+    "team": "Ionia / Challerger",
+    "icons": ["ionia", "challenger"],
+    "image": "2.ionia-challenger.png",
     "locked": false,
     "tier": "S",
     "carries": [
       {
         "id": 1,
-        "name": "Katarina",
-        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"]
+        "name": "Shen",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       },
       {
         "id": 2,
+        "name": "Yasuo",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+      }
+    ],
+    "leveling": "fast-8"
+  },
+  {
+    "id": 3,
+    "team": "Noxus / Shuriman",
+    "icons": ["noxus", "shuriman"],
+    "image": "3.noxus-shuriman.png",
+    "locked": false,
+    "tier": "S",
+    "carries": [
+      {
+        "id": 1,
         "name": "Darius",
         "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+      },
+      {
+        "id": 2,
+        "name": "Katarina",
+        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"]
       }
     ],
     "leveling": "slow-roll-7"
   },
   {
-    "id": 3,
-    "team": "Slayer / Rogue",
+    "id": 4,
+    "team": "Rogue / Slayer",
     "icons": ["rogue", "slayer"],
-    "image": "rogue-slayer.png",
+    "image": "4.rogue-slayer.png",
     "locked": false,
     "tier": "S",
     "carries": [
@@ -63,10 +84,10 @@
     "leveling": "slow-roll-7"
   },
   {
-    "id": 4,
+    "id": 5,
     "team": "Strategist",
     "icons": ["strategist", ""],
-    "image": "strategist.png",
+    "image": "5.strategist.png",
     "locked": false,
     "tier": "S",
     "carries": [
@@ -89,10 +110,10 @@
     "leveling": "fast-8"
   },
   {
-    "id": 5,
+    "id": 6,
     "team": "Void",
     "icons": ["void", ""],
-    "image": "void.png",
+    "image": "6.void.png",
     "locked": false,
     "tier": "S",
     "carries": [
@@ -103,34 +124,13 @@
       },
       {
         "id": 2,
-        "name": "Belveth",
-        "items": ["Bloodthirster", "TitansResolve"]
+        "name": "Yasuo",
+        "items": ["VoidEmblem"]
       },
       {
         "id": 3,
-        "name": "Yasuo",
-        "items": ["VoidEmblem"]
-      }
-    ],
-    "leveling": "fast-8"
-  },
-  {
-    "id": 6,
-    "team": "Ionia / Challerger",
-    "icons": ["ionia", "challenger"],
-    "image": "ionia-challenger.png",
-    "locked": false,
-    "tier": "A",
-    "carries": [
-      {
-        "id": 1,
-        "name": "Yasuo",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
-      },
-      {
-        "id": 2,
-        "name": "Shen",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+        "name": "Belveth",
+        "items": ["Bloodthirster", "TitansResolve"]
       }
     ],
     "leveling": "fast-8"
@@ -139,19 +139,19 @@
     "id": 7,
     "team": "Challenger",
     "icons": ["challenger", ""],
-    "image": "challenger.png",
+    "image": "7.challenger.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Yasuo",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+        "name": "Kalista",
+        "items": ["GiantSlayer", "GuinsoosRageblade", "StatikkShiv"]
       },
       {
         "id": 2,
-        "name": "Kalista",
-        "items": ["GiantSlayer", "GuinsoosRageblade", "StatikkShiv"]
+        "name": "Yasuo",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       }
     ],
     "leveling": "standard"
@@ -160,19 +160,19 @@
     "id": 8,
     "team": "Demacia / Juggernaut",
     "icons": ["demacia", "juggernaut"],
-    "image": "demacia-juggernaut.png",
+    "image": "8.demacia-juggernaut.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Garen",
-        "items": ["Bloodthirster", "GuinsoosRageblade"]
+        "name": "Darius",
+        "items": ["ZekesHerald", "ZekesHerald", "ZekesHerald"]
       },
       {
         "id": 2,
-        "name": "Darius",
-        "items": ["ZekesHerald", "ZekesHerald", "ZekesHerald"]
+        "name": "Garen",
+        "items": ["Bloodthirster", "GuinsoosRageblade"]
       }
     ],
     "leveling": "slow-roll-7"
@@ -181,19 +181,19 @@
     "id": 9,
     "team": "Demacia / Sorcerer",
     "icons": ["demacia", "sorcerer"],
-    "image": "demacia-sorcerer.png",
+    "image": "9.demacia-sorcerer.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Lux",
-        "items": ["BlueBuff", "JeweledGauntlet"]
+        "name": "Swain",
+        "items": ["IonicSpark", "SunfireCape", "WarmogsArmor"]
       },
       {
         "id": 2,
-        "name": "Swain",
-        "items": ["IonicSpark", "SunfireCape", "WarmogsArmor"]
+        "name": "Lux",
+        "items": ["BlueBuff", "JeweledGauntlet"]
       }
     ],
     "leveling": "standard"
@@ -202,7 +202,7 @@
     "id": 10,
     "team": "Freljord / DeadEye",
     "icons": ["freljord", "deadeye"],
-    "image": "freljord-deadeye.png",
+    "image": "10.freljord-deadeye.png",
     "locked": false,
     "tier": "A",
     "carries": [
@@ -223,7 +223,7 @@
     "id": 11,
     "team": "Ionia / Invoker",
     "icons": ["ionia", "invoker"],
-    "image": "ionia-invoker.png",
+    "image": "11.ionia-invoker.png",
     "locked": false,
     "tier": "A",
     "carries": [
@@ -234,7 +234,7 @@
       },
       {
         "id": 2,
-        "name": "Yasuo",
+        "name": "Taric",
         "items": ["IonicSpark", "Redemption", "WarmogsArmor"]
       }
     ],
@@ -244,19 +244,19 @@
     "id": 12,
     "team": "Noxus / Rogues",
     "icons": ["noxus", "rogue"],
-    "image": "noxus-rogue.png",
+    "image": "12.noxus-rogue.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Katarina",
-        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"]
+        "name": "Darius",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       },
       {
         "id": 2,
-        "name": "Darius",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+        "name": "Katarina",
+        "items": ["HandOfJustice", "IonicSpark", "JeweledGauntlet"]
       }
     ],
     "leveling": "slow-roll-7"
@@ -265,19 +265,19 @@
     "id": 13,
     "team": "Shadowisle / Rogue",
     "icons": ["shadowisle", "rogue"],
-    "image": "shadowisle-rogue.png",
+    "image": "13.shadowisle-rogue.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Viego",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+        "name": "Maokai",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       },
       {
         "id": 2,
-        "name": "Maokai",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+        "name": "Viego",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       }
     ],
     "leveling": "hyper-roll"
@@ -286,7 +286,7 @@
     "id": 14,
     "team": "Shadowisle / Slayer",
     "icons": ["shadowisle", "slayer"],
-    "image": "shadowisle-slayer.png",
+    "image": "14.shadowisle-slayer.png",
     "locked": false,
     "tier": "A",
     "carries": [
@@ -307,7 +307,7 @@
     "id": 15,
     "team": "Shuriman",
     "icons": ["shuriman", ""],
-    "image": "shuriman.png",
+    "image": "15.shuriman.png",
     "locked": false,
     "tier": "A",
     "carries": [
@@ -328,19 +328,19 @@
     "id": 16,
     "team": "Void / Bruisers",
     "icons": ["void", "bruiser"],
-    "image": "void-bruiser.png",
+    "image": "16.void-bruiser.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Kaisa",
-        "items": ["GuardBreaker", "JeweledGauntlet", "SpearOfShojin"]
+        "name": "RekSai",
+        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
       },
       {
         "id": 2,
-        "name": "RekSai",
-        "items": ["Bloodthirster", "InfinityEdge", "TitansResolve"]
+        "name": "Kaisa",
+        "items": ["GuardBreaker", "JeweledGauntlet", "SpearOfShojin"]
       }
     ],
     "leveling": "standard"
@@ -349,19 +349,19 @@
     "id": 17,
     "team": "Yordle / Gunner",
     "icons": ["yordle", "gunner"],
-    "image": "yordle-gunner.png",
+    "image": "17.yordle-gunner.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Tristana",
-        "items": ["GiantSlayer", "HextechGunblade", "LastWhisper"]
+        "name": "Maokai",
+        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
       },
       {
         "id": 2,
-        "name": "Maokai",
-        "items": ["Redemption", "SunfireCape", "WarmogsArmor"]
+        "name": "Tristana",
+        "items": ["GiantSlayer", "HextechGunblade", "LastWhisper"]
       }
     ],
     "leveling": "hyper-roll"
@@ -370,19 +370,19 @@
     "id": 18,
     "team": "Yordle / Multicaster",
     "icons": ["yordle", "multicaster"],
-    "image": "yordle-multicaster.png",
+    "image": "18.yordle-multicaster.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Teemo",
-        "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"]
+        "name": "Galio",
+        "items": ["IonicSpark", "Redemption"]
       },
       {
         "id": 2,
-        "name": "Galio",
-        "items": ["IonicSpark", "Redemption"]
+        "name": "Teemo",
+        "items": ["BlueBuff", "HextechGunblade", "JeweledGauntlet"]
       }
     ],
     "leveling": "slow-roll-6"
@@ -391,19 +391,19 @@
     "id": 19,
     "team": "Yordle",
     "icons": ["yordle", ""],
-    "image": "yordle.png",
+    "image": "19.yordle.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Teemo",
-        "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"]
+        "name": "Poppy",
+        "items": ["IonicSpark", "Redemption"]
       },
       {
         "id": 2,
-        "name": "Poppy",
-        "items": ["IonicSpark", "Redemption"]
+        "name": "Teemo",
+        "items": ["BlueBuff", "GiantSlayer", "JeweledGauntlet"]
       }
     ],
     "leveling": "slow-roll-6"
@@ -412,14 +412,14 @@
     "id": 20,
     "team": "Zaun / Gunners",
     "icons": ["zaun", "gunner"],
-    "image": "zaun-gunner.png",
+    "image": "20.zaun-gunner.png",
     "locked": false,
     "tier": "A",
     "carries": [
       {
         "id": 1,
-        "name": "Zeri",
-        "items": ["GiantSlayer", "HextechGunblade", "LastWhisper"]
+        "name": "Jayce",
+        "items": ["ZekesHerald"]
       },
       {
         "id": 2,
@@ -428,8 +428,8 @@
       },
       {
         "id": 3,
-        "name": "Jayce",
-        "items": ["ZekesHerald"]
+        "name": "Zeri",
+        "items": ["GiantSlayer", "GuinsoosRageblade", "LastWhisper"]
       }
     ],
     "leveling": "fast-8"
