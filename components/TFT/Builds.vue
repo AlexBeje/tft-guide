@@ -1,20 +1,6 @@
 <template>
   <div class="flex gap-4 px-2">
     <el-select
-      v-model="leveling"
-      class="py-2"
-      placeholder="Leveling"
-      size="large"
-      @change="onLevelingChange"
-    >
-      <el-option
-        v-for="levelingListItem in levelingList"
-        :key="levelingListItem.value"
-        :label="levelingListItem.label"
-        :value="levelingListItem.value"
-      />
-    </el-select>
-    <el-select
       v-model="team"
       class="py-2"
       placeholder="Team"
@@ -46,6 +32,20 @@
           class="w-[16px] h-[16px]"
         />
       </template>
+    </el-select>
+    <el-select
+      v-model="leveling"
+      class="py-2"
+      placeholder="Leveling"
+      size="large"
+      @change="onLevelingChange"
+    >
+      <el-option
+        v-for="levelingListItem in levelingList"
+        :key="levelingListItem.value"
+        :label="levelingListItem.label"
+        :value="levelingListItem.value"
+      />
     </el-select>
   </div>
   <div v-for="buildsGuide in buildsGuidesDB">
@@ -147,7 +147,7 @@ const team = ref("all");
 const levelingList = ref([
   {
     id: 0,
-    label: "All",
+    label: "All Levels",
     value: "all",
   },
   {
@@ -179,7 +179,7 @@ const levelingList = ref([
 const teamList = ref([
   {
     id: 0,
-    label: "All",
+    label: "All Classes",
     value: "all",
   },
   {

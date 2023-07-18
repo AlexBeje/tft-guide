@@ -22,8 +22,8 @@
   },
   {
     "id": 2,
-    "team": "Shuriman / Noxus",
-    "icons": ["shuriman", "noxus"],
+    "team": "Noxus / Shuriman",
+    "icons": ["noxus", "shuriman"],
     "image": "noxus-shuriman.png",
     "locked": false,
     "tier": "S",
