@@ -33,6 +33,7 @@
     "image": "2.slayer-reroll.png",
     "locked": false,
     "tier": "S",
+    "leveling": "slow-roll-6",
     "carries": [
       {
         "id": 1,
@@ -59,6 +60,7 @@
     "image": "3.noxus-reroll.png",
     "locked": false,
     "tier": "S",
+    "leveling": "slow-roll-7",
     "carries": [
       {
         "id": 1,
@@ -81,10 +83,11 @@
   {
     "id": 4,
     "team": "Slayer Kayle",
-    "icons": ["Slayer", "Demacia"],
+    "icons": ["slayer", "demacia"],
     "image": "4.slayer-kayle.png",
     "locked": false,
     "tier": "S",
+    "leveling": "hyper-roll",
     "carries": [
       {
         "id": 1,
@@ -111,6 +114,7 @@
     "image": "5.freljord-akshan.png",
     "locked": false,
     "tier": "S",
+    "leveling": "slow-roll-7",
     "carries": [
       {
         "id": 1,
