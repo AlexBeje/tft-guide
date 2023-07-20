@@ -632,5 +632,13 @@
   {
     "id": 46,
     "name": "VoidEmblem"
+  },
+  {
+    "id": 46,
+    "name": "ShrinkModule"
+  },
+  {
+    "id": 47,
+    "name": "MechanoSwarm"
   }
 ]

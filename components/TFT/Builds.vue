@@ -88,13 +88,14 @@
                     :src="`items/${items.name}.png`"
                     class="w-[60px] h-[60px] opacity-25"
                   />
-                  <div class="flex flex-col">
+                  <div class="flex flex-col" v-if="items.components?.length">
                     <img
                       v-for="component in items.components"
                       :src="`components/${component.name}.png`"
                       class="w-[30px] h-[30px]"
                     />
                   </div>
+                  <div v-else class="w-[30px] h-[30px]" />
                 </div>
               </div>
             </div>
@@ -104,7 +105,7 @@
           <p class="text-xl font-black">
             {{ getTitle(buildsGuide.id) }}
           </p>
-          <p class="text-sm">{{ getDescription(buildsGuide.id) }}</p>
+          <p class="text-sm" v-html="buildsGuide.description" />
         </div>
       </div>
     </TFTDropdown>
@@ -133,6 +134,7 @@ interface BuildsGuide {
   tier: string;
   carries: Carries[];
   leveling: string;
+  description: string;
 }
 
 /** Props **/
