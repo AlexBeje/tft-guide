@@ -149,7 +149,7 @@ const team = ref("all");
 const levelingList = ref([
   {
     id: 0,
-    label: "All Levels",
+    label: "All Playstyles",
     value: "all",
   },
   {

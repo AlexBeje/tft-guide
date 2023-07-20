@@ -114,7 +114,7 @@
     "image": "5.freljord-akshan.png",
     "locked": false,
     "tier": "S",
-    "leveling": "slow-roll-7",
+    "leveling": "fast-8",
     "carries": [
       {
         "id": 1,
@@ -133,5 +133,81 @@
       }
     ],
     "description": "While Aphelios is currently struggling, Akshan has taken his spot as the best ranged ADC. Thanks to a newly added interaction that makes Akshan shoot Hurricane bolts from his ability, he is capable of dealing massive amounts of AoE damage. With the help of the Freljord trait and Lissandra you can easily bypass the enemy tanks.<br><br>You open with 3 Shurima, 2 Freljord and 2 Deadeye and prioritize Akshan Items. He mainly wants AD items like Deathblade in combination with Hurricane, but he can also use other items like Infinity Edge, Guard Breaker or Giant Slayer. Tank items are initially on Vi and transfer to Sejuani in mid game.<br><br>You want to be Level 7 in Stage 4-1 and roll a bit for upgrades to stabilize your mid game. From here you can either stay on Level 7, roll for Akshan*3 and then push Level 8 or you go straight for Level 8 and roll for Akshan*3 later. Both are viable, it somewhat depends how many Akshan you find and if you have Augments that help with rolling.<br><br>    In late game you can add Sion for an additional Frontline and Heimerdinger for utility. Usually you skip 4 Deadeye in this build and prioritize a stronger frontline."
+  },
+  {
+    "id": 6,
+    "team": "Strategist Azir",
+    "icons": ["strategist", "shuriman"],
+    "image": "6.strategist-azir.png",
+    "locked": false,
+    "tier": "A",
+    "leveling": "standard",
+    "carries": [
+      {
+        "id": 1,
+        "name": "Azir",
+        "items": ["GuinsoosRageblade", "StatikkShiv", "HextechGunblade"]
+      },
+      {
+        "id": 2,
+        "name": "JarvanIV",
+        "items": ["ProtectorsVow", "WarmogsArmor", "GargoyleStoneplate"]
+      },
+      {
+        "id": 3,
+        "name": "Lux",
+        "items": ["SpearOfShojin", "JeweledGauntlet"]
+      }
+    ],
+    "description": "While it's possible to run Azir in a Shurima setup, the more popular version focuses more on the Strategist trait and adds 3 Demacia as an additional power spike. The main focus is on Guinsoo + Statikk Shiv Azir with Tank Jarvan/Nasus to hold the line.<br><br>You can open with 3 Shurima, 2 Bruiser and 2 Multicaster, add Swain with Level 6 and push for Level 7 in early Stage 4, where you roll for your core setup. Place Lux next to Azir so she will reduce the Magic Resistance on Azir's target. Once you're stabilized you can push for Level 8. Usually you are running Taliyah, but you can replace her in late game for K'Sante to remove problematic tanks early into the fight.<br><br>For your Legend take Ezreal or Vladimir, as they both have very powerful combat Augments that synergize well with this comp. Just be careful, there currently is a bug, if you take Buried Treasures for a second time it won't work. So if it is your starting Augment you should ignore other versions later on."
+  },
+  {
+    "id": 7,
+    "team": "Tristana Reroll",
+    "icons": ["gunner", "yordle"],
+    "image": "7.tristana-reroll.png",
+    "locked": false,
+    "tier": "A",
+    "leveling": "hyper-roll",
+    "carries": [
+      {
+        "id": 1,
+        "name": "Tristana",
+        "items": ["LastWhisper", "HextechGunblade", "GiantSlayer"]
+      },
+      {
+        "id": 2,
+        "name": "Maokai",
+        "items": ["GargoyleStoneplate", "Redemption", "BrambleVest"]
+      }
+    ],
+    "description": "Tristana Carry was one of the best reroll comps in the opening Patch for Set 9. Since then the comp has been nerfed by a good amount, but it is still playable and you can still find success with it. The Augment 'On a Roll' is now limited to 2 free rolls per turn, which is still useful for this comp, but makes the Lee Sin Legend less mandatory. One of the problems you can run into is the popularity of Kayle Reroll Players who are contesting Poppy and Maokai.<br><br>The concept is the same every game, you collect your Tier 1 units in the early game and focus on building up your economy. You go for a larger roll down in Stage 3-1 with Level 4 trying to 3 Star your core units. You want to have three 3 Star units as fast possible to make use of the Yordle trait to transform Tristanta into a 4 Star unit.<br><br>In a good setup you can have all of your 3 stars by Stage 3-1, which transform Tristana into 4 Star and allows you to win streak and set yourself up for late game. Maokai is overall a better tank than Poppy and you want to prioritize Tristana for the Yordle trait anyways, so he should get all of your defensive items.<br><br>Once you have 3 Stars you can push for Level 7 and add 4 Gunners with Zeri and Jayce. In late game you are looking for Heimerdinger to replace Teemo and Senna to replace Jinx. You can also run additional Frontline units like Jarvan."
+  },
+  {
+    "id": 8,
+    "team": "Ionia Challenger",
+    "icons": ["ionia", "challenger"],
+    "image": "8.ionia-challenger.png",
+    "locked": false,
+    "tier": "A",
+    "leveling": "standard",
+    "carries": [
+      {
+        "id": 1,
+        "name": "Yasuo",
+        "items": ["Bloodthirster", "EdgeOfNight", "TitansResolve"]
+      },
+      {
+        "id": 2,
+        "name": "Shen",
+        "items": ["GargoyleStoneplate", "SunfireCape", "WarmogsArmor"]
+      },
+      {
+        "id": 3,
+        "name": "Kaisa",
+        "items": ["StatikkShiv", "JeweledGauntlet", "GuardBreaker"]
+      }
+    ],
+    "description": ""
   }
 ]
