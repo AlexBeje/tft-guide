@@ -640,5 +640,17 @@
   {
     "id": 47,
     "name": "MechanoSwarm"
+  },
+  {
+    "id": 48,
+    "name": "ZaunEmblem"
+  },
+  {
+    "id": 49,
+    "name": "ShadowIslesEmblem"
+  },
+  {
+    "id": 50,
+    "name": "BruiserEmblem"
   }
 ]

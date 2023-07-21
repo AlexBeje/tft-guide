@@ -48,68 +48,64 @@
       />
     </el-select>
   </div>
-  <div v-for="buildsGuide in buildsGuidesDB">
-    <TFTDropdown
-      :title="buildsGuide.team"
-      :leftIcons="buildsGuide.icons"
-      :key="buildsGuide.id"
-      :id="buildsGuide.id"
-      :itemLocked="buildsGuide.locked"
-      itemCanBeLocked
-      :tier="buildsGuide.tier"
-      @lockItem="lockItem"
-    >
-      <div class="flex flex-col">
-        <VueMagnifier
-          :src="`builds/${buildsGuide.image}`"
-          class="w-full h-auto border-b border-borderLight"
-          :mgTouchOffsetX="0"
-          :mgTouchOffsetY="0"
-          :mgWidth="300"
-          :mgHeight="300"
-          mgCornerBgColor="#18181B"
-          :zoomFactor="0.6"
-          :mgBorderWidth="1"
-        />
-        <div class="p-2 flex flex-col gap-2 select-none">
-          <div
-            v-for="carry in buildsGuide.carries"
-            :key="carry.id"
-            class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
-          >
-            <img
-              :src="`champions/${carry.name}.png`"
-              class="w-[60px] h-[60px]"
-            />
-            <div v-for="item in carry.items" :key="item">
-              <div v-for="items in itemsDB">
-                <div v-if="items.name === item" class="flex">
+  <TFTDropdown
+    v-for="buildsGuide in buildsGuidesDB"
+    :title="buildsGuide.team"
+    :leftIcons="buildsGuide.icons"
+    :key="buildsGuide.id"
+    :id="buildsGuide.id"
+    :itemLocked="buildsGuide.locked"
+    itemCanBeLocked
+    :tier="buildsGuide.tier"
+    @lockItem="lockItem"
+  >
+    <div class="flex flex-col">
+      <VueMagnifier
+        :src="`builds/${buildsGuide.image}`"
+        class="w-full h-auto border-b border-borderLight"
+        :mgTouchOffsetX="0"
+        :mgTouchOffsetY="0"
+        :mgWidth="300"
+        :mgHeight="300"
+        mgCornerBgColor="#18181B"
+        :zoomFactor="0.6"
+        :mgBorderWidth="1"
+      />
+      <div class="p-2 flex flex-col gap-2 select-none">
+        <div
+          v-for="carry in buildsGuide.carries"
+          :key="carry.id"
+          class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
+        >
+          <img :src="`champions/${carry.name}.png`" class="w-[60px] h-[60px]" />
+          <div v-for="item in carry.items" :key="item">
+            <div v-for="items in itemsDB">
+              <div v-if="items.name === item" class="flex">
+                <img
+                  :src="`items/${items.name}.png`"
+                  class="w-[60px] h-[60px] opacity-25"
+                />
+                <div class="flex flex-col" v-if="items.components?.length">
                   <img
-                    :src="`items/${items.name}.png`"
-                    class="w-[60px] h-[60px] opacity-25"
+                    v-for="component in items.components"
+                    :src="`components/${component.name}.png`"
+                    class="w-[30px] h-[30px]"
                   />
-                  <div class="flex flex-col" v-if="items.components?.length">
-                    <img
-                      v-for="component in items.components"
-                      :src="`components/${component.name}.png`"
-                      class="w-[30px] h-[30px]"
-                    />
-                  </div>
-                  <div v-else class="w-[30px] h-[30px]" />
                 </div>
+                <div v-else class="w-[30px] h-[30px]" />
               </div>
             </div>
           </div>
         </div>
-        <div class="border-t-[1px] border-t-[#414243] p-2 flex flex-col gap-2">
-          <p class="text-xl font-black">
-            {{ getTitle(buildsGuide.id) }}
-          </p>
-          <p class="text-sm" v-html="buildsGuide.description" />
-        </div>
       </div>
-    </TFTDropdown>
-  </div>
+      <div class="border-t-[1px] border-t-[#414243] p-2 flex flex-col gap-2">
+        <p class="text-xl font-black">
+          {{ getTitle(buildsGuide.id) }}
+        </p>
+        <p class="text-sm" v-html="buildsGuide.description" />
+      </div>
+    </div>
+  </TFTDropdown>
 </template>
 
 <script setup lang="ts">
@@ -326,10 +322,30 @@ const selectedTeamListItem = ref("all");
 /** Computed **/
 const buildsGuidesDB = computed(() => {
   if (lockedBuildGuide.value) {
-    return lockedBuildGuide.value;
+    return sortByTier(lockedBuildGuide.value);
   }
-  return props.data;
+  return sortByTier(props.data);
 });
+const sortByTier = (itemToBeSorted: any) => {
+  const sortedByTeam = itemToBeSorted.sort((a: any, b: any) => {
+    if (a.team < b.team) {
+      return -1;
+    }
+    if (a.team > b.team) {
+      return 1;
+    }
+    return 0;
+  });
+  return sortedByTeam.sort((a: any, b: any) => {
+    if (a.tier < b.tier) {
+      return -1;
+    }
+    if (a.tier > b.tier) {
+      return 1;
+    }
+    return 0;
+  });
+};
 const getTeamList = computed(() => {
   const visibleTeamList = teamList.value?.map((teamListItem) => {
     if (
@@ -404,23 +420,6 @@ const getTitle = (id: number) => {
       return "Fast 8";
   }
 };
-const getDescription = (id: number) => {
-  const leveling = props.data?.find(
-    (buildGuide: BuildsGuide) => buildGuide.id === id
-  )?.leveling;
-  switch (leveling) {
-    case "fast-8":
-      return "The goal is to reach level 8 early in Stage 4 to find 4 and 5 cost units before your opponents. You generally need long win or losestreaks to have enough gold for it.";
-    case "slow-roll-6":
-      return "3-star units at level 6 by rolling your excess gold every round.";
-    case "slow-roll-7":
-      return "3-star units at level 7 by rolling your excess gold every round.";
-    case "hyper-roll":
-      return "Save up and then 3-star units at stage 3-1 by rolling all your gold.";
-    case "standard":
-      return "Flexible strategy focused around a healthy economy while still keeping up in levels. General rules are Level 6 by 3-2, Level 7 by 4-1, and Level 8 by 5-1.";
-  }
-};
 const onLevelingChange = (value: string) => {
   selectedTeamListItem.value = "all";
   team.value = "all";
@@ -463,7 +462,6 @@ const onTeamChange = (value: string) => {
     selectedTeamListItem.value = team.value;
   }
 };
-
 const constGetWidth = computed(() => {
   if (selectedTeamListItem.value === "all") {
     return "0px";

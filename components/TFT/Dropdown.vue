@@ -31,11 +31,9 @@
               <div
                 v-if="tier"
                 :class="`w-[14px] h-[14px] rounded-full border-[2px] border-black flex 
-                  ${tier === 'S' && 'bg-[#FF00FF]'}
-                  ${tier === 'A' && 'bg-[#E69138]'}
-                  ${tier === 'B' && 'bg-[#FFE599]'}
-                  ${tier === 'C' && 'bg-[#6D9EEB]'}
-                  ${tier === 'D' && 'bg-[#00FF01]'}
+                  ${tier === 1 && 'bg-[#FF00FF]'}
+                  ${tier === 2 && 'bg-[#E69138]'}
+                  ${tier === 3 && 'bg-[#FFE599]'}
                 `"
               />
               {{ title }}
@@ -90,7 +88,7 @@ const props = defineProps({
     type: Array,
   },
   tier: {
-    type: String,
+    type: Number,
   },
 });
 

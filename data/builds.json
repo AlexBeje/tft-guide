@@ -3,9 +3,9 @@
     "id": 1,
     "team": "Karma Invokers",
     "icons": ["invoker", "ionia"],
-    "image": "1.karma-invoker.png",
+    "image": "karma-invoker.png",
     "locked": false,
-    "tier": "S",
+    "tier": 1,
     "leveling": "slow-roll-7",
     "carries": [
       {
@@ -30,9 +30,9 @@
     "id": 2,
     "team": "Slayer Reroll",
     "icons": ["slayer", "noxus"],
-    "image": "2.slayer-reroll.png",
+    "image": "slayer-reroll.png",
     "locked": false,
-    "tier": "S",
+    "tier": 3,
     "leveling": "slow-roll-6",
     "carries": [
       {
@@ -57,9 +57,9 @@
     "id": 3,
     "team": "Noxus Reroll",
     "icons": ["noxus", "shuriman"],
-    "image": "3.noxus-reroll.png",
+    "image": "noxus-reroll.png",
     "locked": false,
-    "tier": "S",
+    "tier": 1,
     "leveling": "slow-roll-7",
     "carries": [
       {
@@ -76,6 +76,11 @@
         "id": 3,
         "name": "Nasus",
         "items": ["NoxusEmblem", "WarmogsArmor", "GargoyleStoneplate"]
+      },
+      {
+        "id": 4,
+        "name": "Azir",
+        "items": ["GuinsoosRageblade"]
       }
     ],
     "description": "Noxus can be played in a few variations. Outside of your 6 Noxus core you add Nasus/Azir with Shurima, add Zed for Slayer or roll for Ekko*3 together with Katarina. The best setup depends on your game, since Strategist are currently extremely powerful, the Shurima version can be quite difficult to hit at the moment.<br><br>In your best case scenario you have 6 Noxus in Stage 3-2, preferably with a Darius*2 to get you through mid game. Push for Level 7 in early Stage 4 and slow roll your interest for Darius*3 and Katarina*3. Once you have them you can push for Level 8 and add Ekko/Jarvan depending on what you prefer.<br><br>9 Noxus is a powerful chase trait, but it requires two Emblems and Level 9, which is very difficult to reach, so most of the time it's better to stay on Level 7/8 and prioritize your 3 Star carries instead.<br><br>Good users for Noxus Emblem are Nasus, Azir, Ekko, Zed or Aatrox."
@@ -84,9 +89,9 @@
     "id": 4,
     "team": "Slayer Kayle",
     "icons": ["slayer", "demacia"],
-    "image": "4.slayer-kayle.png",
+    "image": "slayer-kayle.png",
     "locked": false,
-    "tier": "S",
+    "tier": 2,
     "leveling": "hyper-roll",
     "carries": [
       {
@@ -111,15 +116,15 @@
     "id": 5,
     "team": "Freljord Akshan",
     "icons": ["freljord", "shuriman"],
-    "image": "5.freljord-akshan.png",
+    "image": "freljord-akshan.png",
     "locked": false,
-    "tier": "S",
+    "tier": 1,
     "leveling": "fast-8",
     "carries": [
       {
         "id": 1,
         "name": "Akshan",
-        "items": ["Deathblade", "RunnansHurricane", "RunnansHurricane"]
+        "items": ["Deathblade", "RunaansHurricane", "RunaansHurricane"]
       },
       {
         "id": 2,
@@ -138,9 +143,9 @@
     "id": 6,
     "team": "Strategist Azir",
     "icons": ["strategist", "shuriman"],
-    "image": "6.strategist-azir.png",
+    "image": "strategist-azir.png",
     "locked": false,
-    "tier": "A",
+    "tier": 2,
     "leveling": "standard",
     "carries": [
       {
@@ -165,9 +170,9 @@
     "id": 7,
     "team": "Tristana Reroll",
     "icons": ["gunner", "yordle"],
-    "image": "7.tristana-reroll.png",
+    "image": "tristana-reroll.png",
     "locked": false,
-    "tier": "A",
+    "tier": 2,
     "leveling": "hyper-roll",
     "carries": [
       {
@@ -187,9 +192,9 @@
     "id": 8,
     "team": "Ionia Challenger",
     "icons": ["ionia", "challenger"],
-    "image": "8.ionia-challenger.png",
+    "image": "ionia-challenger.png",
     "locked": false,
-    "tier": "A",
+    "tier": 2,
     "leveling": "standard",
     "carries": [
       {
@@ -208,6 +213,134 @@
         "items": ["StatikkShiv", "JeweledGauntlet", "GuardBreaker"]
       }
     ],
+    "description": "6 Ionia 4 Challenger might not be the best comp to win the game, but it has great power spikes and can safely secure an easy Top 4 placement. You open with 3 Ionia and 4 Challenger at Level 6, push for Level 7 in early Stage 4 and roll for your core setup.<br><br>You can run 6 Challenger with Level 7 unless you have an Ionia Emblem, which allows you to run 6 Ionia 4 Challenger instead (Emblem goes on Kai'Sa). You should be Level 8 in Stage 5 and add Ahri as an additional win condition in late game. From here you can either try to roll for a 3 Star Tier 4 unit or push for Level 9 to add K'Sante.<br><br>With an Ionia Emblem you can also aim for Bel'Veth in late game as your win condition, as she makes great use out of the bonus Attack Speed."
+  },
+  {
+    "id": 9,
+    "team": "Zaun Chemtank",
+    "icons": ["zaun", "gunner"],
+    "image": "zaun-chemtank.png",
+    "locked": false,
+    "tier": 2,
+    "leveling": "standard",
+    "carries": [
+      {
+        "id": 1,
+        "name": "JarvanIV",
+        "items": ["ZaunEmblem", "WarmogsArmor", "UnstableChamtank"]
+      },
+      {
+        "id": 2,
+        "name": "Urgot",
+        "items": ["Bloodthirster", "TitansResolve"]
+      },
+      {
+        "id": 3,
+        "name": "Zeri",
+        "items": ["StatikkShiv"]
+      },
+      {
+        "id": 4,
+        "name": "Jinx",
+        "items": ["GuinsoosRageblade", "LastWhisper", "RunaansHurricane"]
+      }
+    ],
+    "description": "THIS COMP HAS A REQUIRED CONDITION: You need one Zaun Emblem and one of your Chem Mods needs to be Unstable Chem Tank for this strategy to work. The main concept is to abuse Jarvan jumping into the largest cluster for perfect position for the Chemtank to blow up entire enemy team early into the fight.<br><br>Preferably open with Zaun Emblem (not required in Stage 2) and open with Piltover/Gunner. Give your AD items to Jinx. Check your Zaun Mod early, best case is to have Chemtank to enable this strategy or Robotic Arm for Jinx for a strong early / mid game.<br><br>Push for Level 6 in Stage 3-2, should have 4 Zaun at this point with a Zaun Emblem if you want to commit for this strategy. Should have Jinx*2 at this point. Push for Level 7 in Stage 4-1 and roll down for 6 Zaun and 1 Jarvan. Give Jarvan the Emblem, the Chemtank and HP items like Warmog and Zzrot.<br><br>Build one Statikk Shiv in the backline to increase the Chemtank damage further and itemize Urgot/Jinx. Zeri is weak at the moment and shouldn't receive items. Once you're stabilized you can push for Level 8 and add Senna/Heimerdinger. Can either aim for 3 Star Tier 4 units or push for Level 9 as win condition.<br><br>Chem Mods: Unstable Chemtank on Jarvan, Virulent Bioware on Zeri, Robotic Arm on Jinx, Shimmer Injection/Adapative Defenses/Exoskeleton on Urgot"
+  },
+  {
+    "id": 10,
+    "team": "Shadow Isles Challeger",
+    "icons": ["shadowisle", "challenger"],
+    "image": "shadow-isles-challenger.png",
+    "locked": false,
+    "tier": 2,
+    "leveling": "standard",
+    "carries": [
+      {
+        "id": 1,
+        "name": "Maokai",
+        "items": ["GargoyleStoneplate", "SunfireCape", "WarmogsArmor"]
+      },
+      {
+        "id": 2,
+        "name": "Gwen",
+        "items": ["JeweledGauntlet", "GiantSlayer", "HandOfJustice"]
+      },
+      {
+        "id": 3,
+        "name": "Yasuo",
+        "items": ["ShadowIslesEmblem", "Bloodthirster", "TitansResolve"]
+      },
+      {
+        "id": 4,
+        "name": "Kalista",
+        "items": ["GuinsoosRageblade", "StatikkShiv"]
+      }
+    ],
+    "description": "Shadow Isles is currently doing great as a trait and players have discovered how powerful the Emblem can be. Especially in combination with Challengers and you have a great mid game power spike. The Emblem usually goes on Yasuo since the large shield will allow him to stay alive much longer in the frontline. Sometimes you will hit Kaisa*2 before Yasuo and you can give the Emblem for her and set her up as your main carry.<br><br>The best way to reach the Shadow Isles Emblem is to open with the Urf Legend. To manipulate the Tome of Traits outcome you need to finish one round with either 6 or 8 traits on your board. You should have Multicaster, Yordle and Shadow Isles as part of those traits. Teemo is the best unit for this, as he provides both the Multicaster and the Yordle trait. Since Multicaster/Yordle have no Emblem for the Tome you increase your chances of receiving a Shadow Isles Emblem.<br><br>It's also possible that you just ended up running a normal Challenger/Ionia Board and got your hands on a Shadow Isles Emblem that allows you to make the pivot in the mid game and commit on this comp.<br><br>Gwen is very powerful, give her pure damage items and rely on the large shield from Shadow Isles to keep her alive."
+  },
+  {
+    "id": 11,
+    "team": "Vertical Void",
+    "icons": ["void", ""],
+    "image": "vertical-void.png",
+    "locked": false,
+    "tier": 2,
+    "leveling": "slow-roll-7",
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kaisa",
+        "items": ["SpearOfShojin", "JeweledGauntlet", "ArchangelsStaff"]
+      },
+      {
+        "id": 2,
+        "name": "BelVeth",
+        "items": ["RapidFirecannon"]
+      },
+      {
+        "id": 3,
+        "name": "RekSai",
+        "items": ["Bloodthirster", "TitansResolve", "TitansResolve"]
+      },
+      {
+        "id": 4,
+        "name": "Yasuo",
+        "items": ["VoidEmblem"]
+      }
+    ],
     "description": ""
+  },
+  {
+    "id": 12,
+    "team": "Bruiser Reksai Reroll",
+    "icons": ["Bruiser", "Void"],
+    "image": "bruiser-reksai-reroll.png",
+    "locked": false,
+    "tier": 3,
+    "leveling": "slow-roll-7",
+    "carries": [
+      {
+        "id": 1,
+        "name": "RekSai",
+        "items": ["Bloodthirster", "TitansResolve", "TitansResolve"]
+      },
+      {
+        "id": 2,
+        "name": "Lissandra",
+        "items": ["BruiserEmblem"]
+      },
+      {
+        "id": 3,
+        "name": "Sejuani",
+        "items": ["WarmogsArmor", "Redemption"]
+      },
+      {
+        "id": 4,
+        "name": "ApexTurret",
+        "items": ["ShrinkModule", "ShrinkModule", "MechanoSwarm"]
+      }
+    ],
+    "description": "Overall goal is to to stabilize in Stage 3-2 with 4 Bruiser and 2 Freljord, push for Level 7 in early Stage 4 and slow roll your interest for Reksai*3 and Lissandra*3 (optional). This comp can differ A LOT in power, as it is very Augment dependant.<br><br>It's extremely helpful to get +1 to Bruiser with the help of Augments so you can reach 6 Bruiser without having to find Sion. Augments like Transfusion, All Natural, Gargantuan Resolve or Titanic Strength increase the power of your comp by a considerable amount.<br><br>Once you have reached Reksai*3 you can push for Level 8 and add Sion together with Heimerdinger/Kaisa/Ryze. It's also possible to ignore Lissandra completely and play Kaisa Carry with AP items instead. Heimerdinger with Guinsoo can be good late game win condition or provide you with Armor/Magic Pen, since Freljord is a lot weaker and arrives quite late into the fight."
   }
 ]
