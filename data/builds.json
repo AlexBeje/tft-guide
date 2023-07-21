@@ -314,7 +314,7 @@
   {
     "id": 12,
     "team": "Bruiser Reksai Reroll",
-    "icons": ["Bruiser", "Void"],
+    "icons": ["bruiser", "void"],
     "image": "bruiser-reksai-reroll.png",
     "locked": false,
     "tier": 3,
