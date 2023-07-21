@@ -652,5 +652,9 @@
   {
     "id": 50,
     "name": "BruiserEmblem"
+  },
+  {
+    "id": 51,
+    "name": "UnstableChemtank"
   }
 ]
