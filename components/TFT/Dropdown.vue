@@ -24,13 +24,13 @@
               />
             </div>
             <span
-              :class="`text-sm ${
+              :class="`${
                 leftIcons?.length ? 'm-auto' : 'm-0'
               } flex items-center gap-2`"
             >
-              <div
+              <span
                 v-if="tier"
-                :class="`rounded-full w-[28px] h-[28px] flex items-center justify-center border-[2px] border-[#414243]
+                :class="`text-sm rounded-full w-[28px] h-[28px] flex items-center justify-center border-[2px] border-[#414243]
                 ${tier === 1 && 'bg-[#6FF2B2] text-[#6FF2B2]'}
                 ${tier === 2 && 'bg-[#EF99FA] text-[#EF99FA]'}
                 ${tier === 3 && 'bg-[#9D82F9] text-[#9D82F9]'}
@@ -40,13 +40,13 @@
                   class="bg-[#1D1E1F] m-auto w-[20px] h-[20px] flex items-center justify-center rounded-full"
                 >
                   {{
-                    tier === 1 && 'S' ||
-                    tier === 2 && 'A' ||
-                    tier === 3 && 'B'
+                    (tier === 1 && "S") ||
+                    (tier === 2 && "A") ||
+                    (tier === 3 && "B")
                   }}
                 </div>
-              </div>
-              {{ title }}
+              </span>
+              <span class="text-[12px]">{{ title }}</span>
             </span>
           </div>
         </strong>
