@@ -2,7 +2,7 @@
   <div class="flex gap-4 px-2">
     <el-select
       v-model="team"
-      class="py-2"
+      class="py-2 w-full"
       placeholder="Team"
       size="large"
       @change="onTeamChange"
@@ -33,85 +33,86 @@
         />
       </template>
     </el-select>
-    <el-select
-      v-model="leveling"
-      class="py-2"
-      placeholder="Leveling"
-      size="large"
-      @change="onLevelingChange"
-    >
-      <el-option
-        v-for="levelingListItem in levelingList"
-        :key="levelingListItem.value"
-        :label="levelingListItem.label"
-        :value="levelingListItem.value"
-      />
-    </el-select>
   </div>
-  <TFTDropdown
-    v-for="buildsGuide in buildsGuidesDB"
-    :title="buildsGuide.team"
-    :leftIcons="buildsGuide.icons"
-    :key="buildsGuide.id"
-    :id="buildsGuide.id"
-    :itemLocked="buildsGuide.locked"
-    itemCanBeLocked
-    :tier="buildsGuide.tier"
-    @lockItem="lockItem"
-  >
-    <div class="flex flex-col">
-      <VueMagnifier
-        :src="`builds/${buildsGuide.image}`"
-        class="w-full h-auto border-b border-borderLight"
-        :mgTouchOffsetX="0"
-        :mgTouchOffsetY="0"
-        :mgWidth="300"
-        :mgHeight="300"
-        mgCornerBgColor="#18181B"
-        :zoomFactor="0.6"
-        :mgBorderWidth="1"
-      />
-      <div class="p-2 flex flex-col gap-2 select-none">
+  <div v-for="buildsGuide in buildsGuidesDB">
+    <TFTDropdown
+      :title="buildsGuide.title"
+      :leftIcons="buildsGuide.icons"
+      :key="buildsGuide.id"
+      :id="buildsGuide.id"
+      :itemLocked="buildsGuide.locked"
+      itemCanBeLocked
+      :tier="buildsGuide.tier"
+      @lockItem="lockItem"
+    >
+      <div class="flex flex-col">
+        <div class="p-2 flex flex-col gap-2 select-none">
+          <p class="text-xl font-black">Early Game</p>
+          <div class="flex gap-1">
+            <img
+              v-for="earlyGameChampion in buildsGuide.earlyGameChampions"
+              :src="`champions/${earlyGameChampion}.png`"
+              :class="`w-[54.33px] h-[54.33px] ${getChampionCost(
+                earlyGameChampion
+              )}`"
+            />
+          </div>
+        </div>
         <div
-          v-for="carry in buildsGuide.carries"
-          :key="carry.id"
-          class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
+          class="p-2 flex flex-col gap-2 select-none border-t-[1px] border-t-[#414243]"
         >
-          <img :src="`champions/${carry.name}.png`" class="w-[60px] h-[60px]" />
-          <div v-for="item in carry.items" :key="item">
-            <div v-for="items in itemsDB">
-              <div v-if="items.name === item" class="flex">
-                <img
-                  :src="`items/${items.name}.png`"
-                  class="w-[60px] h-[60px] opacity-25"
-                />
-                <div class="flex flex-col" v-if="items.components?.length">
+          <p class="text-xl font-black">Late Game</p>
+          <div class="flex gap-1">
+            <img
+              v-for="lateGameChampion in buildsGuide.lateGameChampions"
+              :src="`champions/${lateGameChampion}.png`"
+              :class="`w-[39.75px] h-[39.75px] ${getChampionCost(
+                lateGameChampion
+              )}`"
+            />
+          </div>
+        </div>
+        <div
+          class="p-2 flex flex-col gap-2 select-none border-t-[1px] border-t-[#414243]"
+        >
+          <p class="text-xl font-black">Carries</p>
+          <div
+            v-for="carry in buildsGuide.carries"
+            :key="carry.id"
+            class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
+          >
+            <img
+              :src="`champions/${carry.name}.png`"
+              class="w-[60px] h-[60px]"
+            />
+            <div v-for="item in carry.items" :key="item">
+              <div v-for="items in itemsDB">
+                <div v-if="items.name === item" class="flex">
                   <img
-                    v-for="component in items.components"
-                    :src="`components/${component.name}.png`"
-                    class="w-[30px] h-[30px]"
+                    :src="`items/${items.name}.png`"
+                    class="w-[60px] h-[60px] opacity-25"
                   />
+                  <div class="flex flex-col">
+                    <img
+                      v-for="component in items.components"
+                      :src="`components/${component.name}.png`"
+                      class="w-[30px] h-[30px]"
+                    />
+                  </div>
                 </div>
-                <div v-else class="w-[30px] h-[30px]" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="border-t-[1px] border-t-[#414243] p-2 flex flex-col gap-2">
-        <p class="text-xl font-black">
-          {{ getTitle(buildsGuide.id) }}
-        </p>
-        <p class="text-sm" v-html="buildsGuide.description" />
-      </div>
-    </div>
-  </TFTDropdown>
+    </TFTDropdown>
+  </div>
 </template>
 
 <script setup lang="ts">
 /** Imports **/
 import itemsDB from "@/data/items.json";
-import VueMagnifier from "@websitebeaver/vue-magnifier";
+import championsDB from "@/data/champions.json";
 import "@websitebeaver/vue-magnifier/styles.css";
 
 /** Types **/
@@ -124,13 +125,12 @@ interface Carries {
 interface BuildsGuide {
   id: number;
   icons: string[];
-  team: string;
-  image: string;
+  title: string;
   locked: boolean;
   tier: string;
+  earlyGameChampions: string[];
+  lateGameChampions: string[];
   carries: Carries[];
-  leveling: string;
-  description: string;
 }
 
 /** Props **/
@@ -142,38 +142,6 @@ const props = defineProps<{
 const lockedBuildGuide = ref<BuildsGuide[]>();
 const leveling = ref("all");
 const team = ref("all");
-const levelingList = ref([
-  {
-    id: 0,
-    label: "All Playstyles",
-    value: "all",
-  },
-  {
-    id: 1,
-    label: "Standard",
-    value: "standard",
-  },
-  {
-    id: 2,
-    label: "Hyper Roll",
-    value: "hyper-roll",
-  },
-  {
-    id: 3,
-    label: "Slow Roll (6)",
-    value: "slow-roll-6",
-  },
-  {
-    id: 4,
-    label: "Slow Roll (7)",
-    value: "slow-roll-7",
-  },
-  {
-    id: 5,
-    label: "Fast 8",
-    value: "fast-8",
-  },
-]);
 const teamList = ref([
   {
     id: 0,
@@ -322,30 +290,10 @@ const selectedTeamListItem = ref("all");
 /** Computed **/
 const buildsGuidesDB = computed(() => {
   if (lockedBuildGuide.value) {
-    return sortByTier(lockedBuildGuide.value);
+    return lockedBuildGuide.value;
   }
-  return sortByTier(props.data);
+  return props.data;
 });
-const sortByTier = (itemToBeSorted: any) => {
-  const sortedByTeam = itemToBeSorted.sort((a: any, b: any) => {
-    if (a.team < b.team) {
-      return -1;
-    }
-    if (a.team > b.team) {
-      return 1;
-    }
-    return 0;
-  });
-  return sortedByTeam.sort((a: any, b: any) => {
-    if (a.tier < b.tier) {
-      return -1;
-    }
-    if (a.tier > b.tier) {
-      return 1;
-    }
-    return 0;
-  });
-};
 const getTeamList = computed(() => {
   const visibleTeamList = teamList.value?.map((teamListItem) => {
     if (
@@ -403,23 +351,6 @@ const lockItem = (item: number, itemLocked: boolean) => {
       });
   }
 };
-const getTitle = (id: number) => {
-  const title = props.data?.find(
-    (buildGuide: BuildsGuide) => buildGuide.id === id
-  )?.leveling;
-  switch (title) {
-    case "standard":
-      return "Standard";
-    case "hyper-roll":
-      return "Hyper Roll";
-    case "slow-roll-6":
-      return "Slow Roll (6)";
-    case "slow-roll-7":
-      return "Slow Roll (7)";
-    case "fast-8":
-      return "Fast 8";
-  }
-};
 const onLevelingChange = (value: string) => {
   selectedTeamListItem.value = "all";
   team.value = "all";
@@ -462,12 +393,32 @@ const onTeamChange = (value: string) => {
     selectedTeamListItem.value = team.value;
   }
 };
+
 const constGetWidth = computed(() => {
   if (selectedTeamListItem.value === "all") {
     return "0px";
   }
   return "auto";
 });
+
+const getChampionCost = (champion: string) => {
+  const championCost = championsDB.find(
+    (championDB) => championDB.name === champion
+  )?.cost;
+
+  switch (championCost) {
+    case 2:
+      return "border-[2px] border-[#156831]";
+    case 3:
+      return "border-[2px] border-[#12407c]";
+    case 4:
+      return "border-[2px] border-[#893088]";
+    case 5:
+      return "border-[2px] border-[#b89d27]";
+    default:
+      return;
+  }
+};
 </script>
 
 <style scoped lang="scss">
