@@ -31,13 +31,13 @@
       },
       {
         "id": 2,
-        "name": "Lissandra",
-        "items": ["Morellonomicon"]
+        "name": "Sejuani",
+        "items": ["ProtectorsVow", "WarmogsArmor", "GargoyleStoneplate"]
       },
       {
         "id": 3,
-        "name": "Sejuani",
-        "items": ["ProtectorsVow", "WarmogsArmor", "GargoyleStoneplate"]
+        "name": "Lissandra",
+        "items": ["Morellonomicon"]
       }
     ]
   },
@@ -115,19 +115,18 @@
     "carries": [
       {
         "id": 1,
-        "name": "Soraka",
-        "items": ["StatikkShiv"]
-      },
-      {
-        "id": 2,
         "name": "Karma",
         "items": ["JeweledGauntlet", "HextechGunblade", "ArchangelsStaff"]
       },
-
       {
-        "id": 3,
+        "id": 2,
         "name": "Shen",
         "items": ["BrambleVest", "DragonsClaw", "Redemption"]
+      },
+      {
+        "id": 3,
+        "name": "Soraka",
+        "items": ["StatikkShiv"]
       }
     ]
   },
@@ -158,8 +157,8 @@
     "carries": [
       {
         "id": 1,
-        "name": "Swain",
-        "items": ["ZzRotPortal"]
+        "name": "Lux",
+        "items": ["BlueBuff", "JeweledGauntlet"]
       },
       {
         "id": 2,
@@ -168,13 +167,13 @@
       },
       {
         "id": 3,
-        "name": "Lux",
-        "items": ["BlueBuff", "JeweledGauntlet"]
+        "name": "Ahri",
+        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
       },
       {
         "id": 4,
-        "name": "Ahri",
-        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
+        "name": "Swain",
+        "items": ["ZzRotPortal"]
       }
     ]
   },
@@ -210,13 +209,13 @@
       },
       {
         "id": 2,
-        "name": "Sett",
-        "items": ["SunfireCape", "IonicSpark"]
+        "name": "Yasuo",
+        "items": ["InfinityEdge", "RapidFirecannon", "HandOfJustice"]
       },
       {
         "id": 3,
-        "name": "Yasuo",
-        "items": ["InfinityEdge", "RapidFirecannon", "HandOfJustice"]
+        "name": "Sett",
+        "items": ["SunfireCape", "IonicSpark"]
       }
     ]
   },
