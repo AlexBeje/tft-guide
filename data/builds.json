@@ -312,7 +312,7 @@
       "Kaisa"
     ],
     "lateGameChampions": [
-      "MaoKai",
+      "Maokai",
       "Irelia",
       "Kaisa",
       "Yasuo",
@@ -329,7 +329,7 @@
       },
       {
         "id": 2,
-        "name": "MaoKai",
+        "name": "Maokai",
         "items": ["GargoyleStoneplate", "SunfireCape", "WarmogsArmor"]
       },
       {
