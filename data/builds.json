@@ -261,5 +261,124 @@
         "items": ["Bloodthirster", "TitansResolve"]
       }
     ]
+  },
+  {
+    "id": 7,
+    "title": "Zaun Chemtank",
+    "icons": ["zaun", "gunner"],
+    "locked": false,
+    "tier": "A",
+    "earlyGameChampions": ["Jinx", "Vi", "Warwick", "Sett", "Ekko", "Jayce"],
+    "lateGameChampions": [
+      "Jinx",
+      "Warwick",
+      "Jayce",
+      "Ekko",
+      "JarvanIV",
+      "Urgot",
+      "Zeri",
+      "Senna"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "JarvanIV",
+        "items": ["ZaunEmblem", "WarmogsArmor", "UnstableChemtank"]
+      },
+      {
+        "id": 2,
+        "name": "Urgot",
+        "items": ["Bloodthirster", "TitansResolve", "TitansResolve"]
+      },
+      {
+        "id": 3,
+        "name": "Zeri",
+        "items": ["GuinsoosRageblade", "StatikkShiv"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Shadow Isles Challenger",
+    "icons": ["shadowisle", "challenger"],
+    "locked": false,
+    "tier": "A",
+    "earlyGameChampions": [
+      "Samira",
+      "Irelia",
+      "Jhin",
+      "Sett",
+      "Warwick",
+      "Kaisa"
+    ],
+    "lateGameChampions": [
+      "MaoKai",
+      "Irelia",
+      "Kaisa",
+      "Yasuo",
+      "Gwen",
+      "Shen",
+      "Kaisa",
+      "Senna"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kaisa",
+        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
+      },
+      {
+        "id": 2,
+        "name": "MaoKai",
+        "items": ["GargoyleStoneplate", "SunfireCape", "WarmogsArmor"]
+      },
+      {
+        "id": 3,
+        "name": "Gwen",
+        "items": ["GuinsoosRageblade", "StatikkShiv"]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Vertical Void",
+    "icons": ["void", "challenger"],
+    "locked": false,
+    "tier": "A",
+    "earlyGameChampions": [
+      "Chogath",
+      "Malzahar",
+      "Kassadin",
+      "Velkoz",
+      "RekSai",
+      "Kaisa"
+    ],
+    "lateGameChampions": [
+      "Chogath",
+      "Malzahar",
+      "Kassadin",
+      "Velkoz",
+      "RekSai",
+      "Kaisa",
+      "Yasuo",
+      "Belveth"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "RekSai",
+        "items": ["Bloodthirster", "TitansResolve", "TitansResolve"]
+      },
+      {
+        "id": 2,
+        "name": "Kaisa",
+        "items": ["SpearOfShojin", "JeweledGauntlet", "ArchangelsStaff"]
+      },
+      {
+        "id": 3,
+        "name": "Belveth",
+        "items": ["RapidFirecannon", "Bloodthirster", "Quicksilver"]
+      }
+    ]
   }
 ]
