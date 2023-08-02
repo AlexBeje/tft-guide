@@ -43,7 +43,7 @@
   },
   {
     "id": 2,
-    "title": "Noxus",
+    "title": "Noxus Reroll",
     "icons": ["noxus", "shuriman"],
     "locked": false,
     "tier": "S",
@@ -128,6 +128,137 @@
         "id": 3,
         "name": "Shen",
         "items": ["BrambleVest", "DragonsClaw", "Redemption"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "6+ Sorcerer",
+    "icons": ["sorcerer", "demacia"],
+    "locked": false,
+    "tier": "S",
+    "earlyGameChampions": [
+      "Malzahar",
+      "Orianna",
+      "Swain",
+      "Taric",
+      "Velkoz",
+      "Lux"
+    ],
+    "lateGameChampions": [
+      "Malzahar",
+      "Swain",
+      "Velkoz",
+      "Sona",
+      "Taric",
+      "Lux",
+      "JarvanIV",
+      "Ahri"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Swain",
+        "items": ["ZzRotPortal"]
+      },
+      {
+        "id": 2,
+        "name": "Taric",
+        "items": ["IonicSpark", "SunfireCape", "WarmogsArmor"]
+      },
+      {
+        "id": 3,
+        "name": "Lux",
+        "items": ["BlueBuff", "JeweledGauntlet"]
+      },
+      {
+        "id": 4,
+        "name": "Ahri",
+        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Revenous Warwick",
+    "icons": ["juggernaut", "challenger"],
+    "locked": false,
+    "tier": "S",
+    "earlyGameChampions": [
+      "Samira",
+      "Irelia",
+      "Jinx",
+      "Sett",
+      "Warwick",
+      "Kalista"
+    ],
+    "lateGameChampions": [
+      "Irelia",
+      "Sett",
+      "Warwick",
+      "Kaisa",
+      "Urgot",
+      "Nasus",
+      "Yasuo",
+      "Aatrox"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Warwick",
+        "items": ["Bloodthirster", "GuinsoosRageblade", "Quicksilver"]
+      },
+      {
+        "id": 2,
+        "name": "Sett",
+        "items": ["SunfireCape", "IonicSpark"]
+      },
+      {
+        "id": 3,
+        "name": "Yasuo",
+        "items": ["InfinityEdge", "RapidFirecannon", "HandOfJustice"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Zaun Zeri",
+    "icons": ["gunner", "zaun"],
+    "locked": false,
+    "tier": "S",
+    "earlyGameChampions": [
+      "Renekton",
+      "Warwick",
+      "Vi",
+      "Jinx",
+      "Jayce",
+      "Ekko"
+    ],
+    "lateGameChampions": [
+      "Jinx",
+      "Ekko",
+      "Jayce",
+      "Urgot",
+      "Sejuani",
+      "Zeri",
+      "Heimerdinger",
+      "Senna"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Zeri",
+        "items": ["GuinsoosRageblade", "LastWhisper", "GiantSlayer"]
+      },
+      {
+        "id": 2,
+        "name": "Sejuani",
+        "items": ["ProtectorsVow", "WarmogsArmor", "GargoyleStoneplate"]
+      },
+      {
+        "id": 3,
+        "name": "Urgot",
+        "items": ["Bloodthirster", "TitansResolve"]
       }
     ]
   }

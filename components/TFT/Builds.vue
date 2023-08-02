@@ -407,6 +407,8 @@ const getChampionCost = (champion: string) => {
   )?.cost;
 
   switch (championCost) {
+    case 1:
+      return "border-[2px] border-[#9C9EA5]";
     case 2:
       return "border-[2px] border-[#156831]";
     case 3:
