@@ -18,7 +18,7 @@
       "Sejuani",
       "Shen",
       "Ahri",
-      "Belveth",
+      "BelVeth",
       "Sion",
       "Heimerdinger"
     ],
@@ -30,7 +30,7 @@
       },
       {
         "id": 2,
-        "name": "Belveth",
+        "name": "BelVeth",
         "items": ["RapidFirecannon", "Bloodthirster", "EdgeOfNight"]
       },
       {
@@ -310,7 +310,7 @@
       "RekSai",
       "Kaisa",
       "Yasuo",
-      "Belveth"
+      "BelVeth"
     ],
     "carries": [
       {
@@ -325,7 +325,7 @@
       },
       {
         "id": 3,
-        "name": "Belveth",
+        "name": "BelVeth",
         "items": ["RapidFirecannon", "Bloodthirster", "Quicksilver"]
       }
     ]
