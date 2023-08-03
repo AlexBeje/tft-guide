@@ -315,13 +315,13 @@
     "carries": [
       {
         "id": 1,
-        "name": "RekSai",
-        "items": ["Bloodthirster", "TitansResolve", "TitansResolve"]
+        "name": "Kaisa",
+        "items": ["SpearOfShojin", "JeweledGauntlet", "ArchangelsStaff"]
       },
       {
         "id": 2,
-        "name": "Kaisa",
-        "items": ["SpearOfShojin", "JeweledGauntlet", "ArchangelsStaff"]
+        "name": "RekSai",
+        "items": ["Bloodthirster", "TitansResolve", "TitansResolve"]
       },
       {
         "id": 3,
