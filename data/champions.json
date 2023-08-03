@@ -428,7 +428,7 @@
   },
   {
     "id": 41,
-    "name": "Belveth",
+    "name": "BelVeth",
     "cost": 5,
     "class": ["void"],
     "items": ["Bloodthirster", "LastWhisper", "TitansResolve"],
