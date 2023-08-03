@@ -473,5 +473,10 @@
     "class": ["noxus", "bruiser"],
     "items": ["Redemption", "SunfireCape", "WarmogsArmor"],
     "tier": 2
+  },
+  {
+    "id": 47,
+    "name": "ApexTurret",
+    "cost": 5
   }
 ]

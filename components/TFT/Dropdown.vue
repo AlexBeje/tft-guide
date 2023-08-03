@@ -39,9 +39,7 @@
                 <div
                   class="bg-[#1D1E1F] m-auto w-[20px] h-[20px] flex items-center justify-center rounded-full"
                 >
-                  {{
-                    tier
-                  }}
+                  {{ tier }}
                 </div>
               </span>
               <span class="text-[12px]">{{ title }}</span>
@@ -81,9 +79,6 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  id: {
-    type: Number,
-  },
   itemCanBeLocked: {
     type: Boolean,
     default: false,
@@ -109,7 +104,7 @@ const toggleShowMore = () => {
   showMore.value = !showMore.value;
 };
 const onLockItem = (itemLocked: boolean) => {
-  emits("lockItem", props.id, itemLocked);
+  emits("lockItem", props.title, itemLocked);
 };
 </script>
 

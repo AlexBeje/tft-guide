@@ -1,95 +1,121 @@
 [
   {
-    "id": 1,
-    "title": "Freljord Akshan",
-    "icons": ["freljord", "shuriman"],
-    "locked": false,
-    "tier": "S",
-    "earlyGameChampions": [
-      "Cassiopeia",
-      "Renekton",
-      "Vi",
-      "Ashe",
-      "Lissandra",
-      "Akshan"
-    ],
-    "lateGameChampions": [
-      "Ashe",
-      "Lissandra",
-      "Akshan",
-      "Sejuani",
-      "Nasus",
-      "JarvanIV",
-      "Sion",
-      "KSante"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Akshan",
-        "items": ["Deathblade", "InfinityEdge", "RunaansHurricane"]
-      },
-      {
-        "id": 2,
-        "name": "Sejuani",
-        "items": ["ProtectorsVow", "WarmogsArmor", "GargoyleStoneplate"]
-      },
-      {
-        "id": 3,
-        "name": "Lissandra",
-        "items": ["Morellonomicon"]
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Noxus Reroll",
-    "icons": ["noxus", "shuriman"],
+    "title": "Legendary Soup",
+    "icons": ["ionia", "invoker"],
     "locked": false,
     "tier": "S",
     "earlyGameChampions": [
       "Cassiopeia",
       "Samira",
-      "Kled",
       "Swain",
-      "Darius",
-      "Katarina"
+      "Kled",
+      "Katarina",
+      "Darius"
     ],
     "lateGameChampions": [
-      "Cassiopeia",
-      "Swain",
-      "Darius",
-      "Katarina",
-      "Nasus",
-      "Azir",
-      "JarvanIV",
-      "Sion"
+      "Taric",
+      "Karma",
+      "Sejuani",
+      "Shen",
+      "Ahri",
+      "Belveth",
+      "Sion",
+      "Heimerdinger"
     ],
     "carries": [
       {
         "id": 1,
-        "name": "Darius",
-        "items": ["Bloodthirster", "TitansResolve", "InfinityEdge"]
+        "name": "Ahri",
+        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
       },
       {
         "id": 2,
-        "name": "Katarina",
-        "items": ["IonicSpark", "HandOfJustice", "JeweledGauntlet"]
+        "name": "Belveth",
+        "items": ["RapidFirecannon", "Bloodthirster", "EdgeOfNight"]
       },
       {
         "id": 3,
-        "name": "Nasus",
-        "items": ["NoxusEmblem", "WarmogsArmor", "GargoyleStoneplate"]
-      },
-      {
-        "id": 4,
-        "name": "Azir",
-        "items": ["GuinsoosRageblade"]
+        "name": "Sion",
+        "items": ["GargoyleStoneplate", "IonicSpark", "SunfireCape"]
       }
     ]
   },
   {
-    "id": 3,
+    "title": "Noxus Tier 1 Reroll",
+    "icons": ["noxus", "juggernaut"],
+    "locked": false,
+    "tier": "S",
+    "earlyGameChampions": [
+      "Samira",
+      "Cassiopeia",
+      "Swain",
+      "Kled",
+      "Darius",
+      "Katarina"
+    ],
+    "lateGameChampions": [
+      "Samira",
+      "Cassiopeia",
+      "Swain",
+      "Warwick",
+      "Katarina",
+      "Darius",
+      "Sion",
+      "Heimerdinger"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Samira",
+        "items": ["BlueBuff", "InfinityEdge", "Deathblade"]
+      },
+      {
+        "id": 2,
+        "name": "Swain",
+        "items": ["GargoyleStoneplate", "Redemption", "SunfireCape"]
+      },
+      {
+        "id": 3,
+        "name": "Cassiopeia",
+        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
+      }
+    ]
+  },
+  {
+    "title": "Multicast Teemo",
+    "icons": ["multicaster", "demacia"],
+    "locked": false,
+    "tier": "S",
+    "earlyGameChampions": ["Poppy", "Swain", "Galio", "Kled", "Teemo", "Sona"],
+    "lateGameChampions": [
+      "Poppy",
+      "Teemo",
+      "Galio",
+      "Swain",
+      "Taliyah",
+      "Kled",
+      "Velkoz",
+      "Sona"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Teemo",
+        "items": ["BlueBuff", "JeweledGauntlet", "HextechGunblade"]
+      },
+      {
+        "id": 2,
+        "name": "Galio",
+        "items": ["GargoyleStoneplate", "IonicSpark", "SunfireCape"]
+      },
+      {
+        "id": 3,
+        "name": "Taliyah",
+        "items": ["ChaliceOfPower"]
+      }
+    ]
+  },
+  {
     "title": "Karma Invokers",
     "icons": ["invoker", "ionia"],
     "locked": false,
@@ -131,7 +157,6 @@
     ]
   },
   {
-    "id": 4,
     "title": "6+ Sorcerer",
     "icons": ["sorcerer", "demacia"],
     "locked": false,
@@ -178,53 +203,56 @@
     ]
   },
   {
-    "id": 5,
-    "title": "Revenous Warwick",
-    "icons": ["juggernaut", "challenger"],
+    "title": "Noxus Tier 3 Reroll",
+    "icons": ["noxus", "shuriman"],
     "locked": false,
     "tier": "S",
     "earlyGameChampions": [
+      "Cassiopeia",
       "Samira",
-      "Irelia",
-      "Jinx",
-      "Sett",
-      "Warwick",
-      "Kalista"
+      "Kled",
+      "Swain",
+      "Darius",
+      "Katarina"
     ],
     "lateGameChampions": [
-      "Irelia",
-      "Sett",
-      "Warwick",
-      "Kaisa",
-      "Urgot",
+      "Cassiopeia",
+      "Swain",
+      "Darius",
+      "Katarina",
       "Nasus",
-      "Yasuo",
-      "Aatrox"
+      "Azir",
+      "JarvanIV",
+      "Sion"
     ],
     "carries": [
       {
         "id": 1,
-        "name": "Warwick",
-        "items": ["Bloodthirster", "GuinsoosRageblade", "Quicksilver"]
+        "name": "Darius",
+        "items": ["Bloodthirster", "TitansResolve", "InfinityEdge"]
       },
       {
         "id": 2,
-        "name": "Yasuo",
-        "items": ["InfinityEdge", "RapidFirecannon", "HandOfJustice"]
+        "name": "Katarina",
+        "items": ["IonicSpark", "HandOfJustice", "JeweledGauntlet"]
       },
       {
         "id": 3,
-        "name": "Sett",
-        "items": ["SunfireCape", "IonicSpark"]
+        "name": "Nasus",
+        "items": ["NoxusEmblem", "WarmogsArmor", "GargoyleStoneplate"]
+      },
+      {
+        "id": 4,
+        "name": "Azir",
+        "items": ["GuinsoosRageblade"]
       }
     ]
   },
   {
-    "id": 6,
     "title": "Zaun Zeri",
     "icons": ["gunner", "zaun"],
     "locked": false,
-    "tier": "S",
+    "tier": "A",
     "earlyGameChampions": [
       "Renekton",
       "Warwick",
@@ -262,84 +290,6 @@
     ]
   },
   {
-    "id": 7,
-    "title": "Zaun Chemtank",
-    "icons": ["zaun", "gunner"],
-    "locked": false,
-    "tier": "A",
-    "earlyGameChampions": ["Jinx", "Vi", "Warwick", "Sett", "Ekko", "Jayce"],
-    "lateGameChampions": [
-      "Jinx",
-      "Warwick",
-      "Jayce",
-      "Ekko",
-      "JarvanIV",
-      "Urgot",
-      "Zeri",
-      "Senna"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "JarvanIV",
-        "items": ["ZaunEmblem", "WarmogsArmor", "UnstableChemtank"]
-      },
-      {
-        "id": 2,
-        "name": "Urgot",
-        "items": ["Bloodthirster", "TitansResolve", "TitansResolve"]
-      },
-      {
-        "id": 3,
-        "name": "Zeri",
-        "items": ["GuinsoosRageblade", "StatikkShiv"]
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "title": "Shadow Isles Challenger",
-    "icons": ["shadowisle", "challenger"],
-    "locked": false,
-    "tier": "A",
-    "earlyGameChampions": [
-      "Samira",
-      "Irelia",
-      "Jhin",
-      "Sett",
-      "Warwick",
-      "Kaisa"
-    ],
-    "lateGameChampions": [
-      "Maokai",
-      "Irelia",
-      "Kaisa",
-      "Yasuo",
-      "Gwen",
-      "Shen",
-      "Kaisa",
-      "Senna"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Kaisa",
-        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
-      },
-      {
-        "id": 2,
-        "name": "Maokai",
-        "items": ["GargoyleStoneplate", "SunfireCape", "WarmogsArmor"]
-      },
-      {
-        "id": 3,
-        "name": "Gwen",
-        "items": ["GuinsoosRageblade", "StatikkShiv"]
-      }
-    ]
-  },
-  {
-    "id": 9,
     "title": "Vertical Void",
     "icons": ["void", "challenger"],
     "locked": false,
@@ -360,7 +310,7 @@
       "RekSai",
       "Kaisa",
       "Yasuo",
-      "BelVeth"
+      "Belveth"
     ],
     "carries": [
       {
@@ -375,8 +325,290 @@
       },
       {
         "id": 3,
-        "name": "BelVeth",
+        "name": "Belveth",
         "items": ["RapidFirecannon", "Bloodthirster", "Quicksilver"]
+      }
+    ]
+  },
+  {
+    "title": "Revenous Warwick",
+    "icons": ["juggernaut", "challenger"],
+    "locked": false,
+    "tier": "A",
+    "earlyGameChampions": [
+      "Samira",
+      "Irelia",
+      "Jinx",
+      "Sett",
+      "Warwick",
+      "Kalista"
+    ],
+    "lateGameChampions": [
+      "Irelia",
+      "Sett",
+      "Warwick",
+      "Kaisa",
+      "Urgot",
+      "Nasus",
+      "Yasuo",
+      "Aatrox"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Warwick",
+        "items": ["Bloodthirster", "GuinsoosRageblade", "Quicksilver"]
+      },
+      {
+        "id": 2,
+        "name": "Sett",
+        "items": ["SunfireCape", "IonicSpark"]
+      },
+      {
+        "id": 3,
+        "name": "Yasuo",
+        "items": ["InfinityEdge", "RapidFirecannon", "HandOfJustice"]
+      }
+    ]
+  },
+  {
+    "title": "Freljord Akshan",
+    "icons": ["freljord", "shuriman"],
+    "locked": false,
+    "tier": "A",
+    "earlyGameChampions": [
+      "Cassiopeia",
+      "Renekton",
+      "Vi",
+      "Ashe",
+      "Lissandra",
+      "Akshan"
+    ],
+    "lateGameChampions": [
+      "Ashe",
+      "Lissandra",
+      "Akshan",
+      "Sejuani",
+      "Nasus",
+      "JarvanIV",
+      "Sion",
+      "KSante"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Akshan",
+        "items": ["Deathblade", "InfinityEdge", "RunaansHurricane"]
+      },
+      {
+        "id": 2,
+        "name": "Sejuani",
+        "items": ["ProtectorsVow", "WarmogsArmor", "GargoyleStoneplate"]
+      },
+      {
+        "id": 3,
+        "name": "Lissandra",
+        "items": ["Morellonomicon"]
+      }
+    ]
+  },
+  {
+    "title": "Shadow Isles Targon",
+    "icons": ["shadowisle", "targon"],
+    "locked": false,
+    "tier": "A",
+    "earlyGameChampions": [
+      "Samira",
+      "Jhin",
+      "Irelia",
+      "Warwick",
+      "Sett",
+      "Kalista"
+    ],
+    "lateGameChampions": [
+      "Viego",
+      "Maokai",
+      "Soraka",
+      "Kalista",
+      "Taric",
+      "Gwen",
+      "Aphelios",
+      "Senna"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kalista",
+        "items": ["GuinsoosRageblade", "StatikkShiv", "JeweledGauntlet"]
+      },
+      {
+        "id": 2,
+        "name": "Taric",
+        "items": ["ShadowIslesEmblem", "SunfireCape", "DragonsClaw"]
+      },
+      {
+        "id": 3,
+        "name": "Gwen",
+        "items": ["JeweledGauntlet", "GiantSlayer", "HandOfJustice"]
+      }
+    ]
+  },
+  {
+    "title": "Ionia Challenger",
+    "icons": ["ionia", "challenger"],
+    "locked": false,
+    "tier": "B",
+    "earlyGameChampions": [
+      "Jhin",
+      "Samira",
+      "Irelia",
+      "Sett",
+      "Warwick",
+      "Kalista"
+    ],
+    "lateGameChampions": [
+      "Irelia",
+      "Sett",
+      "Warwick",
+      "Karma",
+      "Shen",
+      "Kaisa",
+      "Yasuo",
+      "Ahri"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kaisa",
+        "items": ["StatikkShiv", "JeweledGauntlet", "GuardBreaker"]
+      },
+      {
+        "id": 2,
+        "name": "Shen",
+        "items": ["GargoyleStoneplate", "SunfireCape", "WarmogsArmor"]
+      },
+      {
+        "id": 3,
+        "name": "Yasuo",
+        "items": ["RapidFirecannon", "EdgeOfNight", "InfinityEdge"]
+      }
+    ]
+  },
+  {
+    "title": "Slayer Kayle",
+    "icons": ["slayer", "demacia"],
+    "locked": false,
+    "tier": "B",
+    "earlyGameChampions": [
+      "Kayle",
+      "Poppy",
+      "Maokai",
+      "Teemo",
+      "Kled",
+      "Galio"
+    ],
+    "lateGameChampions": [
+      "Kayle",
+      "Poppy",
+      "Maokai",
+      "Kled",
+      "Gwen",
+      "JarvanIV",
+      "Heimerdinger",
+      "Aatrox"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Kayle",
+        "items": ["GuinsoosRageblade", "GuinsoosRageblade"]
+      },
+      {
+        "id": 2,
+        "name": "Poppy",
+        "items": ["BrambleVest", "ProtectorsVow", "DragonsClaw"]
+      },
+      {
+        "id": 3,
+        "name": "ApexTurret",
+        "items": ["ShrinkModule", "ShrinkModule", "MechanoSwarm"]
+      }
+    ]
+  },
+  {
+    "title": "Tristana Reroll",
+    "icons": ["gunner", "yordle"],
+    "locked": false,
+    "tier": "B",
+    "earlyGameChampions": [
+      "Tristana",
+      "Poppy",
+      "Maokai",
+      "Viego",
+      "Teemo",
+      "Jayce"
+    ],
+    "lateGameChampions": [
+      "Tristana",
+      "Maokai",
+      "Poppy",
+      "Viego",
+      "Teemo",
+      "Jinx",
+      "Jayce",
+      "Zeri"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Tristana",
+        "items": ["LastWhisper", "HextechGunblade", "GiantSlayer"]
+      },
+      {
+        "id": 2,
+        "name": "Maokai",
+        "items": ["GargoyleStoneplate", "Redemption", "BrambleVest"]
+      }
+    ]
+  },
+  {
+    "title": "Strategist Azir",
+    "icons": ["strategist", "shuriman"],
+    "locked": false,
+    "tier": "B",
+    "earlyGameChampions": [
+      "Renekton",
+      "Cassiopeia",
+      "Jhin",
+      "Taliyah",
+      "Vi",
+      "Akshan"
+    ],
+    "lateGameChampions": [
+      "Swain",
+      "Taliyah",
+      "Teemo",
+      "Garen",
+      "Azir",
+      "JarvanIV",
+      "Lux",
+      "Nasus"
+    ],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Azir",
+        "items": ["GuinsoosRageblade", "StatikkShiv", "HextechGunblade"]
+      },
+      {
+        "id": 2,
+        "name": "JarvanIV",
+        "items": ["IonicSpark", "WarmogsArmor", "GargoyleStoneplate"]
+      },
+      {
+        "id": 3,
+        "name": "Lux",
+        "items": ["SpearOfShojin", "JeweledGauntlet"]
       }
     ]
   }

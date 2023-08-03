@@ -1,28 +1,28 @@
 <template>
   <div class="flex gap-4 px-2">
     <el-select
-      v-model="team"
+      v-model="championClass"
       class="py-2 w-full"
       placeholder="Team"
       size="large"
       @change="onTeamChange"
     >
       <el-option
-        v-for="teamListItem in getTeamList"
-        :key="teamListItem.value"
-        :label="teamListItem.label"
-        :value="teamListItem.value"
+        v-for="championClassListItem in getTeamList"
+        :key="championClassListItem.value"
+        :label="championClassListItem.label"
+        :value="championClassListItem.value"
       >
         <div
           class="flex items-center gap-2"
-          v-if="teamListItem.value !== 'all'"
+          v-if="championClassListItem.value !== 'all'"
         >
           <img
-            :src="`classes/${teamListItem.value}.png`"
+            :src="`classes/${championClassListItem.value}.png`"
             class="w-[16px] h-[16px]"
-            v-if="teamListItem.value !== 'all'"
+            v-if="championClassListItem.value !== 'all'"
           />
-          <span>{{ teamListItem.label }}</span>
+          <span>{{ championClassListItem.label }}</span>
         </div>
       </el-option>
       <template #prefix>
@@ -38,8 +38,7 @@
     <TFTDropdown
       :title="buildsGuide.title"
       :leftIcons="buildsGuide.icons"
-      :key="buildsGuide.id"
-      :id="buildsGuide.id"
+      :key="buildsGuide.title"
       :itemLocked="buildsGuide.locked"
       itemCanBeLocked
       :tier="buildsGuide.tier"
@@ -73,17 +72,17 @@
           </div>
         </div>
         <div
-          class="p-2 flex flex-col gap-2 select-none border-t-[1px] border-t-[#414243]"
+          class="p-2 flex flex-col gap-1 select-none border-t-[1px] border-t-[#414243]"
         >
           <p class="text-xl font-black">Carries</p>
           <div
             v-for="carry in buildsGuide.carries"
             :key="carry.id"
-            class="flex gap-[4px] mb-[4px] last-of-type:mb-0"
+            class="flex gap-1 last-of-type:mb-0"
           >
             <img
               :src="`champions/${carry.name}.png`"
-              class="w-[60px] h-[60px]"
+              :class="`w-[60px] h-[60px] ${getChampionCost(carry.name)}`"
             />
             <div v-for="item in carry.items" :key="item">
               <div v-for="items in itemsDB">
@@ -93,7 +92,9 @@
                     class="w-[60px] h-[60px] opacity-25"
                   />
                   <div class="flex flex-col">
+                    <div v-if="!items.components" class="w-[30px] h-[30px]" />
                     <img
+                      v-else
                       v-for="component in items.components"
                       :src="`components/${component.name}.png`"
                       class="w-[30px] h-[30px]"
@@ -123,9 +124,8 @@ interface Carries {
 }
 
 interface BuildsGuide {
-  id: number;
-  icons: string[];
   title: string;
+  icons: string[];
   locked: boolean;
   tier: string;
   earlyGameChampions: string[];
@@ -140,9 +140,8 @@ const props = defineProps<{
 
 /** Variables **/
 const lockedBuildGuide = ref<BuildsGuide[]>();
-const leveling = ref("all");
-const team = ref("all");
-const teamList = ref([
+const championClass = ref("all");
+const championClassList = ref([
   {
     id: 0,
     label: "All Classes",
@@ -295,54 +294,46 @@ const buildsGuidesDB = computed(() => {
   return props.data;
 });
 const getTeamList = computed(() => {
-  const visibleTeamList = teamList.value?.map((teamListItem) => {
-    if (
-      props.data?.find(
-        (buildGuide) =>
-          buildGuide.icons.includes(teamListItem.value) ||
-          teamListItem.value === "all"
-      )
-    ) {
+  const visibleTeamList = championClassList.value?.map(
+    (championClassListItem) => {
+      if (
+        props.data?.find(
+          (buildGuide) =>
+            buildGuide.icons.includes(championClassListItem.value) ||
+            championClassListItem.value === "all"
+        )
+      ) {
+        return {
+          ...championClassListItem,
+          visible: true,
+        };
+      }
       return {
-        ...teamListItem,
-        visible: true,
+        ...championClassListItem,
+        visible: false,
       };
     }
-    return {
-      ...teamListItem,
-      visible: false,
-    };
-  });
+  );
 
-  return visibleTeamList.filter((teamListItem) => teamListItem.visible);
+  return visibleTeamList.filter(
+    (championClassListItem) => championClassListItem.visible
+  );
 });
 
 /** Methods **/
-const lockItem = (item: number, itemLocked: boolean) => {
-  console.log("😳", item);
-  console.log("👾", itemLocked);
+const lockItem = (item: string, itemLocked: boolean) => {
   if (itemLocked) {
     lockedBuildGuide.value = props.data;
-    if (leveling.value === "all" && team.value === "all") {
+    if (championClass.value === "all") {
       lockedBuildGuide.value = props.data;
-    } else if (leveling.value === "all" && team.value !== "all") {
-      lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
-        buildGuide.icons.find((icon) => icon === team.value)
-      );
-    } else if (leveling.value !== "all" && team.value === "all") {
-      lockedBuildGuide.value = props.data.filter(
-        (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
-      );
     } else {
-      lockedBuildGuide.value = props.data.filter(
-        (buildGuide: BuildsGuide) =>
-          buildGuide.leveling === leveling.value &&
-          buildGuide.icons.find((icon) => icon === team.value)
+      lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
+        buildGuide.icons.find((icon) => icon === championClass.value)
       );
     }
   } else {
     lockedBuildGuide.value = props.data
-      .filter((buildGuide: BuildsGuide) => buildGuide.id === item)
+      .filter((buildGuide: BuildsGuide) => buildGuide.title === item)
       .map((buildGuide: BuildsGuide) => {
         return {
           ...buildGuide,
@@ -351,61 +342,31 @@ const lockItem = (item: number, itemLocked: boolean) => {
       });
   }
 };
-const onLevelingChange = (value: string) => {
-  selectedTeamListItem.value = "all";
-  team.value = "all";
-  leveling.value = value;
-  if (lockedBuildGuide.value?.length) {
-    lockedBuildGuide.value = props.data.filter(
-      (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
-    );
-    if (leveling.value === "all") {
-      lockedBuildGuide.value = props.data;
-    }
-  } else {
-    lockedBuildGuide.value = props.data.filter(
-      (buildGuide: BuildsGuide) => buildGuide.leveling === leveling.value
-    );
-    if (leveling.value === "all") {
-      lockedBuildGuide.value = props.data;
-    }
-  }
-};
 const onTeamChange = (value: string) => {
-  leveling.value = "all";
-  team.value = value;
+  championClass.value = value;
   if (lockedBuildGuide.value?.length) {
     lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
-      buildGuide.icons.find((icon) => icon === team.value)
+      buildGuide.icons.find((icon) => icon === championClass.value)
     );
-    if (team.value === "all") {
+    if (championClass.value === "all") {
       lockedBuildGuide.value = props.data;
     }
-    selectedTeamListItem.value = team.value;
+    selectedTeamListItem.value = championClass.value;
   } else {
     lockedBuildGuide.value = undefined;
     lockedBuildGuide.value = props.data.filter((buildGuide: BuildsGuide) =>
-      buildGuide.icons.find((icon) => icon === team.value)
+      buildGuide.icons.find((icon) => icon === championClass.value)
     );
-    if (team.value === "all") {
+    if (championClass.value === "all") {
       lockedBuildGuide.value = props.data;
     }
-    selectedTeamListItem.value = team.value;
+    selectedTeamListItem.value = championClass.value;
   }
 };
-
-const constGetWidth = computed(() => {
-  if (selectedTeamListItem.value === "all") {
-    return "0px";
-  }
-  return "auto";
-});
-
 const getChampionCost = (champion: string) => {
   const championCost = championsDB.find(
     (championDB) => championDB.name === champion
   )?.cost;
-
   switch (championCost) {
     case 1:
       return "border-[2px] border-[#9C9EA5]";
@@ -422,9 +383,3 @@ const getChampionCost = (champion: string) => {
   }
 };
 </script>
-
-<style scoped lang="scss">
-:deep(.el-input__prefix-inner) {
-  width: v-bind(constGetWidth);
-}
-</style>
