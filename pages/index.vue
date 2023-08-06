@@ -43,6 +43,10 @@ import buildsDB from "@/data/builds.json";
 
 /** Vatriables **/
 const activeName = ref("builds");
+
+/** Computed **/
+const isDark = useDark()
+const tabColor = computed(() => isDark.value ? '#18181B' : 'white')
 </script>
 
 <style lang="scss" scoped>
@@ -56,6 +60,7 @@ const activeName = ref("builds");
   @apply flex-1;
 }
 :deep(.el-tabs__header) {
-  @apply mb-0 fixed w-full z-10 dark:bg-zinc-900;
+  @apply mb-0 fixed w-full z-10;
+  background: v-bind(tabColor);
 }
 </style>
