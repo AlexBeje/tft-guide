@@ -9,7 +9,7 @@
     <template #header>
       <div
         :class="`flex justify-between items-center cursor-pointer p-3 
-        ${showMore && 'border-b border-borderLight'}
+        ${showMore && 'border-b dark:border-borderLight'}
         `"
         @click="toggleShowMore()"
       >
@@ -19,7 +19,7 @@
               <div class="w-[24px] h-[24px]" v-if="!leftIcon" />
               <img
                 :src="`classes/${leftIcon}.png`"
-                class="w-[24px] h-[24px]"
+                class="invert dark:invert-0 w-[24px] h-[24px] bg-blend-multiply"
                 v-else
               />
             </div>
@@ -51,7 +51,7 @@
             v-if="itemCanBeLocked"
             size="2rem"
             :name="`uil:${itemLocked ? 'unlock' : 'lock'}`"
-            class="bg-zinc-900 rounded-full p-2"
+            class="dark:bg-zinc-900 bg-zinc-200 rounded-full p-2"
             @click.stop="onLockItem(itemLocked)"
           />
           <Icon

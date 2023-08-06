@@ -11,7 +11,7 @@
           v-for="level in levelGuide.levels"
           :key="level.id"
           :timestamp="level.label"
-          :color="level.checked ? '#909399' : '#414243'"
+          :color="isDark ? (level.checked ? '#909399' : '#414243') : '#E4E7ED'"
           placement="top"
         >
           <div class="flex flex-col">
@@ -20,6 +20,7 @@
                 :class="`p-4 border-[1px] rounded-sm border-borderLight cursor-pointer justify-between flex min-h-[64px] items-center
                     ${
                       level.checked &&
+                      isDark &&
                       'bg-zinc-600 border-zinc-400 text-zinc-400'
                     }`"
                 @click="checkToggle(level.id)"
@@ -68,12 +69,12 @@
       <el-table :data="tableData" border style="width: 360px">
         <el-table-column prop="level" label="Lvl" width="52">
           <template #default="scope">
-            <span class="text-[#A2A6AD] font-bold">{{ scope.row.level }}</span>
+            <span class="dark:text-[#A2A6AD] text-[#909399] font-bold">{{ scope.row.level }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="oneCost" label="1*" width="62">
           <template #default="scope">
-            <span class="text-[#E6EAF3]">{{ scope.row.oneCost }}</span>
+            <span class="dark:text-[#E6EAF3] text-[#aaadb4]">{{ scope.row.oneCost }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="twoCost" label="2*" width="62">
@@ -281,6 +282,10 @@ const toggleExtraInfo = (id: number) => {
     return levelGuide;
   });
 };
+
+/** VueUse **/
+const isDark = useDark();
+console.log("👝", isDark.value);
 </script>
 
 <style scoped lang="scss">

@@ -1,6 +1,8 @@
 <template>
-  <div class="flex justify-center w-full bg-zinc-900 select-none touch-manipulation">
-    <el-tabs v-model="activeName" class="w-full flex flex-col bg-zinc-900">
+  <div
+    class="flex justify-center w-full dark:bg-zinc-900 select-none touch-manipulation"
+  >
+    <el-tabs v-model="activeName" class="w-full flex flex-col dark:bg-zinc-900">
       <el-tab-pane
         label="Builds"
         name="builds"
@@ -54,6 +56,6 @@ const activeName = ref("builds");
   @apply flex-1;
 }
 :deep(.el-tabs__header) {
-  @apply mb-0 fixed w-full z-10 bg-zinc-900;
+  @apply mb-0 fixed w-full z-10 dark:bg-zinc-900;
 }
 </style>

@@ -15,7 +15,7 @@
     >
       <div v-for="champion in sortChampions(championsDB)" :key="champion.id">
         <div
-          v-if="champion.class.includes(championClass.name)"
+          v-if="champion.class && champion.class.includes(championClass.name)"
           class="flex gap-[4px] mb-2 first:mt-2 ml-2"
         >
           <img
@@ -98,12 +98,13 @@ const sortChampions = (champions: Champion[]) => {
   return champions.sort((a, b) => a.cost - b.cost);
 };
 
-const lockItem = (item: number, itemLocked: boolean) => {
+const lockItem = (item: string, itemLocked: boolean) => {
+  console.log('👰', championClasses)
   if (itemLocked) {
     lockedChampionClass.value = championClasses;
   } else {
     lockedChampionClass.value = championClasses
-      .filter((championClass) => championClass.id === item)
+      .filter((championClass) => championClass.name === item.toLowerCase())
       .map((championClass) => {
         return {
           ...championClass,

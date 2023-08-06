@@ -58,7 +58,7 @@
           </div>
         </div>
         <div
-          class="p-2 flex flex-col gap-2 select-none border-t-[1px] border-t-[#414243]"
+          class="p-2 flex flex-col gap-2 select-none border-t-[1px] dark:border-t-[#414243]"
         >
           <p class="text-xl font-black">Late Game</p>
           <div class="flex gap-1">
@@ -72,7 +72,7 @@
           </div>
         </div>
         <div
-          class="p-2 flex flex-col gap-1 select-none border-t-[1px] border-t-[#414243]"
+          class="p-2 flex flex-col gap-1 select-none border-t-[1px] dark:border-t-[#414243]"
         >
           <p class="text-xl font-black">Carries</p>
           <div
