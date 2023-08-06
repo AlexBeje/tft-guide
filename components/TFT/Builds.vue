@@ -19,7 +19,7 @@
         >
           <img
             :src="`classes/${championClassListItem.value}.png`"
-            class="w-[16px] h-[16px]"
+            class="w-[16px] h-[16px] invert dark:invert-0"
             v-if="championClassListItem.value !== 'all'"
           />
           <span>{{ championClassListItem.label }}</span>
