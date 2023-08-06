@@ -29,7 +29,7 @@
         <img
           v-if="selectedTeamListItem && selectedTeamListItem !== 'all'"
           :src="`classes/${selectedTeamListItem}.png`"
-          class="w-[16px] h-[16px]"
+          class="w-[16px] h-[16px] invert dark:invert-0"
         />
       </template>
     </el-select>
