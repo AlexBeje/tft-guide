@@ -46,7 +46,7 @@
     >
       <div class="flex flex-col">
         <div class="p-2 flex flex-col gap-2 select-none">
-          <p class="text-xl font-black">Early Game</p>
+          <p class="text-xl font-black text-black dark:text-inherit">Early Game</p>
           <div class="flex gap-1">
             <img
               v-for="earlyGameChampion in buildsGuide.earlyGameChampions"
@@ -60,7 +60,7 @@
         <div
           class="p-2 flex flex-col gap-2 select-none border-t-[1px] dark:border-t-[#414243]"
         >
-          <p class="text-xl font-black">Late Game</p>
+          <p class="text-xl font-black text-black dark:text-inherit">Late Game</p>
           <div class="flex gap-1">
             <img
               v-for="lateGameChampion in buildsGuide.lateGameChampions"
@@ -74,7 +74,7 @@
         <div
           class="p-2 flex flex-col gap-1 select-none border-t-[1px] dark:border-t-[#414243]"
         >
-          <p class="text-xl font-black">Carries</p>
+          <p class="text-xl font-black text-black dark:text-inherit">Carries</p>
           <div
             v-for="carry in buildsGuide.carries"
             :key="carry.id"
