@@ -50,7 +50,7 @@
           <Icon
             v-if="itemCanBeLocked"
             size="2rem"
-            :name="`uil:${itemLocked ? 'unlock' : 'lock'}`"
+            :name="`uil:${itemLocked ? 'lock' : 'unlock'}`"
             class="dark:bg-zinc-900 bg-zinc-200 rounded-full p-2"
             @click.stop="onLockItem(itemLocked)"
           />
