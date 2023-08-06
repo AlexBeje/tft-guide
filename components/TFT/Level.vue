@@ -285,7 +285,6 @@ const toggleExtraInfo = (id: number) => {
 
 /** VueUse **/
 const isDark = useDark();
-console.log("👝", isDark.value);
 </script>
 
 <style scoped lang="scss">
