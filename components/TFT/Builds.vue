@@ -45,25 +45,15 @@
       @lockItem="lockItem"
     >
       <div class="flex flex-col">
-        <div class="p-2 flex flex-col gap-2 select-none">
-          <p class="text-xl font-black text-black dark:text-inherit">Early Game</p>
-          <div class="flex gap-1">
-            <img
-              v-for="earlyGameChampion in buildsGuide.earlyGameChampions"
-              :src="`champions/${earlyGameChampion}.png`"
-              :class="`w-[54.33px] h-[54.33px] ${getChampionCost(
-                earlyGameChampion
-              )}`"
-            />
-          </div>
-        </div>
         <div
           class="p-2 flex flex-col gap-2 select-none border-t-[1px] dark:border-t-[#414243]"
         >
-          <p class="text-xl font-black text-black dark:text-inherit">Late Game</p>
+          <p class="text-xl font-black text-black dark:text-inherit">
+            Champions
+          </p>
           <div class="flex gap-1">
             <img
-              v-for="lateGameChampion in buildsGuide.lateGameChampions"
+              v-for="lateGameChampion in buildsGuide.champions"
               :src="`champions/${lateGameChampion}.png`"
               :class="`w-[39.75px] h-[39.75px] ${getChampionCost(
                 lateGameChampion
@@ -105,6 +95,12 @@
             </div>
           </div>
         </div>
+        <div class="p-2 flex flex-col gap-2 select-none border-t-[1px] dark:border-t-[#414243]">
+          <p class="text-xl font-black text-black dark:text-inherit">
+            How to play
+          </p>
+          <div v-html="buildsGuide.howToPlay" />
+        </div>
       </div>
     </TFTDropdown>
   </div>
@@ -128,9 +124,9 @@ interface BuildsGuide {
   icons: string[];
   locked: boolean;
   tier: string;
-  earlyGameChampions: string[];
-  lateGameChampions: string[];
+  champions: string[];
   carries: Carries[];
+  howToPlay: string;
 }
 
 /** Props **/

@@ -478,5 +478,45 @@
     "id": 47,
     "name": "ApexTurret",
     "cost": 5
+  },
+  {
+    "id": 48,
+    "name": "Xayah",
+    "cost": 4
+  },
+  {
+    "id": 49,
+    "name": "Nilah",
+    "cost": 4
+  },
+  {
+    "id": 50,
+    "name": "Graves",
+    "cost": 1
+  },
+  {
+    "id": 51,
+    "name": "Qiyana",
+    "cost": 2
+  },
+  {
+    "id": 52,
+    "name": "Neeko",
+    "cost": 3
+  },
+  {
+    "id": 53,
+    "name": "Quinn",
+    "cost": 3
+  },
+  {
+    "id": 54,
+    "name": "Silco",
+    "cost": 4
+  },
+  {
+    "id": 55,
+    "name": "Nautilus",
+    "cost": 3
   }
 ]

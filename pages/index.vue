@@ -10,13 +10,13 @@
       >
         <TFTBuilds :data="buildsDB" />
       </el-tab-pane>
-      <el-tab-pane
+      <!-- <el-tab-pane
         label="Champions"
         name="champions"
         class="max-w-[380px] m-auto mt-12"
       >
         <TFTChampions :data="championsCategoriesDB" />
-      </el-tab-pane>
+      </el-tab-pane> -->
       <el-tab-pane
         label="Items"
         name="items"
@@ -45,8 +45,8 @@ import buildsDB from "@/data/builds.json";
 const activeName = ref("builds");
 
 /** Computed **/
-const isDark = useDark()
-const tabColor = computed(() => isDark.value ? '#18181B' : 'white')
+const isDark = useDark();
+const tabColor = computed(() => (isDark.value ? "#18181B" : "white"));
 </script>
 
 <style lang="scss" scoped>

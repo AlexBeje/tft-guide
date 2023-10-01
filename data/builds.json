@@ -1,615 +1,155 @@
 [
   {
-    "title": "Legendary Soup",
-    "icons": ["ionia", "invoker"],
+    "title": "Vanquishers",
+    "icons": ["ionia", "vanquisher"],
     "locked": false,
     "tier": "S",
-    "earlyGameChampions": [
-      "Cassiopeia",
-      "Samira",
-      "Swain",
-      "Kled",
-      "Katarina",
-      "Darius"
-    ],
-    "lateGameChampions": [
-      "Taric",
+    "champions": [
+      "Jhin",
+      "Sett",
       "Karma",
-      "Sejuani",
-      "Shen",
-      "Ahri",
-      "BelVeth",
-      "Sion",
-      "Heimerdinger"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Ahri",
-        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
-      },
-      {
-        "id": 2,
-        "name": "BelVeth",
-        "items": ["RapidFirecannon", "Bloodthirster", "EdgeOfNight"]
-      },
-      {
-        "id": 3,
-        "name": "Sion",
-        "items": ["GargoyleStoneplate", "IonicSpark", "SunfireCape"]
-      }
-    ]
-  },
-  {
-    "title": "Noxus Tier 1 Reroll",
-    "icons": ["noxus", "juggernaut"],
-    "locked": false,
-    "tier": "S",
-    "earlyGameChampions": [
-      "Samira",
-      "Cassiopeia",
-      "Swain",
-      "Kled",
       "Darius",
-      "Katarina"
-    ],
-    "lateGameChampions": [
-      "Samira",
-      "Cassiopeia",
-      "Swain",
-      "Warwick",
-      "Katarina",
-      "Darius",
-      "Sion",
-      "Heimerdinger"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Samira",
-        "items": ["BlueBuff", "InfinityEdge", "Deathblade"]
-      },
-      {
-        "id": 2,
-        "name": "Swain",
-        "items": ["GargoyleStoneplate", "Redemption", "SunfireCape"]
-      },
-      {
-        "id": 3,
-        "name": "Cassiopeia",
-        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
-      }
-    ]
-  },
-  {
-    "title": "Multicast Teemo",
-    "icons": ["multicaster", "demacia"],
-    "locked": false,
-    "tier": "S",
-    "earlyGameChampions": ["Poppy", "Swain", "Galio", "Kled", "Teemo", "Sona"],
-    "lateGameChampions": [
-      "Poppy",
-      "Teemo",
-      "Galio",
-      "Swain",
-      "Taliyah",
-      "Kled",
-      "Velkoz",
-      "Sona"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Teemo",
-        "items": ["BlueBuff", "JeweledGauntlet", "HextechGunblade"]
-      },
-      {
-        "id": 2,
-        "name": "Galio",
-        "items": ["GargoyleStoneplate", "IonicSpark", "SunfireCape"]
-      },
-      {
-        "id": 3,
-        "name": "Taliyah",
-        "items": ["ChaliceOfPower"]
-      }
-    ]
-  },
-  {
-    "title": "Karma Invokers",
-    "icons": ["invoker", "ionia"],
-    "locked": false,
-    "tier": "S",
-    "earlyGameChampions": [
-      "Cassiopeia",
-      "Soraka",
-      "Galio",
-      "Taric",
-      "Lissandra",
-      "Karma"
-    ],
-    "lateGameChampions": [
-      "Galio",
-      "Soraka",
-      "Taric",
-      "Lissandra",
-      "Karma",
+      "Xayah",
+      "Nilah",
       "Shen",
-      "Ryze",
       "Ahri"
     ],
     "carries": [
       {
         "id": 1,
-        "name": "Karma",
-        "items": ["JeweledGauntlet", "HextechGunblade", "ArchangelsStaff"]
+        "name": "Nilah",
+        "items": ["RapidFirecannon", "GuinsoosRageblade", "HextechGunblade"]
       },
       {
         "id": 2,
+        "name": "Xayah",
+        "items": ["LastWhisper", "Deathblade", "GiantSlayer"]
+      },
+      {
+        "id": 3,
         "name": "Shen",
-        "items": ["BrambleVest", "DragonsClaw", "Redemption"]
+        "items": ["GargoyleStoneplate", "WarmogsArmor", "SunfireCape"]
+      }
+    ],
+    "howToPlay": "Because this comp revolves around 4 cost carries, it is important to manage our econ and HP in a tactical manner early on. Generally the ideal AD lines still revolve around Samira Noxus or Jhin Ionia so learn to play around those lines to go to level 7 or 8 effectively.<br/>Since Nilah specifically requires an RFC, it is a good idea to save bows if you're looking to play for this comp."
+  },
+  {
+    "title": "Ashe Reroll",
+    "icons": ["ionia", "vanquisher"],
+    "locked": false,
+    "tier": "S",
+    "champions": ["Jhin", "Ashe", "Sett", "Darius", "Karma", "Xayah", "Shen"],
+    "carries": [
+      {
+        "id": 1,
+        "name": "Ashe",
+        "items": ["IoniaEmblem", "LastWhisper", "GiantSlayer"]
+      },
+      {
+        "id": 2,
+        "name": "Xayah",
+        "items": ["InfinityEdge", "GuardBreaker", "GiantSlayer"]
       },
       {
         "id": 3,
-        "name": "Soraka",
-        "items": ["StatikkShiv"]
+        "name": "Sett",
+        "items": ["BrambleVest", "WarmogsArmor", "DragonsClaw"]
       }
-    ]
+    ],
+    "howToPlay": "Since it's a 2 cost reroll comp, we want to econ as much as possible Stage 2 to prepare to slowroll above 50g at level 6. If your board is weak with no upgrades, look to losestreak to build econ, but if your board is strong, you can even look to push the tempo and look to winstreak. 95% of the time we want to level at 3-2 to stabilize a bit, usually meaning Ashe 2*, Sett 2*, Jhin 2* and then building econ back up to slowroll above 50g. Typically if you play for Ashe you want to play 4 Vanquishers, and if you hit an Ionia Emblem you can play 6 Ionia 4 Vanquisher as your endgame!"
   },
   {
-    "title": "6+ Sorcerer",
-    "icons": ["sorcerer", "demacia"],
+    "title": "Rogue Reroll",
+    "icons": ["rogue", "gunner"],
     "locked": false,
     "tier": "S",
-    "earlyGameChampions": [
-      "Malzahar",
-      "Orianna",
-      "Swain",
-      "Taric",
-      "Velkoz",
-      "Lux"
-    ],
-    "lateGameChampions": [
-      "Malzahar",
-      "Swain",
-      "Velkoz",
-      "Sona",
-      "Taric",
-      "Lux",
-      "JarvanIV",
-      "Ahri"
+    "champions": [
+      "Graves",
+      "Jinx",
+      "Qiyana",
+      "Katarina",
+      "Ekko",
+      "Quinn",
+      "Neeko"
     ],
     "carries": [
       {
         "id": 1,
-        "name": "Lux",
-        "items": ["BlueBuff", "JeweledGauntlet"]
+        "name": "Graves",
+        "items": ["SteraksGage", "Bloodthirster", "TitansResolve"]
       },
       {
         "id": 2,
-        "name": "Taric",
-        "items": ["IonicSpark", "SunfireCape", "WarmogsArmor"]
+        "name": "Qiyana",
+        "items": ["SteraksGage", "TitansResolve", "HandOfJustice"]
       },
       {
         "id": 3,
-        "name": "Ahri",
-        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
-      },
-      {
-        "id": 4,
-        "name": "Swain",
-        "items": ["ZzRotPortal"]
+        "name": "Katarina",
+        "items": ["IonicSpark", "JeweledGauntlet", "HandOfJustice"]
       }
-    ]
+    ],
+    "howToPlay": "So the way you play Rogues nowadays is not to level to 6 to roll for Qiyana priority, but rather at level 5 first. You are supposed to play for Graves 3* first while having odds to hit the other Rogues, so level 5 is a lot better than level 4 in that aspect. You play Stage 2 as if you were rolling for 1 costs, which means you should build your econ as much as possible. Then, during Stage 3, stay above 50g while rolling for Graves 3* and as many copies of Qiyana, Ekko and Katarina as possible. After you hit Graves 3, level to 6 to finish rolling for Qiyana 3* and as many copies of other Rogues as possible. After you hit Qiyana, level to 7 and roll for Katarina and Ekko 3*."
   },
   {
-    "title": "Noxus Tier 3 Reroll",
-    "icons": ["noxus", "shuriman"],
+    "title": "CHO BITEM",
+    "icons": ["bruiser", "void"],
     "locked": false,
     "tier": "S",
-    "earlyGameChampions": [
+    "champions": [
+      "Chogath",
+      "Renekton",
       "Cassiopeia",
-      "Samira",
-      "Kled",
-      "Swain",
-      "Darius",
-      "Katarina"
-    ],
-    "lateGameChampions": [
-      "Cassiopeia",
-      "Swain",
-      "Darius",
-      "Katarina",
-      "Nasus",
-      "Azir",
-      "JarvanIV",
+      "Vi",
+      "RekSai",
+      "Sejuani",
       "Sion"
     ],
     "carries": [
       {
         "id": 1,
-        "name": "Darius",
-        "items": ["Bloodthirster", "TitansResolve", "InfinityEdge"]
+        "name": "Chogath",
+        "items": ["Redemption", "DragonsClaw", "BrambleVest"]
       },
       {
         "id": 2,
-        "name": "Katarina",
-        "items": ["IonicSpark", "HandOfJustice", "JeweledGauntlet"]
-      },
-      {
-        "id": 3,
-        "name": "Nasus",
-        "items": ["NoxusEmblem", "WarmogsArmor", "GargoyleStoneplate"]
-      },
-      {
-        "id": 4,
-        "name": "Azir",
-        "items": ["GuinsoosRageblade"]
+        "name": "Cassiopeia",
+        "items": ["BlueBuff", "HextechGunblade", "GiantSlayer"]
       }
-    ]
+    ],
+    "howToPlay": "Since Cho'Gath is a 1 cost reroll comp, it is almost always recommended to roll to 30g at 3-1 at level 4 for as many copies of the Cho, Renekton and Cassiopeia/Malzahar as possible. Try to hold onto one Rek'Sai and one vi along the way, as your level 5 includes 4 Bruisers. Then, try to build your economy back up and slowroll at level 5 above 50 gold for your 3* units. The obvious highest priority 3* unit is Cho, but you might as well hold Renektons on the way. As for your backline carry, you have to option to play for either Cassiopeia or Malzahar 3*, or play for a 4 cost backline carry like Silco or Mordekaiser once you push levels. Your endgame should be 6 Bruisers, and a +1 Bruiser emblem or Heart is really good as you don't need to have Sion to get it."
   },
   {
-    "title": "Zaun Zeri",
-    "icons": ["gunner", "zaun"],
+    "title": "Azir Flex",
+    "icons": ["strategist", "juggernaut"],
     "locked": false,
-    "tier": "A",
-    "earlyGameChampions": [
-      "Renekton",
-      "Warwick",
-      "Vi",
-      "Jinx",
-      "Jayce",
-      "Ekko"
-    ],
-    "lateGameChampions": [
-      "Jinx",
-      "Ekko",
-      "Jayce",
-      "Urgot",
-      "Sejuani",
-      "Zeri",
-      "Heimerdinger",
-      "Senna"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Zeri",
-        "items": ["GuinsoosRageblade", "LastWhisper", "GiantSlayer"]
-      },
-      {
-        "id": 2,
-        "name": "Sejuani",
-        "items": ["ProtectorsVow", "WarmogsArmor", "GargoyleStoneplate"]
-      },
-      {
-        "id": 3,
-        "name": "Urgot",
-        "items": ["Bloodthirster", "TitansResolve"]
-      }
-    ]
-  },
-  {
-    "title": "Vertical Void",
-    "icons": ["void", "challenger"],
-    "locked": false,
-    "tier": "A",
-    "earlyGameChampions": [
-      "Chogath",
-      "Malzahar",
-      "Kassadin",
-      "Velkoz",
-      "RekSai",
-      "Kaisa"
-    ],
-    "lateGameChampions": [
-      "Chogath",
-      "Malzahar",
-      "Kassadin",
-      "Velkoz",
-      "RekSai",
-      "Kaisa",
-      "Yasuo",
-      "BelVeth"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Kaisa",
-        "items": ["SpearOfShojin", "JeweledGauntlet", "ArchangelsStaff"]
-      },
-      {
-        "id": 2,
-        "name": "RekSai",
-        "items": ["Bloodthirster", "TitansResolve", "TitansResolve"]
-      },
-      {
-        "id": 3,
-        "name": "BelVeth",
-        "items": ["RapidFirecannon", "Bloodthirster", "Quicksilver"]
-      }
-    ]
-  },
-  {
-    "title": "Revenous Warwick",
-    "icons": ["juggernaut", "challenger"],
-    "locked": false,
-    "tier": "A",
-    "earlyGameChampions": [
-      "Samira",
-      "Irelia",
-      "Jinx",
-      "Sett",
-      "Warwick",
-      "Kalista"
-    ],
-    "lateGameChampions": [
-      "Irelia",
-      "Sett",
-      "Warwick",
-      "Kaisa",
-      "Urgot",
-      "Nasus",
-      "Yasuo",
-      "Aatrox"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Warwick",
-        "items": ["Bloodthirster", "GuinsoosRageblade", "Quicksilver"]
-      },
-      {
-        "id": 2,
-        "name": "Sett",
-        "items": ["SunfireCape", "IonicSpark"]
-      },
-      {
-        "id": 3,
-        "name": "Yasuo",
-        "items": ["InfinityEdge", "RapidFirecannon", "HandOfJustice"]
-      }
-    ]
-  },
-  {
-    "title": "Freljord Akshan",
-    "icons": ["freljord", "shuriman"],
-    "locked": false,
-    "tier": "A",
-    "earlyGameChampions": [
-      "Cassiopeia",
-      "Renekton",
-      "Vi",
-      "Ashe",
-      "Lissandra",
-      "Akshan"
-    ],
-    "lateGameChampions": [
-      "Ashe",
-      "Lissandra",
-      "Akshan",
-      "Sejuani",
-      "Nasus",
-      "JarvanIV",
-      "Sion",
-      "KSante"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Akshan",
-        "items": ["Deathblade", "InfinityEdge", "RunaansHurricane"]
-      },
-      {
-        "id": 2,
-        "name": "Sejuani",
-        "items": ["ProtectorsVow", "WarmogsArmor", "GargoyleStoneplate"]
-      },
-      {
-        "id": 3,
-        "name": "Lissandra",
-        "items": ["Morellonomicon"]
-      }
-    ]
-  },
-  {
-    "title": "Shadow Isles Targon",
-    "icons": ["shadowisle", "targon"],
-    "locked": false,
-    "tier": "A",
-    "earlyGameChampions": [
-      "Samira",
-      "Jhin",
-      "Irelia",
-      "Warwick",
-      "Sett",
-      "Kalista"
-    ],
-    "lateGameChampions": [
-      "Viego",
-      "Maokai",
-      "Soraka",
-      "Kalista",
-      "Taric",
-      "Gwen",
-      "Aphelios",
-      "Senna"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Kalista",
-        "items": ["GuinsoosRageblade", "StatikkShiv", "JeweledGauntlet"]
-      },
-      {
-        "id": 2,
-        "name": "Taric",
-        "items": ["ShadowIslesEmblem", "SunfireCape", "DragonsClaw"]
-      },
-      {
-        "id": 3,
-        "name": "Gwen",
-        "items": ["JeweledGauntlet", "GiantSlayer", "HandOfJustice"]
-      }
-    ]
-  },
-  {
-    "title": "Ionia Challenger",
-    "icons": ["ionia", "challenger"],
-    "locked": false,
-    "tier": "B",
-    "earlyGameChampions": [
-      "Jhin",
-      "Samira",
-      "Irelia",
-      "Sett",
-      "Warwick",
-      "Kalista"
-    ],
-    "lateGameChampions": [
-      "Irelia",
-      "Sett",
-      "Warwick",
-      "Karma",
-      "Shen",
-      "Kaisa",
-      "Yasuo",
-      "Ahri"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Kaisa",
-        "items": ["StatikkShiv", "JeweledGauntlet", "GuardBreaker"]
-      },
-      {
-        "id": 2,
-        "name": "Shen",
-        "items": ["GargoyleStoneplate", "SunfireCape", "WarmogsArmor"]
-      },
-      {
-        "id": 3,
-        "name": "Yasuo",
-        "items": ["RapidFirecannon", "EdgeOfNight", "InfinityEdge"]
-      }
-    ]
-  },
-  {
-    "title": "Slayer Kayle",
-    "icons": ["slayer", "demacia"],
-    "locked": false,
-    "tier": "B",
-    "earlyGameChampions": [
-      "Kayle",
-      "Poppy",
-      "Maokai",
-      "Teemo",
-      "Kled",
-      "Galio"
-    ],
-    "lateGameChampions": [
-      "Kayle",
-      "Poppy",
-      "Maokai",
-      "Kled",
-      "Gwen",
-      "JarvanIV",
-      "Heimerdinger",
-      "Aatrox"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Kayle",
-        "items": ["GuinsoosRageblade", "GuinsoosRageblade"]
-      },
-      {
-        "id": 2,
-        "name": "Poppy",
-        "items": ["BrambleVest", "ProtectorsVow", "DragonsClaw"]
-      },
-      {
-        "id": 3,
-        "name": "ApexTurret",
-        "items": ["ShrinkModule", "ShrinkModule", "MechanoSwarm"]
-      }
-    ]
-  },
-  {
-    "title": "Tristana Reroll",
-    "icons": ["gunner", "yordle"],
-    "locked": false,
-    "tier": "B",
-    "earlyGameChampions": [
-      "Tristana",
-      "Poppy",
-      "Maokai",
-      "Viego",
-      "Teemo",
-      "Jayce"
-    ],
-    "lateGameChampions": [
-      "Tristana",
-      "Maokai",
-      "Poppy",
-      "Viego",
-      "Teemo",
-      "Jinx",
-      "Jayce",
-      "Zeri"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Tristana",
-        "items": ["LastWhisper", "HextechGunblade", "GiantSlayer"]
-      },
-      {
-        "id": 2,
-        "name": "Maokai",
-        "items": ["GargoyleStoneplate", "Redemption", "BrambleVest"]
-      }
-    ]
-  },
-  {
-    "title": "Strategist Azir",
-    "icons": ["strategist", "shuriman"],
-    "locked": false,
-    "tier": "B",
-    "earlyGameChampions": [
-      "Renekton",
-      "Cassiopeia",
-      "Jhin",
-      "Taliyah",
-      "Vi",
-      "Akshan"
-    ],
-    "lateGameChampions": [
+    "tier": "S",
+    "champions": [
       "Swain",
-      "Taliyah",
-      "Teemo",
-      "Garen",
+      "Warwick",
+      "Nautilus",
       "Azir",
+      "Silco",
       "JarvanIV",
-      "Lux",
       "Nasus"
     ],
     "carries": [
       {
         "id": 1,
         "name": "Azir",
-        "items": ["GuinsoosRageblade", "StatikkShiv", "HextechGunblade"]
+        "items": ["RapidFirecannon", "GiantSlayer", "NashorsTooth"]
       },
       {
         "id": 2,
-        "name": "JarvanIV",
-        "items": ["IonicSpark", "WarmogsArmor", "GargoyleStoneplate"]
+        "name": "Nasus",
+        "items": ["IonicSpark", "WarmogsArmor", "SunfireCape"]
       },
       {
         "id": 3,
-        "name": "Lux",
-        "items": ["SpearOfShojin", "JeweledGauntlet"]
+        "name": "Silco",
+        "items": ["BlueBuff", "JeweledGauntlet", "HextechGunblade"]
       }
-    ]
+    ],
+    "howToPlay": "So unlike the vertical Shurima variant, this comp revolves around Azir + 4 Juggernaut. The other units are generally Strategist, but depending on what your items look like, a secondary carry could be either Nilah or Silco. Nilah if you get a lot of bows, and if you get Blue Buff/AP items just play Silco instead! Your early game is extremely flexible, as you can play any sort of backline units that can use attack speed or AP items, such as Cassiopieia + Noxus and/or Shurima, Samira + Challengers/Noxus, Milio + Demacia + Qiyana, etc."
   }
 ]
