@@ -85,7 +85,7 @@
   },
   {
     "id": 7,
-    "name": "SlayerEmblem",
+    "name": "VanquisherEmblem",
     "components": [
       {
         "id": 1,
@@ -365,7 +365,7 @@
   },
   {
     "id": 27,
-    "name": "LocketOfTheIronSolari",
+    "name": "Crownguard",
     "components": [
       {
         "id": 1,
@@ -603,7 +603,7 @@
   },
   {
     "id": 44,
-    "name": "Zephyr",
+    "name": "Evenshroud",
     "components": [
       {
         "id": 1,

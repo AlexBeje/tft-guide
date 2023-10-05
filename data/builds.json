@@ -1,13 +1,14 @@
 [
   {
-    "title": "Vanquishers",
+    "title": "Enlightend Ones 2.0",
     "icons": ["ionia", "vanquisher"],
     "locked": false,
     "tier": "S",
+    "legends": ["Urf"],
     "champions": [
       "Jhin",
+      "Ashe",
       "Sett",
-      "Karma",
       "Darius",
       "Xayah",
       "Nilah",
@@ -17,139 +18,151 @@
     "carries": [
       {
         "id": 1,
-        "name": "Nilah",
-        "items": ["RapidFirecannon", "GuinsoosRageblade", "HextechGunblade"]
+        "name": "Xayah",
+        "items": ["Deathblade", "GuinsoosRageblade", "GuardBreaker"]
       },
       {
         "id": 2,
-        "name": "Xayah",
-        "items": ["LastWhisper", "Deathblade", "GiantSlayer"]
+        "name": "Shen",
+        "items": ["Evenshroud", "Crownguard", "WarmogsArmor"]
       },
       {
         "id": 3,
-        "name": "Shen",
-        "items": ["GargoyleStoneplate", "WarmogsArmor", "SunfireCape"]
+        "name": "Nilah",
+        "items": ["IoniaEmblem", "RapidFirecannon"]
+      },
+      {
+        "id": 4,
+        "name": "Ahri",
+        "items": ["VanquisherEmblem", "BlueBuff"]
       }
-    ],
-    "howToPlay": "Because this comp revolves around 4 cost carries, it is important to manage our econ and HP in a tactical manner early on. Generally the ideal AD lines still revolve around Samira Noxus or Jhin Ionia so learn to play around those lines to go to level 7 or 8 effectively.<br/>Since Nilah specifically requires an RFC, it is a good idea to save bows if you're looking to play for this comp."
+    ]
   },
   {
-    "title": "Ashe Reroll",
-    "icons": ["ionia", "vanquisher"],
+    "title": "Boss Blades",
+    "icons": ["ionia"],
     "locked": false,
     "tier": "S",
+    "legends": ["Caitlyn"],
     "champions": ["Jhin", "Ashe", "Sett", "Darius", "Karma", "Xayah", "Shen"],
     "carries": [
       {
         "id": 1,
         "name": "Ashe",
-        "items": ["IoniaEmblem", "LastWhisper", "GiantSlayer"]
+        "items": ["IoniaEmblem", "Deathblade", "LastWhisper"]
       },
       {
         "id": 2,
-        "name": "Xayah",
-        "items": ["InfinityEdge", "GuardBreaker", "GiantSlayer"]
-      },
-      {
-        "id": 3,
         "name": "Sett",
-        "items": ["BrambleVest", "WarmogsArmor", "DragonsClaw"]
-      }
-    ],
-    "howToPlay": "Since it's a 2 cost reroll comp, we want to econ as much as possible Stage 2 to prepare to slowroll above 50g at level 6. If your board is weak with no upgrades, look to losestreak to build econ, but if your board is strong, you can even look to push the tempo and look to winstreak. 95% of the time we want to level at 3-2 to stabilize a bit, usually meaning Ashe 2*, Sett 2*, Jhin 2* and then building econ back up to slowroll above 50g. Typically if you play for Ashe you want to play 4 Vanquishers, and if you hit an Ionia Emblem you can play 6 Ionia 4 Vanquisher as your endgame!"
-  },
-  {
-    "title": "Rogue Reroll",
-    "icons": ["rogue", "gunner"],
-    "locked": false,
-    "tier": "S",
-    "champions": [
-      "Graves",
-      "Jinx",
-      "Qiyana",
-      "Katarina",
-      "Ekko",
-      "Quinn",
-      "Neeko"
-    ],
-    "carries": [
-      {
-        "id": 1,
-        "name": "Graves",
-        "items": ["SteraksGage", "Bloodthirster", "TitansResolve"]
-      },
-      {
-        "id": 2,
-        "name": "Qiyana",
-        "items": ["SteraksGage", "TitansResolve", "HandOfJustice"]
+        "items": ["Redemption", "BrambleVest", "DragonsClaw"]
       },
       {
         "id": 3,
-        "name": "Katarina",
-        "items": ["IonicSpark", "JeweledGauntlet", "HandOfJustice"]
+        "name": "Jhin",
+        "items": ["Deathblade", "GuinsoosRageblade", "GiantSlayer"]
       }
-    ],
-    "howToPlay": "So the way you play Rogues nowadays is not to level to 6 to roll for Qiyana priority, but rather at level 5 first. You are supposed to play for Graves 3* first while having odds to hit the other Rogues, so level 5 is a lot better than level 4 in that aspect. You play Stage 2 as if you were rolling for 1 costs, which means you should build your econ as much as possible. Then, during Stage 3, stay above 50g while rolling for Graves 3* and as many copies of Qiyana, Ekko and Katarina as possible. After you hit Graves 3, level to 6 to finish rolling for Qiyana 3* and as many copies of other Rogues as possible. After you hit Qiyana, level to 7 and roll for Katarina and Ekko 3*."
+    ]
   },
   {
-    "title": "CHO BITEM",
-    "icons": ["bruiser", "void"],
+    "title": "Bruiser Bites",
+    "icons": ["bruiser"],
     "locked": false,
     "tier": "S",
+    "legends": ["LeeSin", "Caitlyn"],
     "champions": [
       "Chogath",
       "Renekton",
       "Cassiopeia",
-      "Vi",
+      "Soraka",
       "RekSai",
       "Sejuani",
+      "Ryze",
       "Sion"
     ],
     "carries": [
       {
         "id": 1,
         "name": "Chogath",
-        "items": ["Redemption", "DragonsClaw", "BrambleVest"]
+        "items": ["BrambleVest", "DragonsClaw", "Redemption"]
       },
       {
         "id": 2,
         "name": "Cassiopeia",
-        "items": ["BlueBuff", "HextechGunblade", "GiantSlayer"]
+        "items": ["BlueBuff", "JeweledGauntlet", "GiantSlayer"]
       }
-    ],
-    "howToPlay": "Since Cho'Gath is a 1 cost reroll comp, it is almost always recommended to roll to 30g at 3-1 at level 4 for as many copies of the Cho, Renekton and Cassiopeia/Malzahar as possible. Try to hold onto one Rek'Sai and one vi along the way, as your level 5 includes 4 Bruisers. Then, try to build your economy back up and slowroll at level 5 above 50 gold for your 3* units. The obvious highest priority 3* unit is Cho, but you might as well hold Renektons on the way. As for your backline carry, you have to option to play for either Cassiopeia or Malzahar 3*, or play for a 4 cost backline carry like Silco or Mordekaiser once you push levels. Your endgame should be 6 Bruisers, and a +1 Bruiser emblem or Heart is really good as you don't need to have Sion to get it."
+    ]
   },
   {
-    "title": "Azir Flex",
-    "icons": ["strategist", "juggernaut"],
+    "title": "Noxus Empire",
+    "icons": ["noxus", "shuriman"],
     "locked": false,
     "tier": "S",
+    "legends": ["TwistedFate", "Urf"],
     "champions": [
+      "Cassiopeia",
       "Swain",
-      "Warwick",
-      "Nautilus",
+      "Darius",
+      "Katarina",
+      "Mordekaiser",
       "Azir",
-      "Silco",
-      "JarvanIV",
-      "Nasus"
+      "Sion",
+      "Aatrox"
     ],
     "carries": [
       {
         "id": 1,
-        "name": "Azir",
-        "items": ["RapidFirecannon", "GiantSlayer", "NashorsTooth"]
+        "name": "Mordekaiser",
+        "items": ["EdgeOfNight", "Quicksilver", "JeweledGauntlet"]
       },
       {
         "id": 2,
-        "name": "Nasus",
-        "items": ["IonicSpark", "WarmogsArmor", "SunfireCape"]
+        "name": "Swain",
+        "items": ["DragonsClaw", "BrambleVest", "Redemption"]
       },
       {
         "id": 3,
-        "name": "Silco",
-        "items": ["BlueBuff", "JeweledGauntlet", "HextechGunblade"]
+        "name": "Azir",
+        "items": ["NoxusEmblem", "StatikkShiv", "NashorsTooth"]
       }
+    ]
+  },
+  {
+    "title": "Riding Shotguns",
+    "icons": ["rogue", "gunner"],
+    "locked": false,
+    "tier": "S",
+    "legends": ["LeeSin"],
+    "champions": [
+      "Graves",
+      "Jinx",
+      "Qiyana",
+      "Ekko",
+      "Katarina",
+      "Neeko",
+      "Jayce",
+      "Aphelios"
     ],
-    "howToPlay": "So unlike the vertical Shurima variant, this comp revolves around Azir + 4 Juggernaut. The other units are generally Strategist, but depending on what your items look like, a secondary carry could be either Nilah or Silco. Nilah if you get a lot of bows, and if you get Blue Buff/AP items just play Silco instead! Your early game is extremely flexible, as you can play any sort of backline units that can use attack speed or AP items, such as Cassiopieia + Noxus and/or Shurima, Samira + Challengers/Noxus, Milio + Demacia + Qiyana, etc."
+    "carries": [
+      {
+        "id": 1,
+        "name": "Graves",
+        "items": ["Bloodthirster", "TitansResolve", "SteraksGage"]
+      },
+      {
+        "id": 2,
+        "name": "Jinx",
+        "items": ["InfinityEdge", "LastWhisper", "GiantSlayer"]
+      },
+      {
+        "id": 3,
+        "name": "Katarina",
+        "items": ["JeweledGauntlet", "IonicSpark", "HandOfJustice"]
+      },
+      {
+        "id": 4,
+        "name": "Neeko",
+        "items": ["WarmogsArmor", "BrambleVest"]
+      }
+    ]
   }
 ]

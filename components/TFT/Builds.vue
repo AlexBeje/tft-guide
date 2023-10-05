@@ -46,6 +46,18 @@
     >
       <div class="flex flex-col">
         <div
+          class="p-2 flex flex-col gap-1 select-none border-t-[1px] dark:border-t-[#414243]"
+        >
+          <p class="text-xl font-black text-black dark:text-inherit">Legends</p>
+          <div class="flex justify-center gap-2">
+            <img
+              v-for="legend in buildsGuide.legends"
+              :src="`legends/${legend}.png`"
+              class="w-[60px] h-[60px]"
+            />
+          </div>
+        </div>
+        <div
           class="p-2 flex flex-col gap-2 select-none border-t-[1px] dark:border-t-[#414243]"
         >
           <p class="text-xl font-black text-black dark:text-inherit">
@@ -95,12 +107,6 @@
             </div>
           </div>
         </div>
-        <div class="p-2 flex flex-col gap-2 select-none border-t-[1px] dark:border-t-[#414243]">
-          <p class="text-xl font-black text-black dark:text-inherit">
-            How to play
-          </p>
-          <div v-html="buildsGuide.howToPlay" />
-        </div>
       </div>
     </TFTDropdown>
   </div>
@@ -126,7 +132,7 @@ interface BuildsGuide {
   tier: string;
   champions: string[];
   carries: Carries[];
-  howToPlay: string;
+  legends: string[];
 }
 
 /** Props **/
